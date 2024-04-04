@@ -58,7 +58,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/sygmaprotocol/docs',
+            href: 'https://github.com/sygmaprotocol/',
             label: 'GitHub',
             position: 'right',
           },
