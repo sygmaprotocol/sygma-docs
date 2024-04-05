@@ -17,7 +17,7 @@ description: The following section details official links related to Sygma
 
 #### [Testnet Explorer](https://scan.test.buildwithsygma.com)
 
-#### [Testnet Faucet](https://faucet-ui-stage.buildwithsygma.com/)
+#### [Testnet Faucet](../06-environments/03-testnet/01-obtain-testnet-tokens.md)
 
 ## Community
 
