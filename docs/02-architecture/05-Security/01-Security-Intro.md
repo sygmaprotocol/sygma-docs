@@ -14,7 +14,7 @@ draft: false
 
 ## Threshold Signature Schemes (TSS)
 
-**Threshold Signature Schemes (TSS)** is an area of [MPC](/docs/03-architecture/02-mpc.md) that is particularly useful for the crypto domain as it facilitates the distribution of a private key to multiple parties, introducing redundancy for assets management security.&#x20;
+**Threshold Signature Schemes (TSS)** is an area of [MPC](/docs/02-architecture/02-mpc.md) that is particularly useful for the crypto domain as it facilitates the distribution of a private key to multiple parties, introducing redundancy for assets management security.&#x20;
 
 In other words, it enables a set of parties to perform certain cryptographic operations, like signing transactions, while none of them hold a full private key. Instead, the key is split across the parties, and it can only be used when a subset of those parties — the size of which is larger than a certain threshold — combine their key shares.
 

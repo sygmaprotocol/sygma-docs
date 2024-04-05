@@ -4,7 +4,7 @@ description: The following details how to obtain Testnet tokens from the Faucet 
 
 # Obtain Testnet Tokens
 
-import App from '../../../src/Faucet/App'; 
+import App from '../../../../src/Faucet/App'; 
 
 <App />
 

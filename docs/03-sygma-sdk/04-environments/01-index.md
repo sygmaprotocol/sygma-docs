@@ -1,7 +1,7 @@
 ---
 slug: /environments
 title: Environments
-id: environemnts-index
+id: environments-index
 ---
 :::info
 The following details a list of deployed smart contract addresses for a variety of environments.

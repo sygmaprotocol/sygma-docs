@@ -3,7 +3,7 @@ title: Mainnet
 description: The following details a list of resources to support the Mainnet environment.
 ---
 
-import SupportedDomains from '../../src/components/SupportedDomains';
+import SupportedDomains from '../../../src/components/SupportedDomains';
 import { Environment } from '@buildwithsygma/sygma-sdk-core';
 
 :::tip Status
@@ -17,7 +17,7 @@ The following section details Sygma's mainnet deployment, including the protocol
 - [Registered routes and associated fee schemes](#registered-routes-and-associated-fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
 
-Many of the values found below will be important if you are a developer working with the [Sygma SDK](../02-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
+Many of the values found below will be important if you are a developer working with the [Sygma SDK](../01-Quick-Start/01-installing-the-sdk.md).
 
 ## Supported networks
 

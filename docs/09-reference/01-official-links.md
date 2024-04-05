@@ -19,7 +19,7 @@ description: The following section details official links related to Sygma
 
 #### [Testnet Transfer Widget](https://sygma-react-widget.pages.dev/)
 
-#### [Testnet Faucet](../06-environments/03-testnet/01-obtain-testnet-tokens.md)
+#### [Testnet Faucet](../03-sygma-sdk/04-environments/03-testnet/01-obtain-testnet-tokens.md)
 
 ## Community
 
