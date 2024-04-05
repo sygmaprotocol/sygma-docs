@@ -1,17 +1,17 @@
 ---
 id: new-token
-slug: /ecosystem/new-token
+slug: /integrating/new-token
 title: Adding A New Token
-description: The following section details how to request support for a new token.
+description: The following section details how to add new tokens to the Sygma network.
 ---
 
 :::info
-The following section details how to request support for a new token.
+The following section details how to request support for a new token. The Sygma team is iterating towards permissionless additions of new tokens in the near future.
 :::
 
 # Token Support
 
-Sygma supports the ERC-20 & ERC-721 token standards, as well as Substrate-native tokens. The currently supported tokens per route (a combination of source and destination network) can be found in our [Environments](../06-environments/01-index.md) page.
+Sygma supports the ERC-20 & ERC-721 token standards, as well as native tokens in Substrate. The currently open token routes can be found in our [Environments](../06-environments/01-index.md) page.
 
 If there is a token that is not yet supported and you would like Sygma to add support, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x) - please include answers to the following questions:
 

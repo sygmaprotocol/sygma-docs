@@ -19,4 +19,4 @@ See [Cryptonetwork Governance As Capital](https://www.placeholder.vc/blog/2019/2
 
 ### Relayer Network Administration
 
-Becoming a relayer in the Sygma network is currently a permissioned process. You can find more information around the current relaying partners as well as how to become a partner in [Becoming A Relayer Partner](../../04-ecosystem/03-relayer-partner.md).
+Becoming a relayer in the Sygma network is currently a permissioned process. You can find more information around the current relaying partners as well as how to become a partner in [Becoming A Relayer Partner](../../04-integrating-with-sygma/03-relayer-partner.md).

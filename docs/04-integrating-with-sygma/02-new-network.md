@@ -1,17 +1,17 @@
 ---
 id: new-network
-slug: /ecosystem/new-network
+slug: /integrating/new-network
 title: Adding A New Network
 description: The following section details how to request support for a new network.
 ---
 
 :::info
-The following section details how to request support for a new network.
+The following section details how to request support for a new network. The Sygma team is iterating towards permissionless additions of new networks in the near future.
 :::
 
 # Network Support
 
-Sygma supports EVM and Substrate-based networks natively. The currently supported networks can be found in the links below. The linked pages also contain information on supported resource types, contract addresses, and available fee schemas:
+Sygma currently supports EVM and Substrate-based networks natively, with support for Bitcoin and Cosmos-based ecosystems coming soon. The currently supported networks can be found in the links below. The linked pages also contain information on supported resource types, contract addresses, and available fee schemas:
 
 - [Testnet Network Support](https://docs.buildwithsygma.com/environments/testnet/#contract-addresses)
 - [Mainnet Network Support](https://docs.buildwithsygma.com/environments/mainnet#contract-addresses)

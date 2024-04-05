@@ -32,7 +32,7 @@ description: The following section contains frequently asked questions about Syg
   The addition of new networks and tokens to the Sygma protocol is currently a permissioned process that must go through the Sygma team. Engineering is already well underway to enable permissionless additions of networks and tokens by the end of 2023. For further inquiries, please contact Sygma on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
 
 7. **Can you build an integration for my project?**  
-  It depends. Please take a look at the documentation for [Adding A New Token](04-ecosystem/01-new-token.md) and [Adding A New Network](04-ecosystem/02-new-network.md). When you are ready, please contact Sygma on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
+  It depends. Please take a look at the documentation for [Adding A New Token](./04-integrating-with-sygma/01-new-token.md) and [Adding A New Network](./04-integrating-with-sygma/02-new-network.md). When you are ready, please contact Sygma on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
 
 <!-- 9. Is it expensive to bridge with Sygma?
 WIP-->
@@ -42,10 +42,10 @@ WIP-->
   In its current state, the Sygma protocol operates under a trusted federation bridging model using a set of off-chain relayers. Research and engineering is already well underway to enable a decentralized and trustless Sygma bridging protocol, which includes governance of the respective governance controls. 
 
 9. **Who are the relayers and what do they do?**  
-  The Sygma protocol relies on a network of trusted off-chain operators that listen for events on a source chain, and "relay" these events to a destination chain through a cryptographic primitive called [secure multi-party computation](https://blog.buildwithsygma.com/multi-party-computation/). You can find a list of Sygma's relaying partners in [Becoming A Relayer Partner](04-ecosystem/03-relayer-partner.md).
+  The Sygma protocol relies on a network of trusted off-chain operators that listen for events on a source chain, and "relay" these events to a destination chain through a cryptographic primitive called [secure multi-party computation](https://blog.buildwithsygma.com/multi-party-computation/). You can find a list of Sygma's relaying partners in [Becoming A Relayer Partner](./04-integrating-with-sygma/03-relayer-partner.md).
 
-10. **Can I become a relayer for Sygma?**
-  Sygma is currently looking for credible entities that can meet the acceptance criteria for becoming a relayer. Please see [Becoming A Relayer Partner](04-ecosystem/03-relayer-partner.md) for more information. 
+1.  **Can I become a relayer for Sygma?**
+  Sygma is currently looking for credible entities that can meet the acceptance criteria for becoming a relayer. Please see [Becoming A Relayer Partner](./04-integrating-with-sygma/03-relayer-partner.md) for more information. 
 
 <!--9. How are relayers selected? 
 WIP-->

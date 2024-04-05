@@ -1,6 +1,6 @@
 ---
 id: sygma-explorer
-slug: /ecosystem/sygma-explorer
+slug: /integrating/sygma-explorer
 title: Sygma Explorer
 description: The following section provides details on the Sygma explorer.
 ---
