@@ -17,6 +17,6 @@ MPC was introduced as a solution for the **[Two Billionaires Problem](https://en
 
 The multi-party computation (MPC) model that Sygma employs includes a number of trusted relayer nodes operating under [a trusted federation](https://blog.chainsafe.io/bridges-in-crypto-space-12e158f5fd1e). These trusted relayer nodes are run by reputable entities in the web3 space.
 
-For more on how MPC is used by Sygma, see [Security](/docs/03-architecture/05-security/01-Security-Intro.md).
+For more on how MPC is used by Sygma, see [Security](./05-Security/01-Security-Intro.md).
 
 For a detailed research piece, please see [Multi-Party Computation: The Next Generation of Crypto Security](https://blog.buildwithsygma.com/multi-party-computation/) from our blog.

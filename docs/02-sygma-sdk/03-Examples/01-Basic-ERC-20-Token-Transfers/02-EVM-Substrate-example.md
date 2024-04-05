@@ -1,5 +1,5 @@
 ---
-slug: /sdk/quickstart/examples/erc20/evm-substrate-example
+slug: /sdk/examples/erc20/evm-substrate-example
 id:  examples-erc20-evm-substrate-example
 title: EVM To Substrate Token Transfer
 description: Section that describes how to perform an EVM to Substrate token transfer.
@@ -26,7 +26,7 @@ Before running the script, ensure that you have the following:
 - An Ethereum [provider](https://www.infura.io/) (in case the hardcoded RPC within the script does not work)
 - A development wallet funded with `sygUSD` tokens from the [Sygma faucet](https://faucet-ui-stage.buildwithsygma.com/)
 
-import App from '../../../../../src/Faucet/App'; 
+import App from '../../../../src/Faucet/App'; 
 
 <App />
 <br/>

@@ -1,5 +1,5 @@
 ---
-slug: /sdk/quickstart/examples/erc20/evm-example
+slug: /sdk/examples/erc20/evm-example
 id:  examples-erc20-evm-example
 title: EVM To EVM Token Transfer
 description: Section that describes how to perform an EVM to EVM token transfer.
@@ -25,7 +25,7 @@ Before running the script, ensure that you have the following:
 - An Ethereum [provider](https://www.infura.io/) (in case the hardcoded RPC within the script does not work)
 - A development wallet funded with `ERC20LRTest` tokens from the [Sygma faucet](https://faucet-ui-stage.buildwithsygma.com/) (you can use the UI below; please allow some time for minting as testnet may be congested)
 
-import App from '../../../../../src/Faucet/App'; 
+import App from '../../../../src/Faucet/App'; 
 
 <App />
 <br/>
