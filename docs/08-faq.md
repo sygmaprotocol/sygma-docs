@@ -22,7 +22,7 @@ description: The following section contains frequently asked questions about Syg
   
   Sygma invites engaged participants with high initiative to begin making smaller contributions, whether that's to the [Discord](https://discord.gg/Qdf6GyNB5J), to the [documentation](https://docs.buildwithsygma.com) or by creating content. Make sure to check out the [Contribute](10-contribute.md) page for contributions related to Sygma's documentation.
 
-### Support
+### General Support
 5. **Is my ecosystem/blockchain/token supported?**  
   Sygma is currently built to support EVM and Substrate-based chains. The [Solidity contracts](https://github.com/sygmaprotocol/sygma-solidity) and [custom-built pallets](https://github.com/sygmaprotocol/sygma-substrate-pallets) can be adapted to most ecosystems built in these environments, whether that's mainnet Ethereum, an EVM L2, a Polkadot/Kusama parachain, or a standalone Substrate chain.
 
@@ -58,6 +58,20 @@ WIP-->
 
 13.   **How is Sygma currently secured?**  
   The Sygma protocol currently uses secure multi-party computation (MPC) and threshold signature schemes (TSS) to strengthen security and communication within the relayer network. Furthermore, there is ongoing efforts underway to implement optimistic, trust-minimized cross-chain block header oracles (see [Introducing Zipline Casper](https://blog.chainsafe.io/introducing-zipline-casper-6fb6dce44992)), as well as a ZK-based block header oracle to provide tailored security for different bridging use-cases.
+
+### Widget
+
+14. **Why do I need two token approvals to confirm a transaction?**
+
+When initiating a cross-chain transaction using the Sygma widget on EVM-compatible chains, you will encounter two separate prompts for token approvals, followed by a final confirmation request for the transfer. The reason for the two approvals is due to how the Sygma protocol orchestrates fee management and bridging operations across different sets of smart contracts. A deeper look into the two approvals:
+
+  1. **Fee Approval**: The first approval is directed towards a set of smart contracts that manages fee calculations. This approval grants the fee handling contracts permission to spend up to the necessary amount of fee tokens, which represents the service charge for executing the cross-chain operation. The user does not have to specify the fee amount as the interface will automatically calculate this. The user only needs to approve the specified amount.
+  2. **Bridging Transaction Approval**: The second approval is directed towards the bridging smart contract, which oversees the cross-chain transfer of tokens. This approval grants this contract permission to spend (and transfer) up to the specified amount of the given token, less previously calculated fees. Similar to the fee approval, the interface will automatically calculate the amount that needs to be approved for the net token amount to be transferred. The user only needs to approve the specified amount.
+
+Following the two approvals, the user will need to finalize the cross-chain transaction by clicking on “Transfer” within the Sygma widget interface.
+
+This two-step approval process ensures 1) appropriate fees are calculated and 2) on the correct amount of tokens to be transferred during a cross-chain execution. You can read more about token approvals and their role in web3 here and here. As token allowances may represent a potential attack vector for improperly secured smart contracts, it is recommended to periodically practice good token hygiene by revoking permissions.
+
 
 <!--### Substrate 
 Does Sygma require an EVM pallet to work?-->
