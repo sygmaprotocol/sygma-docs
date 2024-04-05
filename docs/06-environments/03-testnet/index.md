@@ -24,7 +24,7 @@ Many of the values found below will be important if you are a developer working 
 
 ## Testnet transfer UI
 
-The [transfer UI](https://transfer-ui.test.buildwithsygma.com) provides users with a visual interface to connect their wallets and bridge tokens.
+The [transfer UI](https://sygma-react-widget.pages.dev/) provides users with a visual interface to connect their wallets and bridge tokens.
 
 ## Testnet faucet
 

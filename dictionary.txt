@@ -378,3 +378,4 @@ sygma-widget
 Customizable
 sygma-explorer-indexer
 Veridise
+EVM-compatible
