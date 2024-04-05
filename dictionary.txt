@@ -367,3 +367,14 @@ Base-sepolia
 ERC1155TST
 sepolia
 ERC1155Handler
+sygma-core
+sygma-x-solidity
+zk
+Spectre
+spectre-node
+sygma-inclusion-prover
+prover
+sygma-widget
+Customizable
+sygma-explorer-indexer
+Veridise
