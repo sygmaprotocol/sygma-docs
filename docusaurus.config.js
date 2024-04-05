@@ -84,7 +84,7 @@ const config = {
             },
             {
               label: `Audits`,
-              to: `/audits`,
+              to: `/reference/audits`,
             },
           ],
         },

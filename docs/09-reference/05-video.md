@@ -15,6 +15,9 @@ description: The following section contains video resources for Sygma
 #### Workshop 2: Creating Cross-chain Fungible Transfers And Generic Message Passing With The Sygma SDK  
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/F_PVqzQlBBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#### Workshop 3: Learn To Bridge From Ethereum To Polkadot For Substrate Developers  
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/-EDMO5fu0wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Explainers
 
 #### Cross-chain Conversations Episode 1: What Is Sygma?

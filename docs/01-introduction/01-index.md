@@ -20,4 +20,4 @@ Sygma is a fully open source ([Lesser General Public License version 3.0 (LGPL-3
 - Look under the hood at the [architecture](../03-architecture/01-index.md)
 - Read more on the [Sygma Vision](02-origins.md)
 
-For the complete source code, please check out [Sygma's GitHub Repositories](../05-github-repositories.md). 
+For the complete source code, please check out [Sygma's GitHub Repositories](../09-reference/03-github-repositories.md). 
