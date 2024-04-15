@@ -1,9 +1,9 @@
 ---
-slug: /readme/protocol/Security/peerdisc
-id: Security-peerdisc
+slug: /tailoredsecurity/mpc/peerdisc
+id: mpc-peerdisc
 title: Peer Discovery
 description: The following details the peer discovery process for all relayers.
-sidebar_position: 2
+sidebar_position: 3
 draft: false
 ---
 
@@ -25,4 +25,4 @@ Relayer nodes are deployed with a configuration in order to serve the above requ
 
 ## Flow
 
-  ![](<../../../static/assets/peerdisc_flow.png>)
+  ![](<../../../../static/assets/peerdisc_flow.png>)

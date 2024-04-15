@@ -1,9 +1,9 @@
 ---
-slug: /readme/protocol/Security/keygen
-id: Security-keygen
+slug: /tailoredsecurity/mpc/keygen
+id: mpc-keygen
 title: Key Generation
 description: The following details the key generation process for all relayers.
-sidebar_position: 3
+sidebar_position: 4
 draft: false
 ---
 
@@ -24,7 +24,7 @@ Ultimately, we can look on the key generation (i.e. keygen) as the access contro
 1. Admin calls `StartKeygen()` of `Bridge.sol` contract
 2. Event `KeygenRequired` is emitted by `Bridge.sol` contract
 3. Relayers that listen to events initiate `Keygen` protocol
-  ![](<../../../static/assets/keygen_flow.png>)
+  ![](<../../../../static/assets/keygen_flow.png>)
 4. Relayers observe chain state and listen to events that signal public key submission
 5. If public key *y* hasn’t been submitted yet, any one relayer can transact it onchain signaling the finalization of the protocol
 

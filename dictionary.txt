@@ -380,3 +380,12 @@ sygma-explorer-indexer
 Veridise
 EVM-compatible
 Sygma-X-Solidity
+protocol-relayers
+tailoredsecurity
+tailoredsecurity-mpc-intro
+tss
+mpc-tss
+mpc-peerdisc
+mpc-keygen
+mpc-signing
+mpc-reshare

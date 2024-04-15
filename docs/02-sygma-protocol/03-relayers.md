@@ -15,10 +15,10 @@ At the core of Sygma exists a **set of relayers** that are distributed among sev
 
 Each relayer within the set listens to both the source and destination chains that are being bridged by Sygma. Based on events that are emitted, these relayers then execute relevant actions.
 
-This multi-relayer set is responsible for relaying messages from a source network to a destination network. Relayers are operating with private key share and execution happens on the destination network with [MPC](/docs/02-sygma-protocol/02-mpc.md) private key.&#x20;
+This multi-relayer set is responsible for relaying messages from a source network to a destination network. Relayers are operating with private key share and execution happens on the destination network with [MPC](../02-sygma-protocol/02-Tailored-Security/02-MPC/02-mpc.md) private key.&#x20;
 
 Communication between relayer parties happens in a [p2p](https://en.wikipedia.org/wiki/Peer-to-peer) manner; and participants of [p2p](https://en.wikipedia.org/wiki/Peer-to-peer) and MPC communication are strictly defined by a configuration file this allows us to prevent [Sybil Attacks](https://en.wikipedia.org/wiki/Sybil\_attack).
 
 For more on our current list of relayer partners or learn how to become one, please see [Becoming A Relayer Partner](../04-integrating-with-sygma/03-relayer-partner.md).
 
-<!-- TODO Relayers can be configured for various verification systems, including [MPC](../02-sygma-protocol/02-mpc.md), Spectre's zk verification, and Zipline's optimistic verification. -->
+<!-- TODO Relayers can be configured for various verification systems, including [MPC](../02-sygma-protocol/02-Tailored-Security/02-MPC/02-mpc.md), Spectre's zk verification, and Zipline's optimistic verification. -->

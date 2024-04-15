@@ -1,9 +1,9 @@
 ---
-slug: /readme/protocol/Security/reshare
-id: Security-reshare
+slug: /tailoredsecurity/mpc/reshare
+id: mpc-reshare
 title: Key Resharing
 description: The following details the process for key resharing.
-sidebar_position: 5
+sidebar_position: 6
 draft: false
 ---
 
@@ -42,4 +42,4 @@ Also note that during this procedure, the entire set of new relayers must be act
     4. go through Setup steps
 2. Admin checks whether new party is online and calls `adminAddRelayer()` of `Bridge.sol` which ends emitting `RelayerAdded` event
 3. All relayers including new ones initiate `Reshare` protocol
-  ![](<../../../static/assets/keyshare_flow.png>)
+  ![](<../../../../static/assets/keyshare_flow.png>)

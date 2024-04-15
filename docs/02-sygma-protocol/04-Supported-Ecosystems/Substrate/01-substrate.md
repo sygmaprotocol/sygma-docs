@@ -17,7 +17,7 @@ Similar to how Sygma enables EVM support by invoking various smart contracts, Sy
 Substrate pallets provide a modular approach to building Substrate-based blockchains and contain runtime logic which can be used, modified, and extended accordingly. 
 :::
 
-![](<../../static/assets/Substrate __ EVM.png>)
+![](<../../../../static/assets/Substrate __ EVM.png>)
 
 ---
 
