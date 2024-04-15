@@ -79,19 +79,6 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8](https://holesky.etherscan.io/address/0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8) |
 | Storage (GMP testing contract)    | [0x58476c75b48c86c05ccad9ae82ac76145bc9119d](https://holesky.etherscan.io/address/0x58476c75b48c86c05ccad9ae82ac76145bc9119d) |
 
-**Mumbai (Domain ID: 7)**
-
-| Contract                          | Address                                    |
-| --------------------------------- | ------------------------------------------ |
-| Bridge                            | [0xeAEffbadF776Da90D8e0a94D918E1CB83c12242d](https://mumbai.polygonscan.com/address/0xeAEffbadF776Da90D8e0a94D918E1CB83c12242d) |
-| Fee Router                        | [0xa5007DF9379b88d62108b061702c1408459FFF3b](https://mumbai.polygonscan.com/address/0xa5007DF9379b88d62108b061702c1408459FFF3b) |
-| Fixed Fee Handler                 | [0x68812fAA580212a29Fa562ECBFf9C7cBfF1bf5AD](https://mumbai.polygonscan.com/address/0x68812fAA580212a29Fa562ECBFf9C7cBfF1bf5AD) |
-| Percentage Fee Handler            | [0x850c0Dfaf1E8489b6699F7D490f8B5693B226De4](https://mumbai.polygonscan.com/address/0x850c0Dfaf1E8489b6699F7D490f8B5693B226De4) |
-| ERC-20 Handler                    | [0x49780Df8982ADeC1989c50c3d2A7f96037f0E937](https://mumbai.polygonscan.com/address/0x49780Df8982ADeC1989c50c3d2A7f96037f0E937) |
-| ERC-721 Handler                   |                                                                                                                                 |
-| Permissionless Generic Handler    | [0x2f2a45CF84D67F22f4925C70612B2506De7a4efB](https://mumbai.polygonscan.com/address/0x2f2a45CF84D67F22f4925C70612B2506De7a4efB) |
-| Storage (GMP testing contract)    | [0x6f250a12f9a2d6f72b6e8ef5b93484da04cdb69e](https://mumbai.polygonscan.com/address/0x6f250a12f9a2d6f72b6e8ef5b93484da04cdb69e) |
-
 **Arbitrum Sepolia (Domain ID: 8)**
 
 | Contract                          | Address                                    |
@@ -144,7 +131,6 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Resource ID              | 0x0000000000000000000000000000000000000000000000000000000000000300                                                                   |
 | Sepolia Contract Address | [0x7d58589b6C1Ba455c4060a3563b9a0d447Bef9af](https://sepolia.etherscan.io/address/0x7d58589b6C1Ba455c4060a3563b9a0d447Bef9af)        |
 | Cronos Contract Address  | [0x2938ed97ef9d897dac7b21c48e045f34a3a02846](https://explorer.cronos.org/testnet/address/0x2938ed97ef9d897dac7b21c48e045f34a3a02846) |
-| Mumbai Contract Address  | [0x75811b960c7acB255f9091bBAC401700E407CDB6](https://mumbai.polygonscan.com/address/0x75811b960c7acB255f9091bBAC401700E407CDB6)      |
 
 **Phala**
 
@@ -170,7 +156,6 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Sepolia Contract Address          | N/A                                                                |
 | Cronos-Testnet Contract Address   | N/A                                                                |
 | Holesky Contract Address          | N/A                                                                |
-| Mumbai Contract Address           | N/A                                                                |
 | Arbitrum-Sepolia Contract Address | N/A                                                                |
 | Base-sepolia Contract Address     | N/A                                                                |
 
@@ -186,7 +171,6 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Sepolia Contract Address          | N/A                                                                |
 | Cronos-Testnet Contract Address   | N/A                                                                |
 | Holesky Contract Address          | N/A                                                                |
-| Mumbai Contract Address           | N/A                                                                |
 | Arbitrum-Sepolia Contract Address | N/A                                                                |
 | Base-sepolia Contract Address     | N/A                                                                |
 
@@ -226,8 +210,6 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Cronos-Testnet Percentage-based | [0x26545905a3a63B9ffB37926e909a827bDd088512](https://explorer.cronos.org/testnet/address/0x26545905a3a63B9ffB37926e909a827bDd088512) | Percentage | 1 BPS (or 0.01%)   |            |
 | Holesky Fixed                   | [0xEE7946aE5f7287a39Bc67207868EDD4a95f96795](https://holesky.etherscan.io/address/0xEE7946aE5f7287a39Bc67207868EDD4a95f96795)        | Fixed fee  | 0.001 ETH          |            |
 | Holesky Percentage-based        | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://holesky.etherscan.io/address/0x9535484111383531BB9D6922B309Bf316Cec9A19)        | Percentage | 1 BPS (or 0.01%)   |            |
-| Mumbai Fixed                    | [0x68812fAA580212a29Fa562ECBFf9C7cBfF1bf5AD](https://mumbai.polygonscan.com/address/0x68812fAA580212a29Fa562ECBFf9C7cBfF1bf5AD)      | Fixed fee  | 0.001 ETH          |            |
-| Mumbai Percentage-based         | [0x850c0Dfaf1E8489b6699F7D490f8B5693B226De4](https://mumbai.polygonscan.com/address/0x850c0Dfaf1E8489b6699F7D490f8B5693B226De4)      | Percentage | 1 BPS (or 0.01%)   |            |
 | Arbitrum-Sepolia Fixed          | [0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78](https://sepolia.arbiscan.io/address/0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78)         | Fixed fee  | 0.001 ETH          |            |
 | Gnosis-Chiado Fixed             | [0x9F5efb442d6F24704dB85569876D9c0CA65aed40](https://gnosis-chiado.blockscout.com/address/0x9F5efb442d6F24704dB85569876D9c0CA65aed40)| Fixed fee  | 0.001 xDAI         |            |
 | Base sepolia Fixed              | [0xde937016D67811f08D93ee54093ea686C21d211C](https://sepolia.basescan.org/address/0xde937016D67811f08D93ee54093ea686C21d211C)        | Fixed fee  | 0.001 ETH          |            |
