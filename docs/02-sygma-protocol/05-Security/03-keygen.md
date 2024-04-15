@@ -1,5 +1,5 @@
 ---
-slug: /readme/architecture/Security/keygen
+slug: /readme/protocol/Security/keygen
 id: Security-keygen
 title: Key Generation
 description: The following details the key generation process for all relayers.

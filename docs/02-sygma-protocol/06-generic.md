@@ -1,6 +1,6 @@
 ---
-slug: /architecture/generic
-id: architecture-generic
+slug: /protocol/generic
+id: protocol-generic
 title: Generic Message Passing
 description: The following details how Generic message passing is handled by Sygma.
 ---

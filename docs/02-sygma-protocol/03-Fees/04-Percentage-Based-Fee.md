@@ -1,6 +1,6 @@
 ---
-slug: /architecture/fees/percentage
-id: architecture-percentage
+slug: /protocol/fees/percentage
+id: protocol-percentage
 title: Percentage-based Fee Strategy
 description: The following section details how percentage-based fee strategies work in Sygma.
 sidebar_position: 4

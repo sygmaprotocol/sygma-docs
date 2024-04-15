@@ -21,9 +21,9 @@ To facilitate the transfer, the following steps are required:
 2. Determine the fee for the transfer, using the  `EVMGenericMessageTransfer.getFee()` method
 3. Prepare, sign, and send the Transfer transaction to the Source network node
 
-The `executeDeposit` function prepares and populates a deposit transaction. The key parameter is `depositData`, which is a string requiring a specific format. Refer to the [Generic Message Passing](../../02-architecture/06-generic.md) documentation for instructions on how to format the `depositData` string correctly.
+The `executeDeposit` function prepares and populates a deposit transaction. The key parameter is `depositData`, which is a string requiring a specific format. Refer to the [Generic Message Passing](../../02-sygma-protocol/06-generic.md) documentation for instructions on how to format the `depositData` string correctly.
 
-There are a few requirements for the Destination chain contract function that gets called. Refer to the [Generic Message Passing](../../02-architecture/06-generic.md) documentation for details.
+There are a few requirements for the Destination chain contract function that gets called. Refer to the [Generic Message Passing](../../02-sygma-protocol/06-generic.md) documentation for details.
 
 #### 1. Initialize the EvmAssetTransfer object
 

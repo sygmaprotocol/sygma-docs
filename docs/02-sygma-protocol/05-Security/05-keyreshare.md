@@ -1,5 +1,5 @@
 ---
-slug: /readme/architecture/Security/reshare
+slug: /readme/protocol/Security/reshare
 id: Security-reshare
 title: Key Resharing
 description: The following details the process for key resharing.

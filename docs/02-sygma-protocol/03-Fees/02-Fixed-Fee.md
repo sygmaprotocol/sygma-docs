@@ -1,6 +1,6 @@
 ---
-slug: /architecture/fees/fixed
-id: architecture-fixed
+slug: /protocol/fees/fixed
+id: protocol-fixed
 title: Fixed Fee Strategy
 description: The following section details how fixed fee strategies work in Sygma.
 sidebar_position: 2

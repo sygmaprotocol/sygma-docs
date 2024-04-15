@@ -1,7 +1,7 @@
 ---
-slug: /architecture
-id: architecture-index
-title: Architecture
+slug: /protocol
+id: protocol-index
+title: Sygma Protocol
 description: The following details the architecture of Sygma.
 ---
 

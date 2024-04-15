@@ -1,6 +1,6 @@
 ---
-slug: /architecture/fees/Fee-intro
-id: architecture-Fee-intro
+slug: /protocol/fees/Fee-intro
+id: protocol-Fee-intro
 title: Introduction To Fees
 description: The following details how fees are handled by Sygma.
 sidebar_position: 1

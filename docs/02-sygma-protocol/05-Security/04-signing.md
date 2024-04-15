@@ -1,5 +1,5 @@
 ---
-slug: /readme/architecture/Security/signing
+slug: /readme/protocol/Security/signing
 id: Security-signing
 title: Proposal Signing
 description: The following details the signing of proposals by relayers.
