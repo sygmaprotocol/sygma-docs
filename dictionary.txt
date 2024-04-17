@@ -368,3 +368,4 @@ ERC1155TST
 sepolia
 ERC1155Handler
 EVM-compatible
+Amoy
