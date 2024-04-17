@@ -117,6 +117,19 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376](https://sepolia.basescan.org/address/0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376) |
 | Storage (GMP testing contract)    | [0x669f52487ffa6f9abf722082f735537a98ec0e4b](https://sepolia.basescan.org/address/0x669f52487ffa6f9abf722082f735537a98ec0e4b) |
 
+**Amoy (Domain ID: 11)**
+
+| Contract                          | Address                                    |
+| --------------------------------- | ------------------------------------------ |
+| Bridge                            | [0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e](https://www.oklink.com/amoy/0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e) |
+| Fee Router                        | [0x055CEe6D441f0c913D863776356C12FfA2FCDc47](https://www.oklink.com/amoy/0x055CEe6D441f0c913D863776356C12FfA2FCDc47) |
+| Fixed Fee Handler                 | [0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3](https://www.oklink.com/amoy/0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3) |
+| Percentage Fee Handler            | [0xcdc03289407b570e434D4BA17B3481CF6B02f369](https://www.oklink.com/amoy/0xcdc03289407b570e434D4BA17B3481CF6B02f369) |
+| ERC-20 Handler                    | [0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af](https://www.oklink.com/amoy/0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af) |
+| Permissionless Generic Handler    | [0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7](https://www.oklink.com/amoy/0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7) |
+| Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/0x1F932B2582c52f939DCfb367A3A42f8A95f66782) |
+| Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb) |
+
 ## Registered resources
 
 **ERC20LRTest**
@@ -158,6 +171,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Holesky Contract Address          | N/A                                                                |
 | Arbitrum-Sepolia Contract Address | N/A                                                                |
 | Base-sepolia Contract Address     | N/A                                                                |
+| Amoy Contract Address     | N/A                                                                |
 
 **Permissionless generic message**
 
@@ -173,6 +187,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Holesky Contract Address          | N/A                                                                |
 | Arbitrum-Sepolia Contract Address | N/A                                                                |
 | Base-sepolia Contract Address     | N/A                                                                |
+| Amoy Contract Address     | N/A                                                                |
 
 **SygmaUSD**
 
@@ -214,6 +229,8 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Gnosis-Chiado Fixed             | [0x9F5efb442d6F24704dB85569876D9c0CA65aed40](https://gnosis-chiado.blockscout.com/address/0x9F5efb442d6F24704dB85569876D9c0CA65aed40)| Fixed fee  | 0.001 xDAI         |            |
 | Base sepolia Fixed              | [0xde937016D67811f08D93ee54093ea686C21d211C](https://sepolia.basescan.org/address/0xde937016D67811f08D93ee54093ea686C21d211C)        | Fixed fee  | 0.001 ETH          |            |
 | Base sepolia Percentage-based   | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://sepolia.basescan.org/address/0x4430E5D4447Df0FC25adCafEb8b5E49d38B56e21)        | Percentage | 1 BPS (or 0.01%)   |            |
+| Amoy Fixed              | [0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3](https://www.oklink.com/amoy/address/0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3)        | Fixed fee  | 0.001 ETH          |            |
+| Amoy Percentage-based   | [0xcdc03289407b570e434D4BA17B3481CF6B02f369](https://www.oklink.com/amoy/address/0xcdc03289407b570e434D4BA17B3481CF6B02f369)        | Percentage | 1 BPS (or 0.01%)   |            |
 
 ## Sygma Explorer
 

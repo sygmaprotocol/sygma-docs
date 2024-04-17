@@ -367,6 +367,7 @@ Base-sepolia
 ERC1155TST
 sepolia
 ERC1155Handler
+<<<<<<< HEAD
 sygma-core
 sygma-x-solidity
 zk
@@ -389,3 +390,7 @@ mpc-peerdisc
 mpc-keygen
 mpc-signing
 mpc-reshare
+=======
+EVM-compatible
+Amoy
+>>>>>>> develop
