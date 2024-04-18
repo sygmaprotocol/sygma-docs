@@ -369,3 +369,7 @@ sepolia
 ERC1155Handler
 EVM-compatible
 Amoy
+Blockops
+Veridise
+Spectre
+Sygma-X-Solidity

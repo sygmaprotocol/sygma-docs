@@ -30,6 +30,6 @@ Credible entities that wish to participate as a relayer on the Sygma relaying ne
 - [ChainSafe Systems](https://chainsafe.io)
 - [Bware Labs](https://bwarelabs.com/)
 - [Phala Network](https://phala.network/)
-- [Astar Network](https://astar.network/) (Coming soon!)
+- [Blockops](https://www.blockops.network/) 
 
 New relaying partners will continue to be added over the next months. If you have experience running validators and/or relayers in a professional environment and want to support the decentralization of the Sygma network, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
