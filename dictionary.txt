@@ -370,6 +370,6 @@ ERC1155Handler
 EVM-compatible
 Amoy
 Blockops
-veridise
-spectre
-sygma-x-solidity
+Veridise
+Spectre
+Sygma-X-Solidity
