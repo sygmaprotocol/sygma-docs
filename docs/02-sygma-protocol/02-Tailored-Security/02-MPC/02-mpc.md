@@ -6,7 +6,7 @@ description: The following details how MPC is utilized by Sygma.
 ---
 
 :::info
-The following details the base relayer node implementation using multi-party computation.
+The following details Sygma's multi-party computation (MPC) verification system.
 :::
 
 **Secure multi-party computation (MPC)** represents a powerful next step in digital asset security because it eliminates the risk of a single point of compromise.
