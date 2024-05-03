@@ -13,6 +13,8 @@ Consider two scenarios: a gamer transferring their character NFT and a crypto wh
 
 The above scenarios illustrate clearly that a few key parameters must be considered when transacting cross-chain: security (high/low); speed (fast/slow); and fees (expensive/cheap). Additionally, considerations must be given to asset type, amounts, and even market implications. 
 
-Building up from these principles, the Sygma protocol offers an alternative approach: **Tailored Security**. It empowers users and developers to make optimal choices based on the given context. Sygma's Tailored Security leverages a multi-layered framework that combines [Proof of Authority](../02-Tailored-Security/02-MPC/02-mpc.md), [Optimistic Execution](../02-Tailored-Security/04-Zipline/01-zipline-intro.md), and [ZK proofs](../02-Tailored-Security/03-Spectre/01-spectre-intro.md) to offer users choice and flexibility. 
+Building up from these principles, the Sygma protocol offers an alternative approach: **Tailored Security**. It empowers users and developers to make optimal choices based on any given context. Sygma's Tailored Security leverages a multi-layered framework that combines [Proof of Authority](../02-Tailored-Security/02-MPC/02-mpc.md), [Optimistic Execution](../02-Tailored-Security/04-Zipline/01-zipline-intro.md), and [ZK proofs](../02-Tailored-Security/03-Spectre/01-spectre-intro.md) to offer users choice and flexibility. 
 
-![](../../../static/assets/tailoredsecurity.png)
+Token routes between two networks can be integrated with any one of these verification systems, and Sygma relayer nodes are equipped to handle and relay messages between chains no matter the framework.
+
+![](<../../../static/assets/tailoredsecurity_compare.png>)
