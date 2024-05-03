@@ -390,7 +390,23 @@ mpc-peerdisc
 mpc-keygen
 mpc-signing
 mpc-reshare
-=======
 EVM-compatible
 Amoy
->>>>>>> develop
+offchain
+tailoredsecurity-introduction
+modularized
+ZK
+spectre
+tailoredsecurity-spectre-intro
+coprocessor
+Gasper
+Spectre's
+Prover
+Verifier
+verifier
+Halo2
+halo2-lib
+auditability
+hardfork
+zipline
+tailoredsecurity-zipline-intro
