@@ -367,7 +367,6 @@ Base-sepolia
 ERC1155TST
 sepolia
 ERC1155Handler
-<<<<<<< HEAD
 sygma-core
 sygma-x-solidity
 zk
