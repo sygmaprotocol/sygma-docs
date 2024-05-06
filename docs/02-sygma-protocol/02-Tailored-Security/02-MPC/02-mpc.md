@@ -1,12 +1,12 @@
 ---
 slug: /tailoredsecurity/mpc/intro
 id: tailoredsecurity-mpc-intro
-title: MPC
+title: Multi-party Computation (MPC)
 description: The following details how MPC is utilized by Sygma.
 ---
 
 :::info
-The following details Sygma's multi-party computation (MPC) verification system.
+The following details Sygma's multi-party computation verification system.
 :::
 
 # Introduction To Multi-party Computation

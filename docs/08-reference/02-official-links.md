@@ -1,6 +1,6 @@
 ---
 id: official-links
-slug: /resources/official-links
+slug: /reference/official-links
 title: Official Links
 description: The following section details official links related to Sygma
 ---
@@ -19,7 +19,7 @@ description: The following section details official links related to Sygma
 
 #### [Testnet Transfer Widget](https://sygma-react-widget.pages.dev/)
 
-#### [Testnet Faucet](../03-sygma-sdk/04-environments/03-testnet/01-obtain-testnet-tokens.md)
+#### [Testnet Faucet](../08-reference/01-environments/03-testnet/01-obtain-testnet-tokens.md)
 
 ## Community
 

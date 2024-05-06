@@ -11,7 +11,7 @@ The following section details how to request support for a new token. The Sygma 
 
 # Token Support
 
-Sygma supports the ERC-20 & ERC-721 token standards, as well as native tokens in Substrate. The currently open token routes can be found in our [Environments](../03-sygma-sdk/04-environments/01-index.md) page.
+Sygma supports the ERC-20 & ERC-721 token standards, as well as native tokens in Substrate. The currently open token routes can be found in our [Environments](../08-reference/01-environments/04-mainnet.md) page.
 
 If there is a token that is not yet supported and you would like Sygma to add support, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x) - please include answers to the following questions:
 

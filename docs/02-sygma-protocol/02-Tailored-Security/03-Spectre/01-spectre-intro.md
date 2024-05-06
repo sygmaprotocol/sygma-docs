@@ -1,15 +1,16 @@
 ---
 slug: /tailoredsecurity/spectre/intro
 id: tailoredsecurity-spectre-intro
-title: Spectre
+title: Introduction To Spectre
 description: The following details how Spectre is utilized by Sygma.
+draft: false
 ---
 
 :::info
-The following details Sygma's Spectre (zero-knowledge light client) verification system.
+The following details Sygma's Spectre verification system utilizing zero-knowledge (zk) proofs of consensus between EVM domains.
 :::
 
-# Introduction To Spectre
+Whereas Sygma's secure [MPC](../02-MPC/02-mpc.md) architecture provides low cost, high speed, and moderately secure attestation of cross-chain messaging events, Sygma's **zero knowledge (zk) light node, Spectre**, offers a trust-minimized, highly secure verification system that offers high speeds and low cost (at scale) in zk verification. 
 
 Spectre implements a blockchain coprocessor to offload intensive computations from a constrained onchain execution layer to a more expansive offchain environment. Its purpose is to produce succinct proofs of [Gasper](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/) consensus that can be efficiently verified on a destination chain.
 
@@ -17,12 +18,12 @@ This model stands in contrast to the prevailing approach where a committee of re
 
 It's crucial to note that neither the threshold signature nor its generation process is concerned with specific consensus rules — they merely confirm the signer's assertions. In contrast, the coprocessor proofs are tailored to the exact computations being verified. Therefore, no valid proof can exist for a computation that halts, for instance, due to fraudulent inputs.
 
-Spectre’s coprocessor proofs are cryptographic arguments of knowledge, that is, SNARKs (Succinct, Non-Interactive Arguments of Knowledge). A critical aspect of Spectre is that it does not rely on trusted intermediaries and makes no probabilistic economic assumptions.
+Spectre’s coprocessor proofs are cryptographic arguments of knowledge, or **SNARKs** (Succinct, Non-Interactive Arguments of Knowledge). A critical aspect of Spectre is that it does not rely on trusted intermediaries and makes no probabilistic economic assumptions.
 
 Spectre consists of three main components:
-- Spectre Prover
-- Light-client Circuits
-- Verifier Contracts
+- **Spectre Prover**
+- **Light-client Circuits**
+- **Verifier Contracts**
 
 ## Spectre Prover
 
@@ -36,4 +37,4 @@ Circuits in the context of ZK proofs refers to the arithmetic circuit that defin
 
 ## Verifier Contract
 
-"Verifier Contracts" are smart contracts deployed on a blockchain that verify the proofs submitted by the prover. These contracts contain the logic necessary to validate the proofs without having to redo the computation. In Spectre, these contracts are auto-generated and can handle proofs related to the consensus rules of the Ethereum blockchain as modified by the Altair hardfork. The verifier contract checks the proof provided by the prover using only a small amount of data and confirms whether the proof is correct, thereby ensuring that the computation was performed accurately and without tampering.
+"Verifier Contracts" are smart contracts deployed on a blockchain that verify the proofs submitted by the prover. These contracts contain the logic necessary to validate the proofs without having to redo the computation. In Spectre, these contracts are auto-generated and can handle proofs related to the consensus rules of the Ethereum blockchain as modified by the [Altair hardfork](https://ethereum.org/en/history/#altair). The verifier contract checks the proof provided by the prover using only a small amount of data and confirms whether the proof is correct, thereby ensuring that the computation was performed accurately and without tampering.
