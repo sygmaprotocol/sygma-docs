@@ -1,5 +1,5 @@
 ---
-slug: /protocol/substrate
+slug: /protocol/ecosystem/substrate
 id: protocol-substrate
 title: Substrate Support
 description: The following details Substrate support on Sygma.
