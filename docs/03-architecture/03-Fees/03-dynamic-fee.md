@@ -44,5 +44,5 @@ This information is used to determine the cost of transactions on the destinatio
 :::info
 The fee oracle service will be _centralized_ in the beginning.&#x20;
 
-The current architecture implies a future update of the fee oracle to a more decentralized or trustless solution. However, since the calculated fee is visible and approved by the user, the current fee oracle does not pose a [security](/docs/03-architecture/05-Security/01-Security-Intro.md) threat to the entire system.
+The current architecture implies a future update of the fee oracle to a more decentralized or trustless solution. However, since the calculated fee is visible and approved by the user, the current fee oracle does not pose a [security](../05-security/01-Security-Intro.md) threat to the entire system.
 :::

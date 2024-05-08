@@ -11,7 +11,7 @@ import { Environment } from '@buildwithsygma/sygma-sdk-core';
 **🟢 Active**
 :::
 
-The following section details Sygma's testnet deployment, including the protocol's:
+The following section details Sygma's testnet deployments, including both MPC and Spectre (zk) verification systems:
 - [Testnet transfer UI](#testnet-transfer-ui)
 - [Testnet faucet](#testnet-faucet)
 - [Supported networks](#supported-networks)
