@@ -11,7 +11,7 @@ import { Environment } from '@buildwithsygma/sygma-sdk-core';
 **🟢 Active**
 :::
 
-The following section details Sygma's testnet deployment, including the protocol's:
+The following section details Sygma's testnet deployments, including both MPC and Spectre (zk) verification systems:
 - [Testnet transfer UI](#testnet-transfer-ui)
 - [Testnet faucet](#testnet-faucet)
 - [Supported networks](#supported-networks)
@@ -39,18 +39,22 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 **Sepolia (Domain ID: 2)**
 
-| Contract                          | Address                                    |
-| --------------------------------- | ------------------------------------------ |
-| Bridge                            | [0x4CF326d3817558038D1DEF9e76b727202c3E8492](https://sepolia.etherscan.io/address/0x4CF326d3817558038D1DEF9e76b727202c3E8492) |
-| Fee Router                        | [0x9D45e9bE1E70735Ee78052717107d5dc59C1EaCE](https://sepolia.etherscan.io/address/0x9D45e9bE1E70735Ee78052717107d5dc59C1EaCE) |
-| Fixed Fee Handler                 | [0xDcBA3f691eF406415556C802163C265Db56208cF](https://sepolia.etherscan.io/address/0xDcBA3f691eF406415556C802163C265Db56208cF) |
-| Percentage Fee Handler            | [0x2e77dEa116117eCF44a427064260D16D488ccff2](https://sepolia.etherscan.io/address/0x2e77dEa116117eCF44a427064260D16D488ccff2) |
-| ERC-20 Handler                    | [0xa65387feCb172ffF8A0aabA323A10c63757BBFA6](https://sepolia.etherscan.io/address/0xa65387feCb172ffF8A0aabA323A10c63757BBFA6) |
-| ERC-721 Handler                   | [0x669F52487ffA6f9aBf722082f735537A98Ec0E4b](https://sepolia.etherscan.io/address/0x669F52487ffA6f9aBf722082f735537A98Ec0E4b) |
-| ERC-1155 Handler                  | [0x65903772866e538e6ffc001dd0c7665e356eb6d8](https://sepolia.etherscan.io/address/0x65903772866e538e6ffc001dd0c7665e356eb6d8) |
-| Permissionless Generic Handler    | [0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479](https://sepolia.etherscan.io/address/0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479) |
-| Storage (GMP testing contract)    | [0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd](https://sepolia.etherscan.io/address/0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd) |
-
+| Contract                       | MPC Address                                                                                                                   | Spectre Address                                                                                                               |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Bridge                         | [0x4CF326d3817558038D1DEF9e76b727202c3E8492](https://sepolia.etherscan.io/address/0x4CF326d3817558038D1DEF9e76b727202c3E8492) | [0x60e3fd2148f3D6934521a00a0Cf318cB1194e072](https://sepolia.etherscan.io/address/0x60e3fd2148f3D6934521a00a0Cf318cB1194e072) |
+| Fee Router                     | [0x9D45e9bE1E70735Ee78052717107d5dc59C1EaCE](https://sepolia.etherscan.io/address/0x9D45e9bE1E70735Ee78052717107d5dc59C1EaCE) | [0xC2C26789671ec5e1542308Ee38faE4A640bCc03e](https://sepolia.etherscan.io/address/0xC2C26789671ec5e1542308Ee38faE4A640bCc03e) |
+| Fixed Fee Handler              | [0xDcBA3f691eF406415556C802163C265Db56208cF](https://sepolia.etherscan.io/address/0xDcBA3f691eF406415556C802163C265Db56208cF) | [0xEA3a9Bcc6de765aC6E01e327D22DB53b8d3DFa0C](https://sepolia.etherscan.io/address/0xEA3a9Bcc6de765aC6E01e327D22DB53b8d3DFa0C) |
+| Percentage Fee Handler         | [0x2e77dEa116117eCF44a427064260D16D488ccff2](https://sepolia.etherscan.io/address/0x2e77dEa116117eCF44a427064260D16D488ccff2) | [0xA048Ddc2C953052835e7847d8c3C4b19183AE1C0](https://sepolia.etherscan.io/address/0xA048Ddc2C953052835e7847d8c3C4b19183AE1C0) |
+| ERC-20 Handler                 | [0xa65387feCb172ffF8A0aabA323A10c63757BBFA6](https://sepolia.etherscan.io/address/0xa65387feCb172ffF8A0aabA323A10c63757BBFA6) | [0x65Ce12864941F56D3665bb0d97D803E81a1d09a0](https://sepolia.etherscan.io/address/0x65Ce12864941F56D3665bb0d97D803E81a1d09a0) |
+| ERC-721 Handler                | [0x669F52487ffA6f9aBf722082f735537A98Ec0E4b](https://sepolia.etherscan.io/address/0x669F52487ffA6f9aBf722082f735537A98Ec0E4b) |                                                                                                                               |
+| ERC-1155 Handler               | [0x65903772866e538e6ffc001dd0c7665e356eb6d8](https://sepolia.etherscan.io/address/0x65903772866e538e6ffc001dd0c7665e356eb6d8) |                                                                                                                               |
+| Permissionless Generic Handler | [0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479](https://sepolia.etherscan.io/address/0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479) | [0x57d66F8A5A57942b25368C837005141e8A586155](https://sepolia.etherscan.io/address/0x57d66F8A5A57942b25368C837005141e8A586155) |
+| Storage (GMP testing contract) | [0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd](https://sepolia.etherscan.io/address/0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd) |                                                                                                                               |
+| Router                         |                                                                                                                               | [0x57a3aC22bb0779A91B334027982cbC58a71aaD32](https://sepolia.etherscan.io/address/0x57a3aC22bb0779A91B334027982cbC58a71aaD32) |
+| Executor                       |                                                                                                                               | [0x108E42c97a57A7FFC3fbB80A8A14129a94cD29C7](https://sepolia.etherscan.io/address/0x108E42c97a57A7FFC3fbB80A8A14129a94cD29C7) |
+| Control Segregator             |                                                                                                                               | [0x2Bdfa87E8caaaB11b8b510C83899Cb18F1D2d4Fd](https://sepolia.etherscan.io/address/0x2Bdfa87E8caaaB11b8b510C83899Cb18F1D2d4Fd) |
+| Spectre Proxy                  |                                                                                                                               | [0xC4c2722e8E35fe95C49036eb0d2Ed15e48341061](https://sepolia.etherscan.io/address/0xC4c2722e8E35fe95C49036eb0d2Ed15e48341061) |
+| Spectre                        |                                                                                                                               | [0xEf7d892E8F5177ED9C8eF140E63948685B15E380](https://sepolia.etherscan.io/address/0xEf7d892E8F5177ED9C8eF140E63948685B15E380) |
 
 **Cronos Testnet (Domain ID: 5)**
 
@@ -68,16 +72,21 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 **Holesky (Domain ID: 6)**
 
-| Contract                          | Address                                    |
-| --------------------------------- | ------------------------------------------ |
-| Bridge                            | [0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78](https://holesky.etherscan.io/address/0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78) |
-| Fee Router                        | [0x5626A5a7b65E3d851c693AC583068e75853fE0C8](https://holesky.etherscan.io/address/0x5626A5a7b65E3d851c693AC583068e75853fE0C8) |
-| Fixed Fee Handler                 | [0xEE7946aE5f7287a39Bc67207868EDD4a95f96795](https://holesky.etherscan.io/address/0xEE7946aE5f7287a39Bc67207868EDD4a95f96795) |
-| Percentage Fee Handler            | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://holesky.etherscan.io/address/0x9535484111383531BB9D6922B309Bf316Cec9A19) |
-| ERC-20 Handler                    | [0xEeFBd08769Ab1e369a04a17180E91E4549938d4c](https://holesky.etherscan.io/address/0xEeFBd08769Ab1e369a04a17180E91E4549938d4c) |
-| ERC-721 Handler                   |                                                                                                                               |
-| Permissionless Generic Handler    | [0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8](https://holesky.etherscan.io/address/0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8) |
-| Storage (GMP testing contract)    | [0x58476c75b48c86c05ccad9ae82ac76145bc9119d](https://holesky.etherscan.io/address/0x58476c75b48c86c05ccad9ae82ac76145bc9119d) |
+| Contract                       | MPC Address                                                                                                                   | Spectre Address                                                                                                               |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Bridge                         | [0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78](https://holesky.etherscan.io/address/0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78) | [0x3DA376947B760836905a0407588C606D1020C4f3](https://holesky.etherscan.io/address/0x3DA376947B760836905a0407588C606D1020C4f3) |
+| Fee Router                     | [0x5626A5a7b65E3d851c693AC583068e75853fE0C8](https://holesky.etherscan.io/address/0x5626A5a7b65E3d851c693AC583068e75853fE0C8) | [0x48512523Bb2634467292dd7776313916425F4c8a](https://holesky.etherscan.io/address/0x48512523Bb2634467292dd7776313916425F4c8a) |
+| Fixed Fee Handler              | [0xEE7946aE5f7287a39Bc67207868EDD4a95f96795](https://holesky.etherscan.io/address/0xEE7946aE5f7287a39Bc67207868EDD4a95f96795) | [0x51b9DcAcB395B00857C815aDb89D20175cBb4A58](https://holesky.etherscan.io/address/0x51b9DcAcB395B00857C815aDb89D20175cBb4A58) |
+| Percentage Fee Handler         | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://holesky.etherscan.io/address/0x9535484111383531BB9D6922B309Bf316Cec9A19) | [0x8fc170823A8dc9eD6Ce81128f0FED3E0089D52f1](https://holesky.etherscan.io/address/0x8fc170823A8dc9eD6Ce81128f0FED3E0089D52f1) |
+| ERC-20 Handler                 | [0xEeFBd08769Ab1e369a04a17180E91E4549938d4c](https://holesky.etherscan.io/address/0xEeFBd08769Ab1e369a04a17180E91E4549938d4c) | [0x96e0cBCb653448a6AE76C2f4041eC6D73127585a](https://holesky.etherscan.io/address/0x96e0cBCb653448a6AE76C2f4041eC6D73127585a) |
+| ERC-721 Handler                |                                                                                                                               |                                                                                                                               |
+| Permissionless Generic Handler | [0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8](https://holesky.etherscan.io/address/0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8) | [0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45](https://holesky.etherscan.io/address/0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45) |
+| Storage (GMP testing contract) | [0x58476c75b48c86c05ccad9ae82ac76145bc9119d](https://holesky.etherscan.io/address/0x58476c75b48c86c05ccad9ae82ac76145bc9119d) |                                                                                                                               |
+| Router                         |                                                                                                                               | [0x6Bac21Aa7627009C79cd4784D94e9c280E36ED79](https://holesky.etherscan.io/address/0x6Bac21Aa7627009C79cd4784D94e9c280E36ED79) |
+| Executor                       |                                                                                                                               | [0x8Fa58B46F887aB519bB4d7967E718eCe7a92716d](https://holesky.etherscan.io/address/0x8Fa58B46F887aB519bB4d7967E718eCe7a92716d) |
+| Control Segregator             |                                                                                                                               | [0xEE6dCE1979a80b6955FBf939403e956CE649a7b5](https://holesky.etherscan.io/address/0xEE6dCE1979a80b6955FBf939403e956CE649a7b5) |
+| Spectre Proxy                  |                                                                                                                               | [0x4D083Cb89698C2CA59cDae9428854073781784A3](https://holesky.etherscan.io/address/0x4D083Cb89698C2CA59cDae9428854073781784A3) |
+| Spectre                        |                                                                                                                               | [0x220aD39E44A3765a791B33c925B8e76B8a665657](https://holesky.etherscan.io/address/0x220aD39E44A3765a791B33c925B8e76B8a665657) |
 
 **Arbitrum Sepolia (Domain ID: 8)**
 
