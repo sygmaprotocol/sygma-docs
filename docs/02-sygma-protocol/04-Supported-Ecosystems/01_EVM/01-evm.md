@@ -45,7 +45,7 @@ Each domain is defined with:
   - `basic`: fee handler properties that will be configured after deployment
     - `fee`: a string representing a fee amount
   - `oracle`: fee handler properties that will be configured after deployment
-    - `gasUsed`: a string representing a amount of units of gas that should be used for calculating transaction cost
+    - `gasUsed`: a string representing an amount of units of gas that should be used for calculating transaction cost
     - `feePercentage`: a number representing the percentage of the total deposited amount that will be taken as a fee (this is only applicable if the calculated transaction cost is smaller than the fee calculated as a percentage of the deposited amount)
 - `access`: an object containing access control information used for transferring admin access as the final step of the migration. If omitted, this migration step will be skipped.
   - `feeHandlerAdmin`: an address to which admin access for all deployed fee handlers will be renounced

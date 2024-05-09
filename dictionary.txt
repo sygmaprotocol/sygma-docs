@@ -379,7 +379,6 @@ Customizable
 sygma-explorer-indexer
 Veridise
 EVM-compatible
-<<<<<<< HEAD
 Sygma-X-Solidity
 protocol-relayers
 tailoredsecurity
@@ -410,10 +409,21 @@ auditability
 hardfork
 zipline
 tailoredsecurity-zipline-intro
-=======
 Amoy
 Blockops
 Veridise
 Spectre
 Sygma-X-Solidity
->>>>>>> develop
+resourceID
+MPC-specific
+Onchain
+Sygma-integrated
+MPC-verified
+Spectre-specific
+Spectre-verified
+evm
+protocol-evm
+DynamicERC20FeeHandlerEVM
+URI
+mb
+lr
