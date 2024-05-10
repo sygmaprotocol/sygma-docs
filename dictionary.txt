@@ -427,3 +427,12 @@ DynamicERC20FeeHandlerEVM
 URI
 mb
 lr
+tradeoffs
+Sygma-specific
+L1
+middleware
+architected
+optionality
+zk-SNARK
+rollups
+Zipline's

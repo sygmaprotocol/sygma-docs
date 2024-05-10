@@ -11,7 +11,13 @@ The following details how relayers are defined and managed by Sygma.
 
 _Relayers are entities that ensure bridge decentralization and execute asset and message bridging._
 
-At the core of Sygma exists a **set of relayers** that are distributed among several legal entities and operate under a trusted federation model. Spreading the relayer set across several legal entities creates a distribution of responsibilities and mitigates risk by disincentivizing relayers in the set to act in an unfair manner.
+At the core of Sygma exists a **set of relayers**. Relayers are offchain middleware agents whose responsibility is to listen and parse for source chain events. Upon verification of canon on the source chain (either through attestation, proof of computation, or optimistic relay), the relayer network posts to the destination network. 
+
+Under the [tailored security](../02-sygma-protocol/02-Tailored-Security/01-index.md) protocol, separate relayers exist for the various verification mechanisms. 
+
+## MPC Relay
+
+For MPC relay, the relayer network is distributed among several legal entities and operate under a trusted federation model. Spreading the relayer set across several legal entities creates a distribution of responsibilities and mitigates risk by disincentivizing relayers in the set to act in an unfair manner.
 
 Each relayer within the set listens to both the source and destination chains that are being bridged by Sygma. Based on events that are emitted, these relayers then execute relevant actions.
 
@@ -21,4 +27,10 @@ Communication between relayer parties happens in a [p2p](https://en.wikipedia.or
 
 For more on our current list of relayer partners or learn how to become one, please see [Becoming A Relayer Partner](../04-integrating-with-sygma/03-relayer-partner.md).
 
-<!-- TODO Relayers can be configured for various verification systems, including [MPC](../02-sygma-protocol/02-Tailored-Security/02-MPC/02-mpc.md), Spectre's zk verification, and Zipline's optimistic verification. -->
+## Spectre
+
+<!-- TODO -->
+
+## Zipline
+
+<!-- TODO -->

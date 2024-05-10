@@ -8,7 +8,11 @@ import SupportedDomains from '../../../../src/components/SupportedDomains';
 import { Environment } from '@buildwithsygma/sygma-sdk-core';
 
 :::tip Status
-**🟢 Active**
+| Verification Mechanism | Status                |
+|------------------------|-----------------------|
+| MPC Relay              | **🟢 Active**         |
+| Spectre                | **🟢 Active**         |
+| Zipline                | **🟠 In Development** |
 :::
 
 The following section details Sygma's testnet deployments, including both MPC and Spectre (zk) verification systems:

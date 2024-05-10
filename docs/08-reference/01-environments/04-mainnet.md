@@ -7,7 +7,11 @@ import SupportedDomains from '../../../src/components/SupportedDomains';
 import { Environment } from '@buildwithsygma/sygma-sdk-core';
 
 :::tip Status
-**🟢 Active**
+| Verification Mechanism | Status                |
+|------------------------|-----------------------|
+| MPC Relay              | **🟢 Active**         |
+| Spectre                | **🔴 Inactive** |
+| Zipline                | **🟠 In Development** |
 :::
 
 The following section details Sygma's mainnet deployment, including the protocol's:
