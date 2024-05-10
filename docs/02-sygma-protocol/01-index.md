@@ -17,7 +17,7 @@ The Sygma protocol stack is designed to leverage the combined strength of both t
 
 Sygma uses an offchain [relayer](./03-relayers.md) network to verify events on one chain that are to be posted to a destination chain. These relayer nodes, or agents, use a variety of verification systems to determine canon across chains. 
 
-Currently, the Sygma protocol is compatible with [EVM](../02-sygma-protocol/04-Supported-Ecosystems/01-evm.md) and [Substrate](../02-sygma-protocol/04-Supported-Ecosystems/02-substrate.md)-based networks, but is proven to be easily extended to other networks such as [Cosmos](../02-sygma-protocol/04-Supported-Ecosystems/04-cosmos.md)-based chains (Tendermint) and [Bitcoin](../02-sygma-protocol/04-Supported-Ecosystems/03-btc.md) as well.
+Currently, the Sygma protocol is compatible with [EVM](../02-sygma-protocol/04-Supported-Ecosystems/01-evm.md) and [Substrate](../02-sygma-protocol/04-Supported-Ecosystems/02-substrate.md)-based networks (i.e. Polkadot and Kusama), but is proven to be easily extended to other networks such as Bitcoin and Tendermint-based chains (i.e. Cosmos).
 
 The below diagram describes a typical transfer flow within the Sygma protocol using MPC verification between two EVM-based networks: 
 
