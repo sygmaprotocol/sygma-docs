@@ -93,12 +93,25 @@ This example script performs the following steps:
 import { Keyring } from "@polkadot/keyring";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
-import { Environment, Substrate, getTransferStatusData } from "@buildwithsygma/sygma-sdk-core";
+import dotenv from "dotenv";
+import {
+  Environment,
+  Substrate,
+  getTransferStatusData,
+  TransferStatusResponse
+} from "@buildwithsygma/sygma-sdk-core";
 
 const { SubstrateAssetTransfer } = Substrate;
+
 const SEPOLIA_CHAIN_ID = 11155111;
-const RESOURCE_ID = "0x0000000000000000000000000000000000000000000000000000000000001100"; // This is the resource ID for the sygUSD token according to Sygma's testnet environment 
-const recipient = "0xD31E89feccCf6f2DE10EaC92ADffF48D802b695C"; // replace this value for your preferred EVM address 
+const RESOURCE_ID =
+  "0x0000000000000000000000000000000000000000000000000000000000001100"; // this is the resourceID for sygUSD 
+const MNEMONIC = process.env.PRIVATE_MNEMONIC;
+const recipient = "0xD31E89feccCf6f2DE10EaC92ADffF48D802b695C"; // replace this value for your preferred EVM recipient address 
+const RHALA_RPC_URL = process.env.RHALA_RPC_URL || "wss://rhala-node.phala.network/ws"
+if (!MNEMONIC) {
+  throw new Error("Missing environment variable: PRIVATE_MNEMONIC");
+}
 ```
 
 - Configures the dotenv module and sets the `MNEMONIC` as a value to be pulled from the `.env` file.
@@ -120,51 +133,41 @@ if (!MNEMONIC) {
 ```ts
 const substrateTransfer = async (): Promise<void> => {
   const keyring = new Keyring({ type: "sr25519" });
+  // Make sure to fund this account with native tokens
+  // Account address: 5FNHV5TZAQ1AofSPbP7agn5UesXSYDX9JycUSCJpNuwgoYTS
+
   await cryptoWaitReady();
-  const account = keyring.addFromUri(MNEMONIC as string);
-  const wsProvider = new WsProvider("wss://subbridge-test.phala.network/rhala/ws");
+
+  const account = keyring.addFromUri(MNEMONIC);
+
+  const wsProvider = new WsProvider(RHALA_RPC_URL);
   const api = await ApiPromise.create({ provider: wsProvider });
+
   const assetTransfer = new SubstrateAssetTransfer();
+
   await assetTransfer.init(api, Environment.TESTNET);
-  ...
-}
 ```
 
 - Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.
 
 ```ts
-const getStatus = async (
-  txHash: string
-): Promise<{ status: string; explorerUrl: string } | void> => {
-  try {
-    const data = await getTransferStatusData(Environment.TESTNET, txHash);
-
-    return data as { status: string; explorerUrl: string };
-  } catch (e) {
-    console.log("error: ", e);
-  }
-};
-
-  let dataResponse: undefined | { status: string; explorerUrl: string };
-
-    const id = setInterval(() => {
+const id = setInterval(() => {
       getStatus(status.asInBlock.toString())
         .then((data) => {
-          if (data) {
-            dataResponse = data;
-            console.log(data);
+          if (data[0]) {
+            console.log("Status of the transfer", data[0].status);
+            if(data[0].status == "executed") {
+              clearInterval(id);
+              process.exit(0);
+            }
+          } else {
+            console.log("Waiting for the TX to be indexed");
           }
         })
-        .catch(() => {
-          console.log("Transfer still not indexed, retrying...");
+        .catch((e) => {
+          console.log("error:", e);
         });
     }, 5000);
-
-    if (dataResponse && dataResponse.status === "executed") {
-      console.log("Transfer executed successfully");
-      clearInterval(id);
-      process.exit(0);
-    }
   });
 };
 ```
@@ -172,18 +175,21 @@ const getStatus = async (
 - Constructs a transfer object that calculates the fee, then builds, signs, and sends the transaction.
 
 ```ts
-const transfer = assetTransfer.createFungibleTransfer(
-  account.address,
-  SEPOLIA_CHAIN_ID,
-  recipient,
-  RESOURCE_ID,
-   "500000000000000000" // 18 decimal places, so in this case 0.5 sygUSD tokens
-);
-const fee = await assetTransfer.getFee(transfer);
 const transferTx = assetTransfer.buildTransferTransaction(transfer, fee);
-const unsub = await transferTx.signAndSend(account, ({ status }) => {
-  ...
-});
+
+  const unsub = await transferTx.signAndSend(account, ({ status }) => {
+    console.log(`Current status is ${status.toString()}`);
+
+    if (status.isInBlock) {
+      console.log(
+        `Transaction included at blockHash ${status.asInBlock.toString()}`
+      );
+    } else if (status.isFinalized) {
+      console.log(
+        `Transaction finalized at blockHash ${status.asFinalized.toString()}`
+      );
+      unsub();
+    }
 ```
 
 - Logs the current status of the transaction, and if it's included in a block or finalized, outputs the respective block hash.

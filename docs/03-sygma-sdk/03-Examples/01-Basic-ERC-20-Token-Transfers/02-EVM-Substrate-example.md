@@ -97,13 +97,20 @@ This example script performs the following steps:
 - Initializes the SDK by importing the required packages and defining the constants for the script.
 
 ```ts
-import { EVMAssetTransfer, Environment, getTransferStatusData } from "@buildwithsygma/sygma-sdk-core";
+import { EVMAssetTransfer, Environment, getTransferStatusData, TransferStatusResponse } from "@buildwithsygma/sygma-sdk-core";
 import { Wallet, providers } from "ethers";
 
 const ROCOCO_PHALA_CHAIN_ID = 5231;
-const DESTINATION_ADDRESS = "5CDQJk6kxvBcjauhrogUc9B8vhbdXhRscp1tGEUmniryF1Vt"; // replace this value for your preferred Substrate address
+const DESTINATION_ADDRESS = "5CDQJk6kxvBcjauhrogUc9B8vhbdXhRscp1tGEUmniryF1Vt";
 const RESOURCE_ID =
-  "0x0000000000000000000000000000000000000000000000000000000000001100"; // This is the resource ID for the sygUSD token according to Sygma's testnet environment 
+  "0x0000000000000000000000000000000000000000000000000000000000001100";
+const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "https://gateway.tenderly.co/public/sepolia" // use your another RPC URL in case this does not work 
+const getStatus = async (
+  txHash: string
+): Promise<TransferStatusResponse[]> => {
+    const data = await getTransferStatusData(Environment.TESTNET, txHash);
+    return data as TransferStatusResponse[];
+};
 ```
 
 - Configures the dotenv module and sets the `privateKey` as a value to be pulled from the `.env` file.
@@ -128,13 +135,9 @@ export async function erc20Transfer(): Promise<void> {
 - Set up the provider, wallet, and asset transfer objects using the TESTNET environment.
 
 ```ts
-  const provider = new providers.JsonRpcProvider(
-    "https://rpc.sepolia.eth.gateway.fm/" // use your own provider in case this does not work
-  );
-  const wallet = new Wallet(
-    privateKey as string,
-    provider
-  );
+export async function erc20Transfer(): Promise<void> {
+  const provider = new providers.JsonRpcProvider(SEPOLIA_RPC_URL);
+  const wallet = new Wallet(privateKey ?? "", provider);
   const assetTransfer = new EVMAssetTransfer();
   await assetTransfer.init(provider, Environment.TESTNET);
 ```
@@ -167,37 +170,22 @@ export async function erc20Transfer(): Promise<void> {
 - Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.
 
 ```ts
-const getStatus = async (
-  txHash: string
-): Promise<{ status: string; explorerUrl: string } | void> => {
-  try {
-    const data = await getTransferStatusData(Environment.TESTNET, txHash);
-
-    return data as { status: string; explorerUrl: string };
-  } catch (e) {
-    console.log("error: ", e);
-  }
-};
-
-  let dataResponse: undefined | { status: string; explorerUrl: string };
-
   const id = setInterval(() => {
     getStatus(response.hash)
       .then((data) => {
-        if (data) {
-          dataResponse = data;
-          console.log(data);
+        if (data[0]) {
+          console.log("Status of the transfer", data[0].status);
+          if(data[0].status == "executed") {
+            clearInterval(id);
+            process.exit(0);
+          }
+        } else {
+          console.log("Waiting for the TX to be indexed");
         }
       })
-      .catch(() => {
-        console.log("Transfer still not indexed, retrying...");
+      .catch((e) => {
+        console.log("error:", e);
       });
-
-    if (dataResponse && dataResponse.status === "executed") {
-      console.log("Transfer executed successfully");
-      clearInterval(id);
-      process.exit(0);
-    }
   }, 5000);
 }
 ```
@@ -205,7 +193,7 @@ const getStatus = async (
 - Builds the final `transfer` transaction and sends it using the Ethereum wallet.
   
 ```ts
-  const transferTx = await assetTransfer.buildTransferTransaction(
+ const transferTx = await assetTransfer.buildTransferTransaction(
     transfer,
     fee
   );
