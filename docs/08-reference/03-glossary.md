@@ -6,7 +6,7 @@ description: The following section details important glossary terms related to S
 ---
 
 :::info 
-The following section is broken down into grouped sections of terminologies. It is also grouped sequentially in order of terminologies that build off of each other.
+The following section is broken down into grouped sections. It follows a sequential ordering so that terminologies and concepts might build off each other.
 :::
 
 ### Table Of Contents
@@ -19,7 +19,7 @@ The following section is broken down into grouped sections of terminologies. It 
 
 **Bridge**: A connection between two blockchain networks, allowing the transfer of data, tokens, or other assets from one chain to another.
 
-**Network**: Refers to the entirety of a Layer 1 (L1) or Layer 2 (L2) blockchain ecosystem including nodes, protocols, and technologies, e.g. Ethereum, Base, Polkadot, Bitcoin, Gnosis, Cosmos, Polygon, Cronos, etc. 
+**Network**: Refers to the entirety of a blockchain ecosystem, whether it is a layer 1 (L1) or layer 2 (L2) chain, including nodes, protocols, and technologies, e.g. Ethereum, Polygon, Base, Gnosis, Polkadot, Bitcoin, Cronos, Cosmos, etc. 
 
 **Cross-chain**: Denotes an action that occurs across multiple blockchains.
 
@@ -43,21 +43,21 @@ The following section is broken down into grouped sections of terminologies. It 
 
 **Cross-consensus message format (XCM)**: A messaging format and language used to communicate between Substrate parachains.
 
-**Liquidity provider**: An entity or individual that supplies tokenized assets to a liquidity pool, typically facilitating trading and other financial activities but also used for bridging in cross-chain transactions.
-
 ---
 
 ## Cross-chain Language
 
-**Native interoperability**: seamless cross-chain transactions established from protocol-level agreements that facilitate interoperability.
+**Native interoperability**: The ability of a digital asset, like an ERC-20 token, to be transferred across different blockchain networks and operate as the native asset of the receiving ecosystem, without being wrapped or converted into a synthetic representation. This ensures that the asset retains its original properties and functions directly within the new environment’s protocol.
 
 **Relayers**: Entities in blockchain systems that relay information from one blockchain to another. Instead of operating full nodes, a relayer operator is listening to events on a source or target chain and sending packets of data to and from different blockchains on behalf of the blockchain’s users. 
 
-**Relayer network**: The set of entities that relay information from one blockchain to another _together_ using various verification mechanisms. Its responsibilities include determining the canon of source chain events and computation.
+**Relayer network**: A collection of nodes that facilitate cross-chain communication by transmitting data and transactions between different blockchain networks, using various security mechanisms to ensure data integrity and consistency between each other.
 
 **Burn-and-mint**: A process in blockchain where tokens are 'burned' or destroyed in one network and an equivalent number of tokens are 'minted' or created in another network, commonly used in pegged token mechanisms.
 
 **Lock-and-release**: A mechanism in cross-chain transactions where assets are locked in one blockchain and equivalent assets are released in another blockchain.
+
+**Liquidity provider**: In the cross-chain context, an entity or individual that supplies tokenized assets to a liquidity pool. These assets facilitate cross-chain trading and other financial activities.
 
 **Generic message passing**: A method for sending arbitrary data and messages between different blockchains or layers within a blockchain, often used in cross-chain communication.
 
@@ -87,7 +87,7 @@ The following section is broken down into grouped sections of terminologies. It 
 
 **MPC-based relay**: A network of nodes that relay information using multi-party computation (MPC), a cryptographic method that allows multiple parties to confirm the consensus of onchain events.
 
-**Co-processor**: An offchain system that offloads heavy computational steps to verify a blockchain state.
+**Coprocessor**: An offchain system that offloads heavy computational steps to verify a blockchain state.
 
 **Zero-knowledge proof (ZKP)**: A ZKP is a cryptographic method that allows one party (the prover) to prove to another party (the verifier) that a statement is true, without revealing any specific information about the statement itself, other than the fact that it’s true.
 
