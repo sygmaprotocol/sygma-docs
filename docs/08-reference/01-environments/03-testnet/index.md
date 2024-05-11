@@ -16,32 +16,39 @@ import { Environment } from '@buildwithsygma/sygma-sdk-core';
 :::
 
 The following section details Sygma's testnet deployments, including both MPC and Spectre (zk) verification systems:
-- [Testnet transfer UI](#testnet-transfer-ui)
-- [Testnet faucet](#testnet-faucet)
-- [Supported networks](#supported-networks)
-- [EVM contract addresses](#evm-contract-addresses)
-- [Registered resources](#registered-resources)
-- [Fee schemes](#fee-schemes)
+- [Testnet Transfer UI](#testnet-transfer-ui)
+- [Testnet Faucet](#testnet-faucet)
+- [Supported Networks](#supported-networks)
+- [EVM Contract Addresses](#evm-contract-addresses)
+    - [Sepolia](#sepolia)
+    - [Cronos Testnet](#cronos-testnet)
+    - [Holesky](#holesky)
+    - [Arbitrum Sepolia](#arbitrum-sepolia)
+    - [Gnosis Chiado](#gnosis-chiado)
+    - [Base Sepolia](#base-sepolia)
+    - [Amoy](#amoy)
+- [Registered Resources](#registered-resources)
+- [Fee Schemes](#fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
 
-Many of the values found below will be important if you are a developer working with the [Sygma SDK](../../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
+You will need to work with these environment values if you are working with the [Sygma SDK](../../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
 
-## Testnet transfer UI
+## Testnet Transfer UI
 
 The [transfer UI](https://sygma-react-widget.pages.dev/) provides users with a visual interface to connect their wallets and bridge tokens.
 
-## Testnet faucet
+## Testnet Faucet
 
-The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a visual interface to mint tokens.
+The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a visual interface to mint testnet tokens.
 
-## Supported networks
+## Supported Networks
 
 <SupportedDomains environment={Environment.TESTNET} />
 
 
-## EVM contract addresses
+## EVM Contract Addresses
 
-**Sepolia (Domain ID: 2)**
+#### Sepolia
 
 | Contract                       | MPC Address                                                                                                                   | Spectre Address                                                                                                               |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +67,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Spectre Proxy                  |                                                                                                                               | [0xC4c2722e8E35fe95C49036eb0d2Ed15e48341061](https://sepolia.etherscan.io/address/0xC4c2722e8E35fe95C49036eb0d2Ed15e48341061) |
 | Spectre                        |                                                                                                                               | [0xEf7d892E8F5177ED9C8eF140E63948685B15E380](https://sepolia.etherscan.io/address/0xEf7d892E8F5177ED9C8eF140E63948685B15E380) |
 
-**Cronos Testnet (Domain ID: 5)**
+#### Cronos Testnet
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -74,7 +81,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48](https://explorer.cronos.org/testnet/address/0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48) |
 | Storage (GMP testing contract)    | [0xcb9eb2b2abbd51945a82f77e789c26720b3835bf](https://explorer.cronos.org/testnet/address/0xcb9eb2b2abbd51945a82f77e789c26720b3835bf) |
 
-**Holesky (Domain ID: 6)**
+#### Holesky
 
 | Contract                       | MPC Address                                                                                                                   | Spectre Address                                                                                                               |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -92,7 +99,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Spectre Proxy                  |                                                                                                                               | [0x4D083Cb89698C2CA59cDae9428854073781784A3](https://holesky.etherscan.io/address/0x4D083Cb89698C2CA59cDae9428854073781784A3) |
 | Spectre                        |                                                                                                                               | [0x220aD39E44A3765a791B33c925B8e76B8a665657](https://holesky.etherscan.io/address/0x220aD39E44A3765a791B33c925B8e76B8a665657) |
 
-**Arbitrum Sepolia (Domain ID: 8)**
+#### Arbitrum Sepolia
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -105,7 +112,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0x5ffB6Dc54221371CcBDb9850A283488e12aDf97D](https://sepolia.arbiscan.io/address/0x5ffB6Dc54221371CcBDb9850A283488e12aDf97D) |
 | Storage (GMP testing contract)    | [0xd2973aca263e088bb3c9c0daf80ae2afebec1386](https://sepolia.arbiscan.io/address/0xd2973aca263e088bb3c9c0daf80ae2afebec1386) |
 
-**Gnosis Chiado (Domain ID: 9)**
+#### Gnosis Chiado
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -117,7 +124,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE](https://gnosis-chiado.blockscout.com/address/0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE) |
 | Storage (GMP testing contract)    | [0x38ee9a4590035fc9506600f4d5c3f75fc8d15406](https://gnosis-chiado.blockscout.com/address/0x38ee9a4590035fc9506600f4d5c3f75fc8d15406) |
 
-**Base Sepolia (Domain ID: 10)**
+#### Base Sepolia
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -130,7 +137,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376](https://sepolia.basescan.org/address/0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376) |
 | Storage (GMP testing contract)    | [0x669f52487ffa6f9abf722082f735537a98ec0e4b](https://sepolia.basescan.org/address/0x669f52487ffa6f9abf722082f735537a98ec0e4b) |
 
-**Amoy (Domain ID: 11)**
+#### Amoy
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
@@ -143,7 +150,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/0x1F932B2582c52f939DCfb367A3A42f8A95f66782) |
 | Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb) |
 
-## Registered resources
+## Registered Resources
 
 **ERC20LRTest**
 
@@ -170,7 +177,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Resource ID              | 0x0000000000000000000000000000000000000000000000000000000000001000                                                           |
 | Sepolia Contract Address | N/A                                                                                                                          |
 
-**Permissionless generic message**
+**Permissionless generic message (MAX_FEE = 1 million)**
 
 | Details                           | Information                                                        |
 | --------------------------------- | ------------------------------------------------------------------ |
@@ -186,7 +193,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Base-sepolia Contract Address     | N/A                                                                |
 | Amoy Contract Address     | N/A                                                                |
 
-**Permissionless generic message**
+**Permissionless generic message (MAX_FEE = 15 million)**
 
 | Details                           | Information                                                        |
 | --------------------------------- | ------------------------------------------------------------------ |
@@ -227,8 +234,8 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Resource ID                   | 0x0000000000000000000000000000000000000000000000000000000000000400                                                                   |
 | Sepolia Contract Address      | [0xc6DE9aa04eF369540A6A4Fa2864342732bC99d06](https://sepolia.etherscan.io/address/0xc6DE9aa04eF369540A6A4Fa2864342732bC99d06)        |
 | Cronos Contract Address       | [0x0d3ce33038a3e9bf940eca6f5eadf355d47d36b3](https://explorer.cronos.org/testnet/address/0x0d3ce33038a3e9bf940eca6f5eadf355d47d36b3) |
-## Fee schemes
 
+## Fee Schemes
 
 | Network Name                    | Handler Address                                                                                                                      | Fee Type   | Fee Percent/Amount | Gas Amount |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ------------------ | ---------- |

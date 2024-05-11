@@ -17,11 +17,18 @@ import { Environment } from '@buildwithsygma/sygma-sdk-core';
 The following section details Sygma's mainnet deployment, including the protocol's:
 - [Supported networks](#supported-networks)
 - [EVM contract addresses](#evm-contract-addresses)
-- [Registered resources](#registered-resources)
-- [Registered routes and associated fee schemes](#registered-routes-and-associated-fee-schemes)
+    - [Ethereum Mainnet](#ethereum-mainnet)
+    - [Khala](#khala)
+    - [Phala](#phala)
+    - [Cronos](#cronos)
+    - [Base](#base)
+    - [Gnosis](#gnosis)
+    - [Polygon](#polygon)
+- [Registered Resources](#registered-resources)
+- [Registered Routes And Associated Fee Schemes](#registered-routes-and-associated-fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
 
-Many of the values found below will be important if you are a developer working with the [Sygma SDK](../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
+You will need to work with these environment values if you are working with the [Sygma SDK](../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
 
 ## Supported networks
 
@@ -29,7 +36,7 @@ Many of the values found below will be important if you are a developer working 
 
 ## EVM contract addresses
 
-**Ethereum mainnet (Domain ID: 1)**
+#### Ethereum Mainnet
 
 | Contract                           | Address                                    |
 | ---------------------------------- | ------------------------------------------ |
@@ -39,7 +46,21 @@ Many of the values found below will be important if you are a developer working 
 | ERC-20 Handler                     | [0xC832588193cd5ED2185daDA4A531e0B26eC5B830](https://etherscan.io/address/0xC832588193cd5ED2185daDA4A531e0B26eC5B830) |
 | Permissionless Generic Handler     | [0x31282123E7bcd947e2c1Bc364d564839574fAdCD](https://etherscan.io/address/0x31282123E7bcd947e2c1Bc364d564839574fAdCD) |
 
-**Cronos (Domain ID: 4)**
+#### Khala
+
+| Pallet                 | Address                                          |
+|------------------------|--------------------------------------------------|
+| Token Reserved Account | 436H4jatj6ntHTVm3wh9zs1Mqa8p1ykfcdkNH7txmjmohTu3 |
+| ERC-20 Handler         | 5EYCAe5jLbHcAAMKvLFSXgCTbPrLgBJusvPwfKcaKzuf5X5e |
+
+#### Phala
+
+| Pallet                 | Address                                          |
+|------------------------|--------------------------------------------------|
+| Token Reserved Account | 436H4jatj6ntHTVm3wh9zs1Mqa8p1ykfcdkNH7txmjmohTu3 |
+| ERC-20 Handler         | 5EYCAe5jLbHcAAMKvLFSXgCTbPrLgBJusvPwfKcaKzuf5X5e |
+
+#### Cronos
 
 | Contract                           | Address                                    |
 | ---------------------------------- | ------------------------------------------ |
@@ -50,7 +71,7 @@ Many of the values found below will be important if you are a developer working 
 | ERC-20 Handler                     | [0x13572649779c8e88bcbbF46E38d6AddaFa6Ba4f1](https://cronoscan.com/address/0x13572649779c8e88bcbbF46E38d6AddaFa6Ba4f1) |
 | Permissionless Generic Handler     | [0xB86bAe6A570a52cBc38Cf6Ac6557F169422cDf30](https://cronoscan.com/address/0xB86bAe6A570a52cBc38Cf6Ac6557F169422cDf30) |
  
-**Base (Domain ID: 5)** 
+#### Base
 
 | Contract                           | Address                                    |
 | ---------------------------------- | ------------------------------------------ |
@@ -61,7 +82,7 @@ Many of the values found below will be important if you are a developer working 
 | ERC-20 Handler                     | [0xe43F8245249d7fAF46408723Ab36D071dD85D7BB](https://basescan.org/address/0xe43F8245249d7fAF46408723Ab36D071dD85D7BB) |
 | Permissionless Generic Handler     | [0x2e1eE4153ad2F763ab8C612415AcF0DEe02Bc79B](https://basescan.org/address/0x2e1eE4153ad2F763ab8C612415AcF0DEe02Bc79B) |
 
-**Gnosis (Domain ID: 6)**
+#### Gnosis
 
 | Contract                           | Address                                    |
 | ---------------------------------- | ------------------------------------------ |
@@ -71,7 +92,7 @@ Many of the values found below will be important if you are a developer working 
 | ERC-20 Handler                     | [0x89b835B4b01E29C9464860189a394297913fD65B](https://gnosisscan.io/address/0x89b835B4b01E29C9464860189a394297913fD65B) |
 | Permissionless Generic Handler     | [0xde57DEfEe28F0F59C5Ad3B7116B3E98d257f6f27](https://gnosisscan.io/address/0xde57DEfEe28F0F59C5Ad3B7116B3E98d257f6f27) |
 
-**Polygon (Domain ID: 7)** 
+#### Polygon
 
 | Contract                           | Address                                    |
 | ---------------------------------- | ------------------------------------------ |
@@ -81,12 +102,12 @@ Many of the values found below will be important if you are a developer working 
 | ERC-20 Handler                     | [0x3eE20f17BC7D07bf3e06a7342C13A29823C22Ad5](https://polygonscan.com/address/0x3eE20f17BC7D07bf3e06a7342C13A29823C22Ad5) |
 | Permissionless Generic Handler     | [0x96eb8544Dd96aF28EeBa9b86a1De6357DAb519F6](https://polygonscan.com/address/0x96eb8544Dd96aF28EeBa9b86a1De6357DAb519F6) |
 
-## Registered resources
+## Registered Resources
 
 **Phala**
 
 | Property                          | Value                                                                                                                 |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | Symbol                            | PHA                                                                                                                   |
 | Type                              | Fungible                                                                                                              |
 | Fee strategy                      | Fixed Fee                                                                                                             |
@@ -94,6 +115,7 @@ Many of the values found below will be important if you are a developer working 
 | Bridging Strategy                 | Lock/Release                                                                                                          |
 | Resource ID                       | 0x0000000000000000000000000000000000000000000000000000000000000001                                                    |
 | Ethereum Mainnet Contract Address | [0x6c5bA91642F10282b576d91922Ae6448C9d52f4E](https://etherscan.io/address/0x6c5bA91642F10282b576d91922Ae6448C9d52f4E) |
+| Substrate Token Reserved Account  | 436H4jatj6ntHTVm3wh9zs1Mqa8p1ykfcdkNH7txmjmohTu3                                                                      |
 
 **Permissionless generic message**
 
@@ -104,7 +126,7 @@ Many of the values found below will be important if you are a developer working 
 | Bridging Strategy  | GMP                                                                |
 | Resource ID        | 0x0000000000000000000000000000000000000000000000000000000000000000 |
 
-## Registered routes and associated fee schemes
+## Registered Routes And Associated Fee Schemes
 
 | Source Network Name | Destination Network Name | Resource | Fee Percent/Amount | Resource ID                                                        |
 | ------------------- | ------------------------ | -------- | ------------------ | ------------------------------------------------------------------ |
@@ -124,7 +146,6 @@ Many of the values found below will be important if you are a developer working 
 | Polygon             | Base                     | GMP      | 2 MATIC            | 0x0000000000000000000000000000000000000000000000000000000000000000 |
 | Polygon             | Cronos                   | GMP      | 1 MATIC            | 0x0000000000000000000000000000000000000000000000000000000000000000 |
 | Polygon             | Gnosis                   | GMP      | 1 MATIC            | 0x0000000000000000000000000000000000000000000000000000000000000000 |
-
 
 ## Sygma Explorer
 
