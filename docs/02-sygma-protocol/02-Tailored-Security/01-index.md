@@ -25,7 +25,7 @@ Token routes between source and destination networks can be integrated with any 
 
 Sygma’s verification systems can be dynamically chosen by a routing gateway as a single or combined system. It has been architected to provide the most optionality in order to reach cross-chain consensus. Sygma’s MPC, Spectre, and Zipline balance degrees of trust minimization and can be combined to ensure the highest level of security. 
 
-- [**Multi-party computation (MPC)**](../02-Tailored-Security/02-MPC/02-mpc.md): a decentralized set of relayers leveraging MPC to attest to the validity of transactions on a source chain, which then transmits the corresponding proof to the destination chain.
+- [**Multi-party computation (MPC)**](../02-Tailored-Security/02-MPC/02-mpc.md): a distributed set of relayers leveraging MPC to attest to the validity of transactions on a source chain, which then transmits the corresponding signed attestation to the destination chain.
 
 - [**Spectre**](../02-Tailored-Security/03-Spectre/01-spectre-intro.md): a trust-minimized zero knowledge (zk) light-client coprocessor that generates zk-SNARK proofs of source chain consensus and user-defined computation of the verified blockchain state that can be efficiently verified on the destination chain.
 

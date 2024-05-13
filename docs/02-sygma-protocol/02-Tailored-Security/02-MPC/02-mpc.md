@@ -11,7 +11,9 @@ The following details Sygma's multi-party computation verification system.
 
 # Introduction To Sygma's Multi-party Computation (MPC)
 
-Sygma's Tailored Security system begins with its base **multi-party computation (MPC)** verification. For routes (i.e. source to destination chain) integrated with MPC, users and developers can enjoy a low cost, high speed, and secure service. At a high level, the verification system is implemented via 1) a set of MPC-specific contract addresses (or equivalent in other ecosystems) and 2) an MPC-specific relayer network. Onchain events are generated as a result of a cross-chain interaction (through a Sygma-integrated dApp). The MPC relayer network listens for and parses these cross-chain events. Multi-party computation methodologies are then used to determine whether these events are canonical; i.e. can it be verified that these events *actually* happened? The MPC relayer network will then post these events to the destination chain, signifying the end of an MPC-verified cross-chain interaction. 
+Sygma's Tailored Security system begins with its base **multi-party computation (MPC)** verification. For routes (i.e. source to destination chain) integrated with MPC, users and developers can enjoy a low cost, high speed, and secure service. At a high level, the verification system is implemented via 1) a set of MPC-specific contracts (or equivalent in other ecosystems) and 2) an MPC-specific relayer network.
+
+Onchain events are generated as a result of a cross-chain interaction (through a Sygma-integrated dApp). The MPC relayer network listens for and parses these cross-chain events. Multi-party computation methodologies are then used to determine whether these events are canonical; i.e. can it be verified that these events *actually* happened? The MPC relayer network will then make attestations and post these events to the destination chain, signifying the end of an MPC-verified cross-chain interaction. 
 
 ## What Is Multi-party Computation?
 
