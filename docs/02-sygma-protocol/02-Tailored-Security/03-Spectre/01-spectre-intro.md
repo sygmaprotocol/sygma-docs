@@ -12,8 +12,6 @@ The following details Sygma's Spectre verification system utilizing zero-knowled
 
 # Introduction To Sygma's Spectre
 
-<!-- TODO: 6.5 minutes aka every epoch proofs are sent to ethereum -->
-
 Sygma's **zero knowledge (zk) light client coprocessor, Spectre**, offers a trust-minimized, highly secure verification system that brings high speeds and low cost (at scale) in zk verification to EVM-based environments. At a high level, the verification system is implemented via 1) a set of Spectre-specific contracts (or equivalent in other ecosystems), including SNARK verifier contracts; 2) a Spectre-specific relayer + Spectre prover, and 3) a Sygma inclusion prover.
 
 The Spectre _relayer_, upon detection of an onchain event, requests the Spectre _prover_ to generate a zk-SNARK proof of the source chain state root / block header. The relayer then submits this proof onchain to a proxy contract acting as the state root storage. This triggers the executor contract on the destination chain. A separate offchain inclusion prover must then submit Merkle proofs of transaction/state inclusion in verified + finalized canonical source chain block to the executor contract. If valid, the execution will then be posted to the destination chain, signifying the end of a Spectre-verified cross-chain interaction.
@@ -46,3 +44,7 @@ Circuits in the context of ZK proofs refers to the arithmetic circuit that defin
 ## Verifier Contract
 
 "Verifier Contracts" are smart contracts deployed on a blockchain that verify the consensus proofs submitted by the prover. These contracts contain the logic necessary to validate the inclusion of transactions in a block that was finalized on the source chain - without having to redo the computation. In Spectre, these contracts are auto-generated and can handle proofs related to the consensus rules of the Ethereum blockchain as modified by the [Altair hardfork](https://ethereum.org/en/history/#altair). The verifier contract checks the proof provided by the prover using only a small amount of data and confirms whether the proof is correct, thereby ensuring that the computation was performed accurately and without tampering.
+
+:::info
+The Spectre relayer/prover follows Ethereum consensus via the light client protocol and submits onchain proofs every epoch (6.5 minutes).
+:::
