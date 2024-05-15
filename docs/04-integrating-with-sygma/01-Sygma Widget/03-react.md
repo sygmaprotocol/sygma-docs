@@ -49,4 +49,4 @@ function MyDapp(){
 }
 ```
 
-See [widget.ts](../widget/src/widget.ts) for all of the available properties.
+See [widget.ts](https://github.com/sygmaprotocol/sygma-widget/blob/main/packages/widget/src/widget.ts) for all of the available properties.
