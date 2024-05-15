@@ -458,3 +458,7 @@ codebase
 sygma-widget-react
 provers
 Gasper-based
+Validator
+eth
+holeskyETH
+incentivization
