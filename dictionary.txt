@@ -448,3 +448,13 @@ rollup
 436H4jatj6ntHTVm3wh9zs1Mqa8p1ykfcdkNH7txmjmohTu3
 5EYCAe5jLbHcAAMKvLFSXgCTbPrLgBJusvPwfKcaKzuf5X5e
 Merkle
+sygma-widget-index
+customizable
+frontend
+Vite
+behaviour
+sygma-widget-lit
+codebase
+sygma-widget-react
+provers
+Gasper-based
