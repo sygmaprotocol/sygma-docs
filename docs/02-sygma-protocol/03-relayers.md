@@ -25,7 +25,7 @@ This multi-relayer set is responsible for relaying messages from a source networ
 
 Communication between relayer parties happens in a [p2p](https://en.wikipedia.org/wiki/Peer-to-peer) manner; and participants of [p2p](https://en.wikipedia.org/wiki/Peer-to-peer) and MPC communication are strictly defined by a configuration file, which allows us to prevent [Sybil Attacks](https://en.wikipedia.org/wiki/Sybil\_attack).
 
-For more on our current list of relayer partners or learn how to become one, please see [Becoming A Relayer Partner](../04-integrating-with-sygma/03-relayer-partner.md).
+For more on our current list of relayer partners or learn how to become one, please see [Becoming A Relayer Partner](../04-integrating-with-sygma/05-relayer-partner.md).
 
 ## Spectre
 

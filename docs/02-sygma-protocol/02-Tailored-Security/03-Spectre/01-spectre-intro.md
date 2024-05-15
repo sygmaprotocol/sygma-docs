@@ -46,7 +46,7 @@ The prover generates a zero-knowledge proof by performing the necessary computat
 
 Two types of proofs are submitted onchain:
 - Step Proofs
-  - These are submitted only for the epoch where a cross-chain interaction is detected by a Sygma relayer. However, depending on the implementation, such as in the case of a Mainnet -> Gnosis route, step proofs are generated every epoch.
+  - These are submitted only for the epoch where a cross-chain interaction is detected by a Sygma relayer. However, depending on the implementation, such as in the case of a Mainnet -> Gnosis route, step proofs are generated every epoch (~3 minutes).
 - Rotate Proofs
   - These are submitted every 256 epoch (or ~27 hours on Ethereum) in order to follow Altair sync committee rotations.
 

@@ -9,7 +9,7 @@ draft: false
 
 ### Using the Sygma Explorer
 
-You can easily check the status of a cross-chain transfer invoked through the Sygma SDK using the [Sygma Explorer](../../04-integrating-with-sygma/04-explorer.md) UI.
+You can easily check the status of a cross-chain transfer invoked through the Sygma SDK using the [Sygma Explorer](../../04-integrating-with-sygma/02-explorer.md) UI.
 
 ### Using the `getTransferStatusData` function
 
