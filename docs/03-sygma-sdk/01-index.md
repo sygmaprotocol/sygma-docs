@@ -1,12 +1,10 @@
 ---
 slug: /sdk
-id: sdk-index
-title: Introduction
+id: sdk
+title: Introduction To The Sygma SDK
 description: The following section introduces the Sygma SDK.
 sidebar_position: 1
 ---
-
-## Introduction
 
 **Sygma SDK** is an open source library (under [GNU Lesser General Public License v3.0](https://www.gnu.org/licenses/lgpl-3.0.en.html)) for developers to work within the Sygma ecosystem. The SDK consist of methods that enable bridging capabilities between EVM and Substrate-based networks.
 

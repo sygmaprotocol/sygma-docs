@@ -1,5 +1,5 @@
 ---
-slug: /protocol/tailoredsecurity/
+slug: /protocol/tailoredsecurity
 id: tailoredsecurity-introduction
 title: Introduction To Tailored Security
 description: The following details Sygma's Tailored Security protocol

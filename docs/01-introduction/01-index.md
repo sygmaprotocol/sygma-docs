@@ -14,8 +14,8 @@ Sygma is a fully open source ([Lesser General Public License version 3.0 (LGPL-3
 ## What's Next
 
 - Get started with our [Quick Start Guide](../03-sygma-sdk/01-index.md)
-- Run your first [cross-chain token transfer](../03-sygma-sdk/03-Examples/01-Basic-ERC-20-Token-Transfers/01-EVM-EVM-example.md)
-- Pass your first [generic message cross-chain](../03-sygma-sdk/03-Examples/02-GMP-Examples/01-GMP-Example-With-A-Simple-Storage-Contract.md)
+- Run your first [cross-chain token transfer](../03-sygma-sdk/04-Examples/01-Basic-ERC-20-Token-Transfers/01-EVM-EVM-example.md)
+- Pass your first [generic message cross-chain](../03-sygma-sdk/04-Examples/02-GMP-Examples/01-GMP-Example-With-A-Simple-Storage-Contract.md)
 - See the [environments](../08-reference/01-environments/01-index.md) Sygma is deployed in
 - Look under the hood at the [architecture](../02-sygma-protocol/01-index.md)
 - Read more on the [Sygma Vision](02-origins.md)

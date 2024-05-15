@@ -1,6 +1,6 @@
 ---
 id: sygma-widget-react
-slug: /integrating/sygma-widget/react
+slug: /sygma-widget/react
 title: React Framework
 description: The following section provides details on the Sygma React Widget.
 sidebar_position: 3

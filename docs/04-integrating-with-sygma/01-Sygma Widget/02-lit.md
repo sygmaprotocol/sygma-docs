@@ -1,6 +1,6 @@
 ---
 id: sygma-widget-lit
-slug: /integrating/sygma-widget/lit
+slug: /sygma-widget/lit
 title: Lit Framework
 description: The following section provides details on the Sygma Lit Widget.
 sidebar_position: 2

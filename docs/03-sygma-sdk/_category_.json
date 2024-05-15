@@ -1,8 +1,4 @@
 {
     "label": "Building A DApp With Sygma",
-    "position": 3,
-    "link": {
-      "type": "doc", 
-      "id": "sdk-index" 
-    }
+    "position": 3
   }

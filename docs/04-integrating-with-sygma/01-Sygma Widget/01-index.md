@@ -1,7 +1,7 @@
 ---
-id: sygma-widget
-slug: /integrating/sygma-widget
-title: Introduction To The Widget
+id: sygma-widget-index
+slug: /sygma-widget
+title: Introduction To The Sygma Widget
 description: The following section provides details on the Sygma Widget.
 sidebar_position: 1
 ---

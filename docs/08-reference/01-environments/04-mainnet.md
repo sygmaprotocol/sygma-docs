@@ -28,7 +28,7 @@ The following section details Sygma's mainnet deployment, including the protocol
 - [Registered Routes And Associated Fee Schemes](#registered-routes-and-associated-fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
 
-You will need to work with these environment values if you are working with the [Sygma SDK](../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
+You will need to work with these environment values if you are working with the [Sygma SDK](../../03-sygma-sdk/02-Quick-Start/01-installing-the-sdk.md).
 
 ## Supported networks
 

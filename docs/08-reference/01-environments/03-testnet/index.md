@@ -31,7 +31,7 @@ The following section details Sygma's testnet deployments, including both MPC an
 - [Fee Schemes](#fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
 
-You will need to work with these environment values if you are working with the [Sygma SDK](../../../03-sygma-sdk/01-Quick-Start/01-installing-the-sdk.md).
+You will need to work with these environment values if you are working with the [Sygma SDK](../../../03-sygma-sdk/02-Quick-Start/01-installing-the-sdk.md).
 
 ## Testnet Transfer UI
 
