@@ -1,6 +1,6 @@
 ---
 id: resources-video
-slug: /reference/video
+slug: /resources/video
 title: Video Resources
 description: The following section contains video resources for Sygma
 ---

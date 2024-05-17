@@ -1,5 +1,5 @@
 ---
-slug: /reference/environments
+slug: /resource/environments
 title: Environments
 id: environments-index
 sidebar_position: 1

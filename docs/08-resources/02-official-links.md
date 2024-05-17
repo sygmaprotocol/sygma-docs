@@ -1,6 +1,6 @@
 ---
 id: official-links
-slug: /reference/official-links
+slug: /resources/official-links
 title: Official Links
 description: The following section details official links related to Sygma
 ---

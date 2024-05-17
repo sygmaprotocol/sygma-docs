@@ -1,6 +1,6 @@
 ---
 id: glossary
-slug: /reference/glossary
+slug: /resources/glossary
 title: Glossary
 description: The following section details important glossary terms related to Sygma
 ---
