@@ -27,8 +27,8 @@ import { capName } from "../utils";
 
 // Timeout interval for timer
 const TIMEOUT = 60 //seconds
-//const BASE_URL = "https://faucet-api-stage.buildwithsygma.com"
-const BASE_URL = "http://localhost:8080"
+
+const BASE_URL = "https://faucet-api-stage.buildwithsygma.com"
 
 function App() {
   const [tokens, setTokens] = useState([]);
