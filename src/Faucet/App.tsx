@@ -17,16 +17,20 @@ import TokenInfo from "./components/TokenInfo";
 import TxHashLabel from "./components/TxHashLabel";
 import ErrorDialog from "./components/ErrorDialog";
 import Progress from "./components/Progress";
+import NetworkSelect from "./components/NetworkSelect";
 
-import { getDomains, getTokens, mintRequest } from "./services/ConfigService";
+import { getDomains, getTokens, mintEvmRequest, mintSubstrateRequest } from "./services/ConfigService";
 
 import { sygmaTheme } from "./themes/SygmaTheme";
+import { Domain, Network } from "@buildwithsygma/sygma-sdk-core";
+import { capName } from "../utils";
 
 // Timeout interval for timer
 const TIMEOUT = 60 //seconds
+//const BASE_URL = "https://faucet-api-stage.buildwithsygma.com"
+const BASE_URL = "http://localhost:8080"
 
 function App() {
-  const [domains, setDomains] = useState([]);
   const [tokens, setTokens] = useState([]);
   const [sDomain, setsDomain] = useState<any>();
   const [sToken, setsToken] = useState<any>({});
@@ -37,14 +41,26 @@ function App() {
   const [serverError, setServerError] = useState<any>();
   const [expiredDate, setExpiredDate] = useState(Cookies.get('mintedExpires'));
   const [progress, setProgress] = useState(0);
-
+  const [evmDomains, setEvmDomains] = useState([]);
+  const [substrateDomains, setSubstrateDomains] = useState([]);
+  const [selectedNetworkType, setSelectedNetworkType] = useState("");
 
   useEffect(() => {
     const timeout = Cookies.get('mintedExpires')
     setExpiredDate(timeout)
-    getDomains("https://faucet-api-stage.buildwithsygma.com").then(
+    getDomains(BASE_URL).then(
       (domains) => {
-        setDomains(domains.domains);
+        let evmDomains: Domain[] = [];
+        let substrateDomains: Domain[] = []; 
+        Object.values(domains.domains).forEach((domain: Domain) => {
+          if (domain.type === Network.EVM){
+            evmDomains.push(domain)
+          } else if (domain.type === Network.SUBSTRATE){
+            substrateDomains.push(domain)
+          }
+        })
+        setEvmDomains(evmDomains);
+        setSubstrateDomains(substrateDomains);
       }
     );
   }, []);
@@ -73,7 +89,7 @@ function App() {
   const setSelectedDomain = (selectedDomain) => {
     setsDomain(selectedDomain);
     getTokens(
-      "https://faucet-api-stage.buildwithsygma.com",
+      BASE_URL,
       selectedDomain.id
     ).then((tokens) => {
       setTokens(tokens.tokens);
@@ -90,6 +106,13 @@ function App() {
     setsToAddress(event.target.value);
   };
 
+  const handleNetworkTypeChange = (networkType) => {
+    setSelectedNetworkType(networkType);
+    setsDomain(undefined);
+    setTokens([]);
+    setsToken({});
+  };
+
   const mint = (e) => {
     e.preventDefault();
     setsMinting(true);
@@ -97,28 +120,51 @@ function App() {
     Cookies.set("mintedExpires", timeToExpire.toISOString(), {
       expires: timeToExpire,
     });
-    mintRequest(
-      "https://faucet-api-stage.buildwithsygma.com",
-      sDomain.id,
-      sToken.address,
-      toAddress
-    )
-      .then((respo) => {
-        setsTxHash(respo.txHash);
-        setsMinting(false);
-        setsMintingFinished(true);
-      })
-      .catch((error) => {
-        console.error(error);
-        setsMinting(false);
-        setsMintingFinished(false);
-        setServerError(error);
-      });
+    if (selectedNetworkType === Network.EVM) {
+      mintEvmRequest(
+        BASE_URL,
+        sDomain.id,
+        sToken.address,
+        toAddress,
+      )
+        .then((resp) => {
+          setsTxHash(resp.txHash);
+          setsMinting(false);
+          setsMintingFinished(true);
+        })
+        .catch((error) => {
+          console.error(error);
+          setsMinting(false);
+          setsMintingFinished(false);
+          setServerError(error);
+        });
+    } else {
+      mintSubstrateRequest(
+        BASE_URL,
+        sDomain.id,
+        sToken.assetID,
+        toAddress,
+      )
+        .then((resp) => {
+          setsTxHash(resp.txHash);
+          setsMinting(false);
+          setsMintingFinished(true);
+        })
+        .catch((error) => {
+          console.error(error);
+          setsMinting(false);
+          setsMintingFinished(false);
+          setServerError(error);
+        });
+    }
+   
   };
 
   const isFilled = () => {
     return sDomain !== undefined && sToken.address !== undefined && toAddress !== "";
   };
+
+  const filteredDomains = selectedNetworkType.toLocaleLowerCase() === Network.EVM ? evmDomains : substrateDomains;
 
   return (
     <div>
@@ -130,14 +176,19 @@ function App() {
               onSubmit={mint}
             >
               <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                  <NetworkSelect
+                    networkTypes={[Network.EVM.toLocaleUpperCase(), capName(Network.SUBSTRATE)]}
+                    setSelectedNetworkType={handleNetworkTypeChange}                  />
+                </Grid>
                 <Grid item xs={12} sm={6}>
                   <DomainSelect
-                    disabled={minting}
-                    domainArray={domains}
+                    disabled={minting || !selectedNetworkType}
+                    domainArray={filteredDomains}
                     setSelectedDomain={setSelectedDomain}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={12}>
                   <TokenSelect
                     disabled={!sDomain || minting}
                     tokenArray={tokens}
@@ -145,7 +196,7 @@ function App() {
                   />
                 </Grid>
 
-                {sToken.address && <TokenInfo tokenInfo={sToken} />}
+                {sToken.address && <TokenInfo tokenInfo={sToken} domainType={selectedNetworkType.toLocaleLowerCase()} />}
 
                 <Grid item xs={12} sm={12}>
                   <FormControl fullWidth>
