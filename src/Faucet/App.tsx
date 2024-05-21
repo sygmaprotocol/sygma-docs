@@ -120,7 +120,7 @@ function App() {
     Cookies.set("mintedExpires", timeToExpire.toISOString(), {
       expires: timeToExpire,
     });
-    if (selectedNetworkType === Network.EVM) {
+    if (selectedNetworkType.toLocaleLowerCase() === Network.EVM) {
       mintEvmRequest(
         BASE_URL,
         sDomain.id,
