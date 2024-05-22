@@ -22,7 +22,7 @@ Before running the script, ensure that you have the following:
 - The 12-word mnemonic for your Substrate development wallet
 - An Ethereum wallet to receive tokens into (the example presets an existing wallet address already)
 - A Substrate provider (in case the hardcoded WSS within the script does not work)
-- A Substrate development wallet funded with `sygUSD` tokens; you will need to run the [EVM-to-Substrate example](02-EVM-Substrate-example.md) first to preload `sygUSD` tokens into a Substrate wallet
+- A Substrate development wallet funded with `sygUSD` tokens
 
 import App from '../../../../../src/Faucet/App'; 
 
