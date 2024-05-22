@@ -21,7 +21,7 @@ The bridge contract is responsible for initiating and executing proposed transfe
 
 The handlers are used by the bridge contract to interact with other existing contracts. For example, the `ERC20Handler` contract handles fungible ERC-20 tokens, enabling their deposit, withdrawal, and management within the protocol. On the other hand, the `PermissionlessGenericHandler` contract processes generic message deposits and their execution. It is designed to handle complex data encoding for executing transactions across chains.
 
-Beyond contracts handling asset/message types, there are handler contracts that route fees (`FeeHandlerRouter`) and collect/manage fees (`BasicFeeHandler`, `PercentageFeeHandler`) based on the destination `domain` and `resourceID` (see [Configuring Sygma](../01-index.md#configuring-sygma)).
+Beyond contracts handling asset/message types, there are handler contracts that route fees (`FeeHandlerRouter`) and collect/manage fees (`BasicFeeHandler`, `PercentageFeeHandler`) based on the destination domain `sygmaID` and `sygmaResourceID` (see [Configuring Sygma](../01-index.md#configuring-sygma)).
 
 For more information on both the Bridge and Handler contracts, please visit the [sygma-solidity](https://github.com/sygmaprotocol/sygma-solidity) repo.
 

@@ -25,17 +25,21 @@ The below diagram describes a typical transfer flow within the Sygma protocol us
 
 ## Configuring Sygma 
 
-Sygma utilizes a shared configuration file to enable cross-chain communications. It allows management of network-specific parameters like `domainID`s, `chainID`s, and `resourceID`s effectively. The shared config is primarily used by various components within the Sygma protocol, such as relayers, widgets, and SDK examples.
+Sygma utilizes a shared configuration file to enable cross-chain communications. It allows efficient management of network-specific parameters like `sygmaID`s, `chainID`s, and `sygmaResourceID`s. The shared config is primarily used by various components within the Sygma protocol, such as relayers, widgets, and SDK examples.
 
-- **`DomainID`**: Domains are Sygma-specific identifiers ascribed to an L1 or L2 blockchain network. Most configurations in Sygma are domain-specific.
+- **`sygmaID`**: Formerly domainID, it refers to Sygma-specific identifiers ascribed to an L1 or L2 blockchain network. Most configurations in Sygma are domain-specific.
+
+- **`caipId`**: Representing [caip2](https://chainagnostic.org/CAIPs/caip-2) compatible domain identifier
 
 - **`ChainID`**: Represents the more conventionally understood identifiers denoting a blockchain network. It distinguishes between different networks within the same domain or across domains. It is primarily used during interactions with RPC endpoints. 
 
-- **`ResourceID`**: Resources are Sygma-specific unique identifiers that define a token or an asset on a domain. It is crucial for asset tracking and management in cross-chain interactions. There can be different types, such as `fungible`, `nonfungible`, `semifungible`, `permissionlessgeneric`, etc.
+- **`sygmaResourceID`**: Formerly resourceID, resources are Sygma-specific unique identifiers that define a token or an asset on a domain. It is crucial for asset tracking and management in cross-chain interactions. There can be different types, such as `fungible`, `nonfungible`, `semifungible`, `permissionlessgeneric`, etc.
+
+- **`caip19`**: Representing [caip19](https://chainagnostic.org/CAIPs/caip-19) compatible resource identifier
 
 - **`Asset`**: Refers to any token or digital resource managed on a blockchain within the Substrate framework. It can be native or bridged from another chain.
 
-- **`Handler` Types**: Describes the different types of handlers (e.g., `erc20`, `permissionlessGeneric`, etc.) available to a domain, and their roles in processing specific types of transactions or interactions within the network. For more on handlers, please see [Handlers](../02-sygma-protocol/04-Supported-Ecosystems/01-evm.md#handlers)
+- **`Handler` Types**: Describes the different types of handlers (e.g., `erc20`, `permissionlessGeneric`, etc.) available to a domain, and their roles in processing specific types of transactions or interactions within the network. For more on handlers, please see [Handlers](../02-sygma-protocol/04-Supported-Ecosystems/01-evm.md#handlers).
 
 - **`feeHandlers`**: Describes the fee strategies available on each domain. For more on fees, please see [Fees](../02-sygma-protocol/05-Fees/01-Fee-intro.md).
 

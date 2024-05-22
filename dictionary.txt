@@ -462,3 +462,6 @@ Validator
 eth
 holeskyETH
 incentivization
+domainID
+caip2
+caip19
