@@ -24,6 +24,11 @@ Before running the script, ensure that you have the following:
 - A Substrate provider (in case the hardcoded WSS within the script does not work)
 - A Substrate development wallet funded with `sygUSD` tokens; you will need to run the [EVM-to-Substrate example](02-EVM-Substrate-example.md) first to preload `sygUSD` tokens into a Substrate wallet
 
+import App from '../../../../../src/Faucet/App'; 
+
+<App />
+<br/>
+
 :::danger
 We make use of the dotenv module to manage Substrate's private mnemonics with environment variables. Please note that accidentally committing a .env file containing private mnemonics to a wallet with real funds, onto GitHub, could result in the complete loss of your funds. **Never expose your private keys.**
 :::
