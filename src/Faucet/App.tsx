@@ -19,7 +19,7 @@ import ErrorDialog from "./components/ErrorDialog";
 import Progress from "./components/Progress";
 import NetworkSelect from "./components/NetworkSelect";
 
-import { getDomains, getTokens, mintEvmRequest, mintSubstrateRequest } from "./services/ConfigService";
+import { getDomains, getTokens, mintRequest } from "./services/ConfigService";
 
 import { sygmaTheme } from "./themes/SygmaTheme";
 import { Domain, Network } from "@buildwithsygma/sygma-sdk-core";
@@ -120,44 +120,23 @@ function App() {
     Cookies.set("mintedExpires", timeToExpire.toISOString(), {
       expires: timeToExpire,
     });
-    if (selectedNetworkType.toLocaleLowerCase() === Network.EVM) {
-      mintEvmRequest(
-        BASE_URL,
-        sDomain.id,
-        sToken.address,
-        toAddress,
-      )
-        .then((resp) => {
-          setsTxHash(resp.txHash);
-          setsMinting(false);
-          setsMintingFinished(true);
-        })
-        .catch((error) => {
-          console.error(error);
-          setsMinting(false);
-          setsMintingFinished(false);
-          setServerError(error);
-        });
-    } else {
-      mintSubstrateRequest(
-        BASE_URL,
-        sDomain.id,
-        sToken.assetID,
-        toAddress,
-      )
-        .then((resp) => {
-          setsTxHash(resp.txHash);
-          setsMinting(false);
-          setsMintingFinished(true);
-        })
-        .catch((error) => {
-          console.error(error);
-          setsMinting(false);
-          setsMintingFinished(false);
-          setServerError(error);
-        });
-    }
-   
+    mintRequest(
+      BASE_URL,
+      sDomain.id,
+      sToken.resourceID,
+      toAddress
+    )
+      .then((respo) => {
+        setsTxHash(respo.txHash);
+        setsMinting(false);
+        setsMintingFinished(true);
+      })
+      .catch((error) => {
+        console.error(error);
+        setsMinting(false);
+        setsMintingFinished(false);
+        setServerError(error);
+      });
   };
 
   const isFilled = () => {
