@@ -29,6 +29,31 @@ The Sygma protocol allows for two fee strategies, implemented via **fee handlers
 
 ![](../../../static/assets/fee-router-general.png)
 
+These fee handlers are mapped between `sygmaResourceID` and the handler address. This logic can be found in the `Bridge.sol` mapping called `_resourceIDToHandlerAddress`:
+
+```solidity
+mapping(bytes32 => address) public _resourceIDToHandlerAddress;
+
+function adminSetResource(address handlerAddress, bytes32 resourceID, address contractAddress, bytes calldata args) external onlyAllowed {
+    _resourceIDToHandlerAddress[resourceID] = handlerAddress;
+    IHandler handler = IHandler(handlerAddress);
+    handler.setResource(resourceID, contractAddress, args);
+}
+```
+
+In Substrate, the `FeeHandlersRouter` handles the configuration of fee routes. The `adminSetResourceHandler` function is used to set up routes for specific `sygmaResourceID`s and destination domains:
+
+```rs
+decl_module! {
+    pub struct Module<T: Config> for enum Call where origin: T::Origin {
+        #[weight = 10_000]
+        pub fn admin_set_resource_handler(origin, destination_domain: u32, resource_id: Vec<u8>, handler_id: u32) -> DispatchResult {
+            ensure_root(origin)?;
+            <ResourceHandlers>::insert((destination_domain, resource_id), handler_id);
+            Ok(())
+        }
+```
+
 ### Fee Collection
 
 Fees are usually collected in the source (i.e. native) token, but can be collected in any token using a [percentage-based fee strategy](04-Percentage-Based-Fee.md) is selected. If you are interested in a custom fee setup, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
