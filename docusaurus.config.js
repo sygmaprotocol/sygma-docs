@@ -80,11 +80,11 @@ const config = {
             },
             {
               label: `Environments`,
-              to: `/reference/environments`,
+              to: `/resource/environments`,
             },
             {
               label: `Audits`,
-              to: `/reference/audits`,
+              to: `/resource/audits`,
             },
           ],
         },
