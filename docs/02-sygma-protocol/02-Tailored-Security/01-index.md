@@ -23,7 +23,7 @@ Token routes between source and destination networks can be integrated with any 
 
 ## Sygma's Verification Systems
 
-Sygma’s verification systems can be dynamically chosen by a routing gateway as a single or combined system. It has been architected to provide the most optionality in order to reach cross-chain consensus. Sygma’s MPC, Spectre, and Zipline balance degrees of trust minimization and can be combined to ensure the highest level of security. 
+Sygma’s verification systems can be manually selected by the user or dynamically chosen by the protocol. Manual selection of verification system offers users flexibility and choice in security based on their context. Verification systems may also be dynamically chosen by a routing gateway as either a single or combined system. It has been architected to provide optionalities in order to reach cross-chain consensus. Sygma’s MPC, Spectre, and Zipline balance degrees of trust minimization and can be combined to ensure the highest level of security. Below is a list of the verification systems available in the Sygma protocol: 
 
 - [**Multi-party computation (MPC)**](../02-Tailored-Security/02-MPC/02-mpc.md): a distributed set of relayers leveraging MPC to attest to the validity of transactions on a source chain, which then transmits the corresponding signed attestation to the destination chain.
 
