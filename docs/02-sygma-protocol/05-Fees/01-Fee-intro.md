@@ -56,4 +56,4 @@ decl_module! {
 
 ### Fee Collection
 
-Fees are usually collected in the source (i.e. native) token, but can be collected in any token using a [percentage-based fee strategy](04-Percentage-Based-Fee.md) is selected. If you are interested in a custom fee setup, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
+Fees are usually collected in the source (i.e. native) token, but can be collected in any token using a [percentage-based fee strategy](04-Percentage-Based-Fee.md). If you are interested in a custom fee setup, please contact us on [Discord](https://discord.gg/Qdf6GyNB5J) or fill out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
