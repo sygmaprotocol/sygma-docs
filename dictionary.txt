@@ -465,3 +465,4 @@ incentivization
 domainID
 caip2
 caip19
+optionalities
