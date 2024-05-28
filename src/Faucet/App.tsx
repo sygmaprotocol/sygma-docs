@@ -158,13 +158,14 @@ function App() {
               <Grid item xs={12} sm={6}>
                   <NetworkSelect
                     networkTypes={[Network.EVM.toLocaleUpperCase(), capName(Network.SUBSTRATE)]}
-                    setSelectedNetworkType={handleNetworkTypeChange}                  />
+                    setSelectedNetworkType={handleNetworkTypeChange}/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <DomainSelect
                     disabled={minting || !selectedNetworkType}
                     domainArray={filteredDomains}
                     setSelectedDomain={setSelectedDomain}
+                    selectedDomain={sDomain}
                   />
                 </Grid>
                 <Grid item xs={12} sm={12}>
@@ -172,6 +173,7 @@ function App() {
                     disabled={!sDomain || minting}
                     tokenArray={tokens}
                     setSelectedToken={setSelectedToken}
+                    selectedToken={sToken}
                   />
                 </Grid>
 

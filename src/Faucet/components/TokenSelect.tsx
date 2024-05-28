@@ -5,12 +5,9 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function TokenSelect({tokenArray, setSelectedToken, disabled}) {
-
-  const [token, setToken] = React.useState('');
+export default function TokenSelect({tokenArray, setSelectedToken, disabled, selectedToken}) {
 
   const handleChange = (event) => {
-    setToken(event.target.value);
     setSelectedToken(event.target.value);
   };
 
@@ -21,7 +18,7 @@ export default function TokenSelect({tokenArray, setSelectedToken, disabled}) {
         <Select
           labelId="token-select-label"
           id="token-select"
-          value={token}
+          value={selectedToken || ""}
           label="Token"
           onChange={handleChange}
           disabled={disabled}
