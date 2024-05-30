@@ -7,7 +7,7 @@ description: The following details Sygma's Tailored Security protocol
 
 # What Is Tailored Security?
 
-Cross-chain use cases are advancing beyond just simply bridging assets. Interoperability now services complex interactions, from cross-chain contract execution to cross-chain liquid staking solutions, requiring the consensus of multiple verification systems to facilitate these. While the vast number of bridging solutions aim to enhance the trustworthiness and efficiency of cross-chain interoperability, most employ fixed security pathways, and none over aggregated tailored security routes. A true interoperability protocol should be able to adapt its verification mechanisms based on transaction type, assets involved, protocols of both chains and security and cost requirements. The Sygma cross-consensus interoperability protocol achieves this through its evolved architecture and advanced application design, automatically and dynamically routing transactions through the most optimal combinations of verification mechanisms based on the user’s needs and input parameters.
+Cross-chain use cases are advancing beyond just simply bridging assets. Interoperability now services complex interactions, from cross-chain contract execution to cross-chain liquid staking solutions, requiring the consensus of multiple verification systems to facilitate these. While the vast number of bridging solutions aim to enhance the trustworthiness and efficiency of cross-chain interoperability, most employ fixed security pathways, and none over aggregated tailored security routes. A true interoperability protocol should be able to adapt its verification mechanisms based on transaction type, assets involved, protocols of both chains, security, and cost requirements. The Sygma cross-consensus interoperability protocol achieves this through its architecture and application design, allowing users to select the optimal combinations of verification mechanisms based on their needs and input parameters.
 
 ## Scenario
 
@@ -23,7 +23,7 @@ Token routes between source and destination networks can be integrated with any 
 
 ## Sygma's Verification Systems
 
-Sygma’s verification systems can be manually selected by the user or dynamically chosen by the protocol. Manual selection of verification system offers users flexibility and choice in security based on their context. Verification systems may also be dynamically chosen by a routing gateway as either a single or combined system. It has been architected to provide optionalities in order to reach cross-chain consensus. Sygma’s MPC, Spectre, and Zipline balance degrees of trust minimization and can be combined to ensure the highest level of security. Below is a list of the verification systems available in the Sygma protocol: 
+Sygma’s verification systems can be manually selected by the user or dynamically chosen by the protocol. Manual selection of verification system offers users flexibility and choice in security based on their context. Verification systems may also be dynamically chosen by a routing gateway as either a single or combined system. This balances degrees of trust minimization to offer appropriate levels of security. Below is a list of the verification systems available in the Sygma protocol: 
 
 - [**Multi-party computation (MPC)**](../02-Tailored-Security/02-MPC/02-mpc.md): a distributed set of relayers leveraging MPC to attest to the validity of transactions on a source chain, which then transmits the corresponding signed attestation to the destination chain.
 
