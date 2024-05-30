@@ -18,6 +18,7 @@ Sygma is a fully open source ([Lesser General Public License version 3.0 (LGPL-3
 - Pass your first [generic message cross-chain](../03-sygma-sdk/04-Examples/02-GMP-Examples/01-GMP-Example-With-A-Simple-Storage-Contract.md)
 - See the [environments](../08-resources/01-environments/01-index.md) Sygma is deployed in
 - Look under the hood at the [architecture](../02-sygma-protocol/01-index.md)
+- Integrate the [Sygma Widget](https://sygma-react-widget.pages.dev/) into your dApp
 - Read more on the [Sygma Vision](02-origins.md)
 
 For the complete source code, please check out [Sygma's GitHub Repositories](../08-resources/04-github-repositories.md). 
