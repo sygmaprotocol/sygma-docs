@@ -29,8 +29,8 @@ For more on our current list of relayer partners or learn how to become one, ple
 
 ## Spectre
 
-<!-- TODO -->
+More details coming soon
 
 ## Zipline
 
-<!-- TODO -->
+More details coming soon
