@@ -24,7 +24,7 @@ Before running the script, ensure that you have the following:
 - A Substrate provider (in case the hardcoded WSS within the script does not work)
 - A Substrate development wallet funded with `sygUSD` tokens
 
-import App from '../../../../../src/Faucet/App'; 
+import App from '../../../../src/Faucet/App'; 
 
 <App />
 <br/>
