@@ -15,7 +15,7 @@ export async function getDomains(root) {
 
 export async function getTokens(root, domainID) {
     var resp = await axios({
-        url: root + "/tokens/" + domainID,
+        url: root + "/domains/" + domainID+ "/resources",
         method: "GET"
     })
 
@@ -26,12 +26,17 @@ export async function getTokens(root, domainID) {
     }
 }
 
-export async function mintRequest(root, domain, token, to) {
+export async function mintRequest(root, domain, resourceId, recipient){
     var resp = await axios({
-        url: root + "/drip/" + domain + "/" + token + "/to/" + to,
-        method: "GET"
+        url: root + "/domains/" + domain + "/resources/" + resourceId+"/drip",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data: {
+            recipient: recipient
+        }, 
+        method: "POST"
     })
-    
     if(resp.status == 200) {
         return resp.data;
     } else {
