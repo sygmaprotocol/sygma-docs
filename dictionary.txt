@@ -449,6 +449,7 @@ rollup
 5EYCAe5jLbHcAAMKvLFSXgCTbPrLgBJusvPwfKcaKzuf5X5e
 Merkle
 sygma-widget-index
+sygma-widget-playground
 customizable
 frontend
 Vite
