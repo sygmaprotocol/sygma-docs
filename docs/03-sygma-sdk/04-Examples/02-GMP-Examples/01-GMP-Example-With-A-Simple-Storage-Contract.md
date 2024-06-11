@@ -9,7 +9,7 @@ draft: false
 
 ### GMP Example With A Simple Storage Contract
 
-In the following example, we will use the `TESTNET` environment to pass a generic message from Ethereum Sepolia to Cronos Testnet using a simple storage contract. Specifically, the `deposit` method will be called on Sepolia, passing the details of the function to be called (the `store` function, or function signature `0xa271ced2`) on a smart contract deployed on Cronos ([0xcb9eb2b2abbd51945a82f77e789c26720b3835bf](https://explorer.cronos.org/testnet/address/0xcb9eb2b2abbd51945a82f77e789c26720b3835bf)). The method will encode the current UNIX timestamp as the payload to be passed and stored in the destination chain contract. The data can be read by calling the `retrieve` function on the destination chain contract by querying the depositor address derived from the private key.
+In the following example, we will use the `TESTNET` environment to pass a generic message from Ethereum Sepolia to Base-Sepolia Testnet using a simple storage contract. Specifically, the `deposit` method will be called on Sepolia, passing the details of the function to be called (the `store` function, or function signature `0xa271ced2`) on a smart contract deployed on Base-Sepolia ([0x669f52487ffa6f9abf722082f735537a98ec0e4b](https://sepolia.basescan.org/address/0x669f52487ffa6f9abf722082f735537a98ec0e4b)). The method will encode the current UNIX timestamp as the payload to be passed and stored in the destination chain contract. The data can be read by calling the `retrieve` function on the destination chain contract by querying the depositor address derived from the private key.
 
 This is an example script that demonstrates the functionality of the Sygma SDK and the wider Sygma ecosystem of relayers and bridge and handler contracts. The complete example can be found in this [repo](
 https://github.com/sygmaprotocol/sygma-sdk/tree/main/examples/evm-to-evm-generic-mesage-passing).
@@ -79,7 +79,7 @@ cd examples/evm-to-evm-generic-mesage-passing
 yarn run transfer
 ```
 
-The example will use `ethers` in conjunction with the sygma-sdk to call a function on a smart contract on Cronos by calling the `Deposit` method on Sepolia and passing the details of the function to be called.
+The example will use `ethers` in conjunction with the sygma-sdk to call a function on a smart contract on Base-Sepolia by calling the `Deposit` method on Sepolia and passing the details of the function to be called.
 
 Replace the placeholder values in the `.env` file with your own Ethereum wallet private key and provider URL.
 

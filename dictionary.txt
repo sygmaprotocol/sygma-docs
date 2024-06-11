@@ -467,3 +467,4 @@ domainID
 caip2
 caip19
 optionalities
+Base-Sepolia
