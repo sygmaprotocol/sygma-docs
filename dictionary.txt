@@ -468,3 +468,5 @@ caip19
 optionalities
 Base-Sepolia
 B3
+SygmaBTC
+sygBTC
