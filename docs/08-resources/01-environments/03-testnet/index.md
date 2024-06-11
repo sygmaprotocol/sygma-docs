@@ -27,6 +27,8 @@ The following section details Sygma's testnet deployments, including both MPC an
     - [Gnosis Chiado](#gnosis-chiado)
     - [Base Sepolia](#base-sepolia)
     - [Amoy](#amoy)
+    - [B3 Sepolia](#b3-sepolia)
+    - [Bison](#bison)
 - [Registered Resources](#registered-resources)
 - [Fee Schemes](#fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
@@ -150,6 +152,28 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/0x1F932B2582c52f939DCfb367A3A42f8A95f66782) |
 | Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb) |
 
+#### B3 Sepolia
+| Contract                          | Address                                    |
+| --------------------------------- | ------------------------------------------ |
+| Bridge                            | [0xFF92C3C393B22F9d26e5732F2601EaC04094880F](https://sepolia.explorer.b3.fun/address/0xFF92C3C393B22F9d26e5732F2601EaC04094880F) |
+| Fee Router                        | [0x837F6005187b0Ce30451b464a0C6ae77F1aC94F7](https://sepolia.explorer.b3.fun/address/0x837F6005187b0Ce30451b464a0C6ae77F1aC94F7) |
+| Fixed Fee Handler                 | [0x27284B791992a40D18197087477304368Ac67Fcb](https://sepolia.explorer.b3.fun/address/0x27284B791992a40D18197087477304368Ac67Fcb) |
+| Percentage Fee Handler            | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://sepolia.explorer.b3.fun/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F) |
+| ERC-20 Handler                    | [0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E](https://sepolia.explorer.b3.fun/address/0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E) |
+| Permissionless Generic Handler    | [0x39D1Aea5F01138940F19A15049E2073D4df1dc9E](https://sepolia.explorer.b3.fun/address/0x39D1Aea5F01138940F19A15049E2073D4df1dc9E) |
+| Storage (GMP testing contract)    |  |
+
+#### Bison
+| Contract                          | Address                                    |
+| --------------------------------- | ------------------------------------------ |
+| Bridge                            | 0x9D5C332Ebe0DaE36e07a4eD552Ad4d8c5067A61F |
+| Fee Router                        | 0x772e242e6c312f6eF6255d8F35921e7A30D018BA |
+| Fixed Fee Handler                 | 0xde937016D67811f08D93ee54093ea686C21d211C |
+| Percentage Fee Handler            | 0x4430E5D4447Df0FC25adCafEb8b5E49d38B56e21 |
+| ERC-20 Handler                    | 0x72a588B76025d552B239532C31fB7D5Cc80A3e41 |
+| Permissionless Generic Handler    | 0x3C1A4d85826919CE0d170AaA93987C79D2B4374d |
+| Storage (GMP testing contract)    |  |
+
 ## Registered Resources
 
 **ERC20LRTest**
@@ -251,6 +275,11 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Base sepolia Percentage-based   | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://sepolia.basescan.org/address/0x4430E5D4447Df0FC25adCafEb8b5E49d38B56e21)        | Percentage | 1 BPS (or 0.01%)   |            |
 | Amoy Fixed              | [0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3](https://www.oklink.com/amoy/address/0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3)        | Fixed fee  | 0.001 ETH          |            |
 | Amoy Percentage-based   | [0xcdc03289407b570e434D4BA17B3481CF6B02f369](https://www.oklink.com/amoy/address/0xcdc03289407b570e434D4BA17B3481CF6B02f369)        | Percentage | 1 BPS (or 0.01%)   |            |
+| B3 Sepolia Fixed   | [0x27284B791992a40D18197087477304368Ac67Fcb](https://sepolia.explorer.b3.fun/address/0x27284B791992a40D18197087477304368Ac67Fcb)         | Fixed fee  | 0.001 ETH          |            |
+| B3 Sepolia Percentage-based   | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://sepolia.explorer.b3.fun/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F)        | Percentage | 1 BPS (or 0.01%)   |            |
+| Bison Fixed   | 0xde937016D67811f08D93ee54093ea686C21d211C         | Fixed fee  | 0.001 ETH          |            |
+| Bison Percentage-based   | 0x4430E5D4447Df0FC25adCafEb8b5E49d38B56e21       | Percentage | 1 BPS (or 0.01%)   |            |
+
 
 ## Sygma Explorer
 
