@@ -27,6 +27,8 @@ The following section details Sygma's testnet deployments, including both MPC an
     - [Gnosis Chiado](#gnosis-chiado)
     - [Base Sepolia](#base-sepolia)
     - [Amoy](#amoy)
+    - [B3 Sepolia](#b3-sepolia)
+    - [Bison](#bison)
 - [Registered Resources](#registered-resources)
 - [Fee Schemes](#fee-schemes)
 - [Sygma Explorer](#sygma-explorer)
@@ -150,6 +152,28 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/0x1F932B2582c52f939DCfb367A3A42f8A95f66782) |
 | Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb) |
 
+#### B3 Sepolia
+| Contract                          | Address                                    |
+| --------------------------------- | ------------------------------------------ |
+| Bridge                            | [0xFF92C3C393B22F9d26e5732F2601EaC04094880F](https://sepolia.explorer.b3.fun/address/0xFF92C3C393B22F9d26e5732F2601EaC04094880F) |
+| Fee Router                        | [0x837F6005187b0Ce30451b464a0C6ae77F1aC94F7](https://sepolia.explorer.b3.fun/address/0x837F6005187b0Ce30451b464a0C6ae77F1aC94F7) |
+| Fixed Fee Handler                 | [0x27284B791992a40D18197087477304368Ac67Fcb](https://sepolia.explorer.b3.fun/address/0x27284B791992a40D18197087477304368Ac67Fcb) |
+| Percentage Fee Handler            | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://sepolia.explorer.b3.fun/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F) |
+| ERC-20 Handler                    | [0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E](https://sepolia.explorer.b3.fun/address/0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E) |
+| Permissionless Generic Handler    | [0x39D1Aea5F01138940F19A15049E2073D4df1dc9E](https://sepolia.explorer.b3.fun/address/0x39D1Aea5F01138940F19A15049E2073D4df1dc9E) |
+| Storage (GMP testing contract)    |  |
+
+#### Bison
+| Contract                          | Address                                    |
+| --------------------------------- | ------------------------------------------ |
+| Bridge                            | 0x7e28f84A21cf0349165dD4f0590B1D28b71c6087 |
+| Fee Router                        | 0x9CADaEBd6B67E424E0Cbc67Da1aF7cF991cFCb1E |
+| Fixed Fee Handler                 | 0x9b2Ac30252AADaD5DfBa81B65aA055153B0c796a |
+| Percentage Fee Handler            | 0x7a26BAC81b453E4d6407b8e3fD7989cF650dCABd |
+| ERC-20 Handler                    | 0x564ba4645aEB9F91eCfd0B0FE47B273C34F28943 |
+| Permissionless Generic Handler    | 0x669F52487ffA6f9aBf722082f735537A98Ec0E4b |
+| Storage (GMP testing contract)    |  |
+
 ## Registered Resources
 
 **ERC20LRTest**
@@ -192,6 +216,8 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Arbitrum-Sepolia Contract Address | N/A                                                                |
 | Base-sepolia Contract Address     | N/A                                                                |
 | Amoy Contract Address     | N/A                                                                |
+| B3 Sepolia Contract Address     | N/A                                                                |
+| Bison Contract Address     | N/A                                                                |
 
 **Permissionless generic message (MAX_FEE = 15 million)**
 
@@ -235,6 +261,19 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Sepolia Contract Address      | [0xc6DE9aa04eF369540A6A4Fa2864342732bC99d06](https://sepolia.etherscan.io/address/0xc6DE9aa04eF369540A6A4Fa2864342732bC99d06)        |
 | Cronos Contract Address       | [0x0d3ce33038a3e9bf940eca6f5eadf355d47d36b3](https://explorer.cronos.org/testnet/address/0x0d3ce33038a3e9bf940eca6f5eadf355d47d36b3) |
 
+
+**SygmaBTC**
+
+| Details                       | Information                                                                                                                          |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------|
+| Symbol                        | sygBTC                                                                                                                           |
+| Type                          | Fungible                                                                                                                             |
+| Registered Fee Handler        | BasicFeeHandler                                                                                                                      |
+| Registered Handler            | ERC20Handler                                                                                                                       |
+| Bridging Strategy             | Lock/Release                                                                                                                            |
+| Resource ID                   | 0x0000000000000000000000000000000000000000000000000000000000000700                                                                   |
+| Bison Contract Address      | 0x53B8C30a0C51DDda196d62DA40dF810cb8f87859    |
+
 ## Fee Schemes
 
 | Network Name                    | Handler Address                                                                                                                      | Fee Type   | Fee Percent/Amount | Gas Amount |
@@ -251,6 +290,11 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Base sepolia Percentage-based   | [0x9535484111383531BB9D6922B309Bf316Cec9A19](https://sepolia.basescan.org/address/0x4430E5D4447Df0FC25adCafEb8b5E49d38B56e21)        | Percentage | 1 BPS (or 0.01%)   |            |
 | Amoy Fixed              | [0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3](https://www.oklink.com/amoy/address/0x43E3A09C5Db24130b94f415fD11bac4b1d44A6A3)        | Fixed fee  | 0.001 ETH          |            |
 | Amoy Percentage-based   | [0xcdc03289407b570e434D4BA17B3481CF6B02f369](https://www.oklink.com/amoy/address/0xcdc03289407b570e434D4BA17B3481CF6B02f369)        | Percentage | 1 BPS (or 0.01%)   |            |
+| B3 Sepolia Fixed   | [0x27284B791992a40D18197087477304368Ac67Fcb](https://sepolia.explorer.b3.fun/address/0x27284B791992a40D18197087477304368Ac67Fcb)         | Fixed fee  | 0.001 ETH          |            |
+| B3 Sepolia Percentage-based   | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://sepolia.explorer.b3.fun/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F)        | Percentage | 1 BPS (or 0.01%)   |            |
+| Bison Fixed   | 0x9b2Ac30252AADaD5DfBa81B65aA055153B0c796a         | Fixed fee  | 0.001 ETH          |            |
+| Bison Percentage-based   | 0x7a26BAC81b453E4d6407b8e3fD7989cF650dCABd       | Percentage | 1 BPS (or 0.01%)   |            |
+
 
 ## Sygma Explorer
 
