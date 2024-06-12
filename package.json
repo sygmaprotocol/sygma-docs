@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@buildwithsygma/sygma-sdk-core": "^2.7.3",
+    "@buildwithsygma/sygmaprotocol-react-widget": "^0.1.2",
     "@cmfcmf/docusaurus-search-local": "^1.0.0",
     "@docusaurus/core": "^2.3.1",
     "@docusaurus/preset-classic": "^2.3.1",
@@ -24,6 +25,7 @@
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
+    "@polkadot/extension-inject": "^0.47.5",
     "clsx": "^1.2.1",
     "js-cookie": "^3.0.5",
     "prism-react-renderer": "^1.3.5",
@@ -34,7 +36,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.3.1",
     "@tsconfig/docusaurus": "^1.0.5",
-    "typescript": "^4.7.4"
+    "typescript": "^5.2.2"
   },
   "browserslist": {
     "production": [
