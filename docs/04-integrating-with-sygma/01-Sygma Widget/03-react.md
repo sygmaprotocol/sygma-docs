@@ -29,8 +29,8 @@ import { SygmaProtocolReactWidget } from '@buildwithsygma/sygmaprotocol-react-wi
 
 function MyDapp(){
   return (
-    <SygmaProtocolReactWidget />;
-  )
+    <SygmaProtocolReactWidget />
+  );
 }
 ```
 
