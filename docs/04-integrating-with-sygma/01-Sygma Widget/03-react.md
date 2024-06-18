@@ -25,6 +25,7 @@ yarn add @buildwithsygma/sygmaprotocol-react-widget @buildwithsygma/sygma-sdk-co
 After installation, add the widget into your code using:
 
 ```ts
+import React from "react";
 import { SygmaProtocolReactWidget } from '@buildwithsygma/sygmaprotocol-react-widget';
 
 function MyDapp(){
@@ -34,7 +35,7 @@ function MyDapp(){
 }
 ```
 
-You can also pass props to the widget component to customize it:
+You can also pass props to the widget component to customize widget behaviour:
 
 ```ts
 function MyDapp(){
