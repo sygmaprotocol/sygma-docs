@@ -45,7 +45,7 @@ function MyDapp(){
       whitelistedSourceNetworks={["sepolia"]}
       whitelistedDestinationNetworks={["cronos"]}
       evmProvider={myEip1193Provider}
-    />
+    />;
   )
 }
 ```
