@@ -49,16 +49,16 @@ The behaviour of the Sygma Widget can be customized using configurable propertie
 The currently available properties are:
 - environment
   - Desc: Determines whether the widget operates on the live network (mainnet) or a testing environment (testnet). 
-  - Usage: environment={Environment.MAINNET}
+  - Usage: `<SygmaProtocolReactWidget environment={Environment.MAINNET} />`
 - whitelistedSourceNetworks
   - Desc: Specifies which blockchain networks can be selected as the source for transactions.
-  - Usage: whitelistedSourceNetworks={["sepolia"]}
+  - Usage: `<SygmaProtocolReactWidget whitelistedSourceNetworks={["sepolia"]} />`
 - whitelistedDestinationNetworks
   - Desc: Specifies which blockchain networks can be selected as the destination for transactions.
-  - Usage: whitelistedDestinationNetworks={["cronos"]}
+  - Usage: `<SygmaProtocolReactWidget whitelistedDestinationNetworks={["cronos"]} />`
 - whitelistedSourceResources
   - Desc: Defines which assets or resources (e.g., tokens) can be selected for transaction.
-  - Usage: whitelistedSourceResources={["resourceID1", "resourceID2"]}
+  - Usage: `<SygmaProtocolReactWidget whitelistedSourceResources={["resourceID1", "resourceID2"]} />`
 - walletModules
   - Desc: Specifies the wallet integrations available for users to connect their cryptocurrency wallets.
   - Usage:
