@@ -471,3 +471,8 @@ Base-Sepolia
 B3
 SygmaBTC
 sygBTC
+whitelistedSourceNetworks
+whitelistedDestinationNetworks
+whitelistedSourceResources
+walletModules
+substrateProviders
