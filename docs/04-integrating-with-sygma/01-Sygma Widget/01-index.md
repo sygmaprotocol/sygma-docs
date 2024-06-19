@@ -62,7 +62,7 @@ The currently available properties are:
 - walletModules
   - Desc: Specifies the wallet integrations available for users to connect their cryptocurrency wallets.
   - Usage:
-    ```
+    ```ts
     const walletModules = [
       {
          walletName: "metamask",
@@ -78,7 +78,7 @@ The currently available properties are:
 - substrateProviders
   - Desc: Specifies the API endpoints or connection details for Substrate-based blockchain networks.
   - Usage:
-    ```
+    ```ts
     import { ApiPromise, WsProvider } from '@polkadot/api';
     const substrateProviders = [
     new ApiPromise({ provider: new WsProvider("wss://rpc.polkadot.io") }),
