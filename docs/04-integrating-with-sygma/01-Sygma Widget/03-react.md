@@ -12,7 +12,7 @@ Add the following dependencies to integrate the widget into any React project:
 
 ```bash
 yarn add @polkadot/extension-inject
-yarn add @polkadot/types
+yarn add -D @polkadot/types
 ```
 
 And similarly:
