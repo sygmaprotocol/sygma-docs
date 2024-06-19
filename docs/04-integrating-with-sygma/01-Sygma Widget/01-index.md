@@ -48,11 +48,44 @@ The behaviour of the Sygma Widget can be customized using configurable propertie
 
 The currently available properties are:
 - environment
+  - Desc: Determines whether the widget operates on the live network (mainnet) or a testing environment (testnet). 
+  - Usage: environment={Environment.MAINNET}
 - whitelistedSourceNetworks
+  - Desc: Specifies which blockchain networks can be selected as the source for transactions.
+  - Usage: whitelistedSourceNetworks={["sepolia"]}
 - whitelistedDestinationNetworks
+  - Desc: Specifies which blockchain networks can be selected as the destination for transactions.
+  - Usage: whitelistedDestinationNetworks={["cronos"]}
 - whitelistedSourceResources
+  - Desc: Defines which assets or resources (e.g., tokens) can be selected for transaction.
+  - Usage: whitelistedSourceResources={["resourceID1", "resourceID2"]}
 - walletModules
+  - Desc: Specifies the wallet integrations available for users to connect their cryptocurrency wallets.
+  - Usage:
+    ```
+    const walletModules = [
+      {
+         walletName: "metamask",
+         preferred: true,
+      },
+      {
+         walletName: "walletConnect",
+         rpcUrl: "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID",
+      },
+      ];
+    <SygmaProtocolReactWidget walletModules={walletModules} />
+    ```
 - substrateProviders
+  - Desc: Specifies the API endpoints or connection details for Substrate-based blockchain networks.
+  - Usage:
+    ```
+    import { ApiPromise, WsProvider } from '@polkadot/api';
+    const substrateProviders = [
+    new ApiPromise({ provider: new WsProvider("wss://rpc.polkadot.io") }),
+    new ApiPromise({ provider: new WsProvider("wss://kusama-rpc.polkadot.io") }),
+    ];
+    <SygmaProtocolReactWidget substrateProviders={substrateProviders} />
+    ```
 
 ## Using Props In An Example
 
