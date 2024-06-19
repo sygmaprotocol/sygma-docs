@@ -33,6 +33,8 @@ function MyDapp(){
     <SygmaProtocolReactWidget />
   );
 }
+
+export default MyDapp;
 ```
 
 You can also pass props to the widget component to customize widget behaviour:
