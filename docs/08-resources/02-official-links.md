@@ -17,7 +17,7 @@ description: The following section details official links related to Sygma
 
 #### [Testnet Explorer](https://scan.test.buildwithsygma.com)
 
-#### [Testnet Transfer Widget](https://sygma-react-widget.pages.dev/)
+#### [Testnet Transfer Widget](https://docs.buildwithsygma.com/sygma-widget/playground/)
 
 #### [Testnet Faucet](../08-resources/01-environments/03-testnet/01-obtain-testnet-tokens.md)
 
