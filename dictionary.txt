@@ -476,3 +476,7 @@ whitelistedDestinationNetworks
 whitelistedSourceResources
 walletModules
 substrateProviders
+MAINNET
+sygma-props
+SygmaProtocolReactWidget
+setState
