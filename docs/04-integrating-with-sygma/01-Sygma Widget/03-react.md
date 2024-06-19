@@ -11,8 +11,8 @@ sidebar_position: 3
 Add the following dependencies to integrate the widget into any React project: 
 
 ```bash
-yarn add @polkadot/extension-inject
-yarn add -D @polkadot/types
+yarn add @polkadot/extension-inject # required for polkadot wallet injections
+yarn add -D @polkadot/types # required for environment configuration
 ```
 
 And similarly:
