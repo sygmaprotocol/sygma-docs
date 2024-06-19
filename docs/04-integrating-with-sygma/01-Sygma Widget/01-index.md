@@ -44,7 +44,17 @@ Follow the [Lit](02-lit.md) or [React](03-react.md) documentation for framework-
 
 ## Widget Properties
 
-The behaviour of the Sygma Widget can be customized using configurable properties (props). A complete reference of the properties can be found under [packages/widget/src/widget.ts](https://github.com/sygmaprotocol/sygma-widget/blob/main/packages/widget/src/widget.ts)/ 
+The behaviour of the Sygma Widget can be customized using configurable properties (props). A complete reference of the properties can be found under [packages/widget/src/widget.ts](https://github.com/sygmaprotocol/sygma-widget/blob/main/packages/widget/src/widget.ts)/.
+
+The currently available properties are:
+- environment
+- whitelistedSourceNetworks
+- whitelistedDestinationNetworks
+- whitelistedSourceResources
+- walletModules
+- substrateProviders
+
+## Using Props In An Example
 
 Below you will find an example of props being passed to whitelist (i.e enable) the source and destination networks in the React component: 
 
