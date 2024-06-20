@@ -42,20 +42,4 @@ declare global {
 }
 ```
 
-You can also pass properties into the widget to customize its behaviour:
-
-```ts
-render() {
-    return html`
-      <div>
-        <sygmaprotocol-widget 
-        .environment=${Environment.MAINNET} 
-        .whitelistedSourceNetworks=${['sepolia']} 
-        .whitelistedDestinationNetworks=${['cronos']}
-        ></sygmaprotocol-widget>
-      </div>
-    `
-  }
-```
-
-See [widget.ts](https://github.com/sygmaprotocol/sygma-widget/blob/main/packages/widget/src/widget.ts) for all of the available properties.
+You can also pass properties into the widget to customize its behaviour. See [Properties](05-properties.md) for more.

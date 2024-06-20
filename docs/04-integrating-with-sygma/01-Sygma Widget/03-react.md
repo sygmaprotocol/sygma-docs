@@ -11,7 +11,7 @@ sidebar_position: 3
 Add the following dependencies to integrate the widget into any React project: 
 
 ```bash
-yarn add @polkadot/extension-inject
+yarn add @polkadot/extension-inject # required for polkadot wallet injections
 ```
 
 And similarly:
@@ -25,28 +25,16 @@ yarn add @buildwithsygma/sygmaprotocol-react-widget @buildwithsygma/sygma-sdk-co
 After installation, add the widget into your code using:
 
 ```ts
+import React from "react";
 import { SygmaProtocolReactWidget } from '@buildwithsygma/sygmaprotocol-react-widget';
 
 function MyDapp(){
   return (
-    <SygmaProtocolReactWidget />;
-  )
+    <SygmaProtocolReactWidget />
+  );
 }
+
+export default MyDapp;
 ```
 
-You can also pass props to the widget component to customize it:
-
-```ts
-function MyDapp(){
-  return (
-    <SygmaProtocolReactWidget
-      environment={Environment.MAINNET}
-      whitelistedSourceNetworks={["sepolia"]}
-      whitelistedDestinationNetworks={["cronos"]}
-      evmProvider={myEip1193Provider}
-    />
-  )
-}
-```
-
-See [widget.ts](https://github.com/sygmaprotocol/sygma-widget/blob/main/packages/widget/src/widget.ts) for all of the available properties.
+You can also pass props to the widget component to customize widget behaviour. See [Properties](05-properties.md) for more.
