@@ -32,19 +32,13 @@ The currently available properties are:
 - **substrateProviders**
   - Desc: Specifies the API endpoints or connection details for Substrate-based blockchain networks.
   - Usage:
-    1. Install `@polkadot-daily-snapshots/api` dependency: `yarn add -D @polkadot-daily-snapshots/api`
-    2. Add import statements to the top of the app:
-       `import { ApiPromise, WsProvider } from '@polkadot/api';`
-    3. Setup a setState action:
-      ```ts
-       const [substrateProviders, setSubstrateProviders] = useState<ApiPromise[]>(
-       []
-       );
-      ```
-    4. Initialize the provider:
+    1. Install `@polkadot/api` dependency: `yarn add @polkadot/api`
+    2. Add import statements to the top of the app: `import { ApiPromise, WsProvider } from '@polkadot/api';`
+    3. Setup a `setState` action: `const [substrateProviders, setSubstrateProviders] = useState<ApiPromise[]>([]);`
+    4. Initialize the Substrate provider:
       ```ts
         useEffect(() => {
-          const provider = new WsProvider('wss://rhala-node.phala.network/ws');
+          const provider = new WsProvider('[YOUR_SUBSTRATE_WSS_PROVIDER_HERE]');
           const api = new ApiPromise({ provider });
           api.isReady.then(() => {
             console.log('API is ready');
@@ -52,13 +46,12 @@ The currently available properties are:
           });
         }, []);
       ```
-    5. Pass into the component:
+    5. Pass the provider into the component:
       ```ts
         <SygmaProtocolReactWidget
           substrateProviders={substrateProviders}
         />
       ```
-
 
 ## Using Props In An Example
 
