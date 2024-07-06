@@ -9,6 +9,8 @@ description: The following details EVM support on Sygma.
 The following section details Sygma's compatibility with EVM chains via its ecosystem of smart contracts. 
 :::
 
+# Introduction To EVM Support
+
 Sygma uses Solidity smart contracts to enable transfers to and from Ethereum Virtual machine (EVM) compatible chains. These contracts consist of a core bridge contract (`Bridge.sol`), and a set of handler contracts (e.g. `ERC20Handler.sol`, `ERC721Handler.sol`, `PermissionlessGenericHandler.sol`, `FeeHandlerRouter.sol`, `BasicFeeHandler.sol`). [Different verification systems](../02-Tailored-Security/01-index.md) also require separate sets of smart contracts. These onchain components establish a relationship with the offchain actors via generation and detection of onchain contract events. 
 
 ## Sygma's Smart Contracts

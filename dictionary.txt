@@ -480,3 +480,7 @@ MAINNET
 sygma-props
 SygmaProtocolReactWidget
 setState
+UTXO-based
+stateful
+UTXO
+BTC
