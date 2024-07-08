@@ -42,3 +42,18 @@ Sygma facilitates the transfer of Bitcoin to Ethereum by setting up specific Bit
     - Constructs and sends the raw transaction to the Bitcoin network.
     - Upon confirmation, the equivalent amount of wrapped BTC is minted on Ethereum.
 
+## An Example
+
+For an example of a cross-chain transaction on Bitcoin using the Sygma protocol, see [this transaction hash](https://blockstream.info/testnet/tx/7341772580155039004345fe17c3619f777eb5b144cde9baf040c3ac422bb74e).
+
+**Anatomy**:
+- Output Index 0: `OP_RETURN`
+  - Desc: Includes `OP_RETURN` data containing the metadata (`0x703265c472F169b20E8E03c842B9B374Cb842Cb8_2`). The metadata indicates the address the funds should be bridged to as well as the domain ID (`2`), which represents Ethereum Sepolia.
+- Output Index 1: UTXO #1
+  - Desc: Contains 0.01000000 tBTC, which is the fixed fee amount for bridging with the Sygma protocol.
+  - Output Address: [tb1p0r2w3ugreaggd7nakw2wd04up6rl8k0cce8eetxwmhnrelgqx87s4zdkd7](https://blockstream.info/testnet/address/tb1p0r2w3ugreaggd7nakw2wd04up6rl8k0cce8eetxwmhnrelgqx87s4zdkd7)
+- Output Index 2: UTXO #2 
+  - Desc: Contains 2.48957356 tBTC, representing the amount of BTC being bridged to the EVM. 
+  - Output Address: [tb1p72xwajwdxdfhmu5dp39sh8jdc6msnez0a7rq4gk5jeep0kvccnsqkgcj7e](https://blockstream.info/testnet/address/tb1p72xwajwdxdfhmu5dp39sh8jdc6msnez0a7rq4gk5jeep0kvccnsqkgcj7e)
+
+![](../../../static/assets/op_return_example.png)
