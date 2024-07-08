@@ -57,8 +57,8 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Fee Router                     | [0xD277478b4684Ed8594d5eb5B228AA7aDbA59df43](https://sepolia.etherscan.io/address/0xD277478b4684Ed8594d5eb5B228AA7aDbA59df43) | [0xC2C26789671ec5e1542308Ee38faE4A640bCc03e](https://sepolia.etherscan.io/address/0xC2C26789671ec5e1542308Ee38faE4A640bCc03e) |
 | Fixed Fee Handler              | [0x356B7B3C25355325CcBFBCF00a82895F93f086b7](https://sepolia.etherscan.io/address/0x356B7B3C25355325CcBFBCF00a82895F93f086b7) | [0xEA3a9Bcc6de765aC6E01e327D22DB53b8d3DFa0C](https://sepolia.etherscan.io/address/0xEA3a9Bcc6de765aC6E01e327D22DB53b8d3DFa0C) |
 | Percentage Fee Handler         | [0xDDa14370765696cD64bA93b974a934FF18A278e2](https://sepolia.etherscan.io/address/0xDDa14370765696cD64bA93b974a934FF18A278e2) | [0xA048Ddc2C953052835e7847d8c3C4b19183AE1C0](https://sepolia.etherscan.io/address/0xA048Ddc2C953052835e7847d8c3C4b19183AE1C0) |
-| Dynamic Fee Handler         | [0x6a5c39db255D55F77ccA590418EB4175Ec02Ea37](https://sepolia.etherscan.io/address/0x6a5c39db255D55F77ccA590418EB4175Ec02Ea37) |
-| Dynamic Fee Handler         | [0x52C09318436d729c212B582A0b2Aba2952da0a05](https://sepolia.etherscan.io/address/0x52C09318436d729c212B582A0b2Aba2952da0a05) |
+| Dynamic Native Token Fee Handler         | [0x6a5c39db255D55F77ccA590418EB4175Ec02Ea37](https://sepolia.etherscan.io/address/0x6a5c39db255D55F77ccA590418EB4175Ec02Ea37) |
+| Dynamic GMP Fee Handler         | [0x52C09318436d729c212B582A0b2Aba2952da0a05](https://sepolia.etherscan.io/address/0x52C09318436d729c212B582A0b2Aba2952da0a05) |
 | ERC-20 Handler                 | [0xa65387feCb172ffF8A0aabA323A10c63757BBFA6](https://sepolia.etherscan.io/address/0xa65387feCb172ffF8A0aabA323A10c63757BBFA6) | [0x65Ce12864941F56D3665bb0d97D803E81a1d09a0](https://sepolia.etherscan.io/address/0x65Ce12864941F56D3665bb0d97D803E81a1d09a0) |
 | ERC-721 Handler                | [0x669F52487ffA6f9aBf722082f735537A98Ec0E4b](https://sepolia.etherscan.io/address/0x669F52487ffA6f9aBf722082f735537A98Ec0E4b) |                                                                                                                               |
 | ERC-1155 Handler               | [0x65903772866e538e6ffc001dd0c7665e356eb6d8](https://sepolia.etherscan.io/address/0x65903772866e538e6ffc001dd0c7665e356eb6d8) |                                                                                                                               |
@@ -78,7 +78,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Fee Router                        | [0xFaa9214b2bb90222c4f5A2DAbBB61fC945CDFD42](https://explorer.cronos.org/testnet/address/0xFaa9214b2bb90222c4f5A2DAbBB61fC945CDFD42) |
 | Fixed Fee Handler                 | [0x1afc317C3C8578274B557a022aD79e073ef6EBF7](https://explorer.cronos.org/testnet/address/0x1afc317C3C8578274B557a022aD79e073ef6EBF7) |
 | Percentage Fee Handler            | [0xC5244700904c987E5441F568440ed5c3b7233559](https://explorer.cronos.org/testnet/address/0xC5244700904c987E5441F568440ed5c3b7233559) |
-| ERC-20 Handler                    | [0x41F7869E4E0dd06c0c02804e4afcFA76BEE92CC7](https://explorer.cronos.org/testnet/address/0x41F7869E4E0dd06c0c02804e4afcFA76BEE92CC7) |
+| ERC-20 Handler                    | [0x39D1Aea5F01138940F19A15049E2073D4df1dc9E](https://explorer.cronos.org/testnet/address/0x39D1Aea5F01138940F19A15049E2073D4df1dc9E) |
 | ERC-721 Handler                   | [0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a](https://explorer.cronos.org/testnet/address/0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a) |
 | ERC-1155 Handler                  | [0x2d92a0aa3ea19da735514ea542438345ef09cb60](https://explorer.cronos.org/testnet/address/0x2d92a0aa3ea19da735514ea542438345ef09cb60) |
 | Permissionless Generic Handler    | [0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48](https://explorer.cronos.org/testnet/address/0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48) |
@@ -88,11 +88,11 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 | Contract                       | MPC Address                                                                                                                   | Spectre Address                                                                                                               |
 |--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Bridge                         | [0x2D7651aF6FFdb486571067568BFefA6e7fe7Fa8a](https://holesky.etherscan.io/address/0x2D7651aF6FFdb486571067568BFefA6e7fe7Fa8a) | [0x3DA376947B760836905a0407588C606D1020C4f3](https://holesky.etherscan.io/address/0x3DA376947B760836905a0407588C606D1020C4f3) |
+| Bridge                         | [0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78](https://holesky.etherscan.io/address/0xE366E0B707FBF59CF9A3068af34dC519D5fa6e78) | [0x3DA376947B760836905a0407588C606D1020C4f3](https://holesky.etherscan.io/address/0x3DA376947B760836905a0407588C606D1020C4f3) |
 | Fee Router                     | [0xfc8fE2bC5C780ef8cA28dda09751ef69BdDA53Cb](https://holesky.etherscan.io/address/0xfc8fE2bC5C780ef8cA28dda09751ef69BdDA53Cb) | [0x48512523Bb2634467292dd7776313916425F4c8a](https://holesky.etherscan.io/address/0x48512523Bb2634467292dd7776313916425F4c8a) |
 | Fixed Fee Handler              | [0xd6224d509DDa6c5eB3FFd3204218AD8eEC8F59Ef](https://holesky.etherscan.io/address/0xd6224d509DDa6c5eB3FFd3204218AD8eEC8F59Ef) | [0x51b9DcAcB395B00857C815aDb89D20175cBb4A58](https://holesky.etherscan.io/address/0x51b9DcAcB395B00857C815aDb89D20175cBb4A58) |
 | Percentage Fee Handler         | [0xa477963806167acB38830Ea91B081a3de47B6ce9](https://holesky.etherscan.io/address/0xa477963806167acB38830Ea91B081a3de47B6ce9) | [0x8fc170823A8dc9eD6Ce81128f0FED3E0089D52f1](https://holesky.etherscan.io/address/0x8fc170823A8dc9eD6Ce81128f0FED3E0089D52f1) |
-| ERC-20 Handler                 | [0x9D5C332Ebe0DaE36e07a4eD552Ad4d8c5067A61F](https://holesky.etherscan.io/address/0x9D5C332Ebe0DaE36e07a4eD552Ad4d8c5067A61F) | [0x96e0cBCb653448a6AE76C2f4041eC6D73127585a](https://holesky.etherscan.io/address/0x96e0cBCb653448a6AE76C2f4041eC6D73127585a) |
+| ERC-20 Handler                 | [0xEeFBd08769Ab1e369a04a17180E91E4549938d4c](https://holesky.etherscan.io/address/0xEeFBd08769Ab1e369a04a17180E91E4549938d4c) | [0x96e0cBCb653448a6AE76C2f4041eC6D73127585a](https://holesky.etherscan.io/address/0x96e0cBCb653448a6AE76C2f4041eC6D73127585a) |
 | ERC-721 Handler                |                                                                                                                               |                                                                                                                               |
 | Permissionless Generic Handler | [0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8](https://holesky.etherscan.io/address/0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8) | [0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45](https://holesky.etherscan.io/address/0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45) |
 | Storage (GMP testing contract) | [0x58476c75b48c86c05ccad9ae82ac76145bc9119d](https://holesky.etherscan.io/address/0x58476c75b48c86c05ccad9ae82ac76145bc9119d) |                                                                                                                               |
@@ -121,8 +121,8 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | --------------------------------- | ------------------------------------------ |
 | Bridge                            | [0x668fad90DeAd0F8f04346A735875b62eF9c65f0B](https://gnosis-chiado.blockscout.com/address/0x668fad90DeAd0F8f04346A735875b62eF9c65f0B) |
 | Fee Router                        | [0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E](https://gnosis-chiado.blockscout.com/address/0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E) |
-| Fixed Fee Handler                 | [0x8651f04eFA1FccfB9Cd27c6FE3FA0F2E7CB7A75a](https://gnosis-chiado.blockscout.com/address/0x8651f04eFA1FccfB9Cd27c6FE3FA0F2E7CB7A75a) |
-| Percentage Fee Handler            | [0xA6Cd2A4c41946fAADACf88a87A50997B04abE557](https://gnosis-chiado.blockscout.com/address/0xA6Cd2A4c41946fAADACf88a87A50997B04abE557) |
+| Fixed Fee Handler                 | [0x27284B791992a40D18197087477304368Ac67Fcb](https://gnosis-chiado.blockscout.com/address/0x27284B791992a40D18197087477304368Ac67Fcb) |
+| Percentage Fee Handler            | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://gnosis-chiado.blockscout.com/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F) |
 | ERC-20 Handler                    | [0xb947F89269F0cF54CC721BcDE298a46930f3418b](https://gnosis-chiado.blockscout.com/address/0xb947F89269F0cF54CC721BcDE298a46930f3418b) |
 | Permissionless Generic Handler    | [0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE](https://gnosis-chiado.blockscout.com/address/0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE) |
 | Storage (GMP testing contract)    | [0x38ee9a4590035fc9506600f4d5c3f75fc8d15406](https://gnosis-chiado.blockscout.com/address/0x38ee9a4590035fc9506600f4d5c3f75fc8d15406) |
@@ -144,14 +144,14 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 | Contract                          | Address                                    |
 | --------------------------------- | ------------------------------------------ |
-| Bridge                            | [0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e](https://www.oklink.com/amoy/0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e) |
-| Fee Router                        | [0x04C4B75084B557ab0E79dE3DEd42b6c1dD4F48E6](https://www.oklink.com/amoy/0x04C4B75084B557ab0E79dE3DEd42b6c1dD4F48E6) |
-| Fixed Fee Handler                 | [0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7](https://www.oklink.com/amoy/0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7) |
-| Percentage Fee Handler            | [0x2E3d3b2535785341584D17840F59dc0370b3504D](https://www.oklink.com/amoy/0x2E3d3b2535785341584D17840F59dc0370b3504D) |
-| ERC-20 Handler                    | [0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af](https://www.oklink.com/amoy/0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af) |
-| Permissionless Generic Handler    | [0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7](https://www.oklink.com/amoy/0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7) |
-| Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/0x1F932B2582c52f939DCfb367A3A42f8A95f66782) |
-| Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb) |
+| Bridge                            | [0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e](https://www.oklink.com/amoy/address/0x09379198A26E98b42E2619D2fCa1f3170c6FBB6e/contract) |
+| Fee Router                        | [0x04C4B75084B557ab0E79dE3DEd42b6c1dD4F48E6](https://www.oklink.com/amoy/address/0x04C4B75084B557ab0E79dE3DEd42b6c1dD4F48E6/contract) |
+| Fixed Fee Handler                 | [0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7](https://www.oklink.com/amoy/address/0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7/contract) |
+| Percentage Fee Handler            | [0x2E3d3b2535785341584D17840F59dc0370b3504D](https://www.oklink.com/amoy/address/0x2E3d3b2535785341584D17840F59dc0370b3504D/contract) |
+| ERC-20 Handler                    | [0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af](https://www.oklink.com/amoy/address/0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af/contract) |
+| Permissionless Generic Handler    | [0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7](https://www.oklink.com/amoy/address/0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7/contract) |
+| Permissionless Generic Handler    | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/address/0x1F932B2582c52f939DCfb367A3A42f8A95f66782/contract) |
+| Storage (GMP testing contract)    | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/address/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb/contract) |
 
 #### B3 Sepolia
 | Contract                          | Address                                    |
@@ -248,7 +248,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Bridging Strategy             | Lock/Release                                                                                                                            |
 | Resource ID                   | 0x0000000000000000000000000000000000000000000000000000000000000700                                                                   |
 | Sepolia Contract Address      | [0xc3cb14a020319f479ff164485008896a853dc8ca](https://sepolia.etherscan.io/address/0xc3cb14a020319f479ff164485008896a853dc8ca)        |
-| Holsky Contract Address       | [0x34d4fb8c45060143d39b7526c2b645d351af85a5](https://holesky.etherscan.io/address/0x34d4fb8c45060143d39b7526c2b645d351af85a5)         |
+| Holesky Contract Address       | [0x34d4fb8c45060143d39b7526c2b645d351af85a5](https://holesky.etherscan.io/address/0x34d4fb8c45060143d39b7526c2b645d351af85a5)         |
 
 
 ## Fee Schemes
@@ -262,7 +262,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Holesky Fixed                   | [0xd6224d509DDa6c5eB3FFd3204218AD8eEC8F59Ef](https://holesky.etherscan.io/address/0xd6224d509DDa6c5eB3FFd3204218AD8eEC8F59Ef)        | Fixed fee  | 0.001 ETH          |            |
 | Holesky Percentage-based        | [0xa477963806167acB38830Ea91B081a3de47B6ce9](https://holesky.etherscan.io/address/0xa477963806167acB38830Ea91B081a3de47B6ce9)        | Percentage | 1 BPS (or 0.01%)   |            |
 | Arbitrum-Sepolia Fixed          | [0x2D7651aF6FFdb486571067568BFefA6e7fe7Fa8a](https://sepolia.arbiscan.io/address/0x2D7651aF6FFdb486571067568BFefA6e7fe7Fa8a)         | Fixed fee  | 0.001 ETH          |            |
-| Gnosis-Chiado Fixed             | [0x8651f04eFA1FccfB9Cd27c6FE3FA0F2E7CB7A75a](https://gnosis-chiado.blockscout.com/address/0x8651f04eFA1FccfB9Cd27c6FE3FA0F2E7CB7A75a)| Fixed fee  | 0.001 xDAI         |            |
+| Gnosis-Chiado Fixed             | [0x27284B791992a40D18197087477304368Ac67Fcb](https://gnosis-chiado.blockscout.com/address/0x27284B791992a40D18197087477304368Ac67Fcb)| Fixed fee  | 0.001 xDAI         |            |
 | Base sepolia Fixed              | [0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a](https://sepolia.basescan.org/address/0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a)        | Fixed fee  | 0.001 ETH          |            |
 | Base sepolia Percentage-based   | [0xa477963806167acB38830Ea91B081a3de47B6ce9](https://sepolia.basescan.org/address/0x8b8F51bB26Eb521ac33dD6DcAA97f5d052977746)        | Percentage | 1 BPS (or 0.01%)   |            |
 | Amoy Fixed              | [0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7](https://www.oklink.com/amoy/address/0x5842071a7D59e56c73874194A1Ea25FcFB6e00D7)        | Fixed fee  | 0.001 ETH          |            |
