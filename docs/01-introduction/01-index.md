@@ -17,11 +17,12 @@ Sygma is an open-source interoperability layer licensed under [LGPL-3.0](https:/
 
 ## What's Next
 
-- Get started with our [Quick Start Guide](../03-sygma-sdk/01-index.md)
+- Get started with the Sygma SDK [Quick Start Guide](../03-sygma-sdk/01-index.md)
 - Run your first [cross-chain token transfer](../03-sygma-sdk/04-Examples/01-Basic-ERC-20-Token-Transfers/01-EVM-EVM-example.md)
 - Pass your first [generic message cross-chain](../03-sygma-sdk/04-Examples/02-GMP-Examples/01-GMP-Example-With-A-Simple-Storage-Contract.md)
 - See the [environments](../08-resources/01-environments/01-index.md) Sygma is deployed in
 - Look under the hood at the [architecture](../02-sygma-protocol/01-index.md)
+- Find out how Sygma's [Tailored Security](../02-sygma-protocol/02-Tailored-Security/01-index.md) works
 - Integrate the [Sygma Widget](https://docs.buildwithsygma.com/sygma-widget/playground/) into your dApp
 - Read more on the [Sygma Vision](02-origins.md)
 
