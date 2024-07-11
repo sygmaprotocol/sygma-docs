@@ -5,11 +5,15 @@ title: Introduction
 description: The following describes an introduction of Sygma.
 ---
 
-# Welcome to Sygma Docs
+# Home
+
+![](https://blog.buildwithsygma.com/content/images/2023/06/full-logo-3.png)
+
+## Welcome To The Sygma Docs 
 
 > _Sygma, like the Greek letter sigma (Σ), alludes to summation, the adding up of many things._
 
-Sygma is a fully open source ([Lesser General Public License version 3.0 (LGPL-3.0)](https://www.gnu.org/licenses/lgpl-3.0.html)) multi-purpose interoperability layer that supports developers in building cross-chain dApps. A key part in this is removing complexity from the equation. Sygma empowers builders to create streamlined experiences by abstracting the complexities of bridging away and enabling smooth, web2-like user experiences. 
+Sygma is an open-source interoperability layer licensed under [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.html), designed to support the development of cross-chain decentralized applications (dApps). It abstracts the underlying complexities of blockchain bridging, enabling developers to create dApps that facilitate cross-chain token transfers and generic message passing. Sygma integrates with multiple blockchain environments, providing tools for efficient cross-chain communication. This documentation covers technical and non-technical aspects of the protocol, aiming to equip both novice and experienced developers with the knowledge to leverage Sygma effectively in their projects.
 
 ## What's Next
 
@@ -22,3 +26,11 @@ Sygma is a fully open source ([Lesser General Public License version 3.0 (LGPL-3
 - Read more on the [Sygma Vision](02-origins.md)
 
 For the complete source code, please check out [Sygma's GitHub Repositories](../08-resources/04-github-repositories.md). 
+
+## About These Docs
+
+This documentation is open source and can be found at [sygma-docs](https://github.com/sygma-protocol/docs). For more on contributing, please see [Contribute](../10-contribute.md).
+
+## Need Assistance?
+
+First, make sure to check out the [FAQs](../09-faq.md). If you have questions about the protocol, the code, the docs, or have a business inquiry, please reach out to us on [Discord](https://discord.gg/Qdf6GyNB5J) or by filling out [this form](https://share.hsforms.com/1K4-T_yaKSp6F06FGk4wsSgnmy2x).
