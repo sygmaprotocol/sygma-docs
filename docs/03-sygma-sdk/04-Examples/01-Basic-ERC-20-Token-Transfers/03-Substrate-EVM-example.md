@@ -7,6 +7,11 @@ sidebar_position: 3
 draft: false
 ---
 
+:::warning
+Please be aware that the Rococo-Phala testnet is currently down due to ongoing maintenance by the Phala team as they migrate their testnet to Paseo. Stay tuned for further updates.
+:::
+
+
 ### EVM-to-Substrate token transfer example
 
 In the following example, we will use the `TESTNET` environment to perform a cross-chain ERC-20 transfer with 0.5 sygUSD `sygUSD` tokens. The transfer will be initiated on the Substrate-side via the Rococo-Phala testnet and received on the EVM-side via the Sepolia Ethereum testnet.
