@@ -480,4 +480,13 @@ MAINNET
 sygma-props
 SygmaProtocolReactWidget
 setState
+UTXO-based
+stateful
+UTXO
+BTC
+tBTC
+LGPL-3.0
+sygma-docs
+sygma-shared-configuration
+IPFS
 Paseo
