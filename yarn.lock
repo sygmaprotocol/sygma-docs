@@ -1258,12 +1258,30 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@buildwithsygma/core@file:/home/mace/repos/sygma-sdk/packages/core":
+  version "0.0.1"
+  dependencies:
+    "@buildwithsygma/sygma-contracts" "2.6.1"
+    "@ethersproject/abi" "^5.7.0"
+    "@ethersproject/bytes" "^5.7.0"
+    "@ethersproject/contracts" "^5.7.0"
+    "@ethersproject/providers" "^5.7.2"
+    ethers "5.6.2"
+
 "@buildwithsygma/sygma-contracts@2.5.1":
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/@buildwithsygma/sygma-contracts/-/sygma-contracts-2.5.1.tgz#b874853b7c52c12e0ca1de0cf84cc8711a8e58f8"
   integrity sha512-9jWck7+tX3ot0KCtCl4JqDY+hw70/MVb8qd3qbb2c17/RC28ObQ5qMHLGX+Z+S+KkQyMfRqjsUqXu1+dxXGmkA==
   dependencies:
     "@openzeppelin/contracts" "4.5.0"
+
+"@buildwithsygma/sygma-contracts@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@buildwithsygma/sygma-contracts/-/sygma-contracts-2.6.1.tgz#503d090f2f65bded7363915ad38bbf3a0a110358"
+  integrity sha512-5yEdSR+CdX40hoZ+Hgu2eUpLGxHhjnm3JHvg3EgbPIuFY+42lfDBpdtljZ+vR3unrwPKiyxt5AGA93cBZZHTPw==
+  dependencies:
+    "@openzeppelin/contracts" "4.5.0"
+    "@uniswap/v3-periphery" "^1.4.4"
 
 "@buildwithsygma/sygma-contracts@^2.5.1":
   version "2.8.0"

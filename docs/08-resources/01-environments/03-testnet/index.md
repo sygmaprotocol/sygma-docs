@@ -4,7 +4,9 @@ id: testnet-index
 description: The following details a list of resources that support the Testnet environment.
 ---
 
-import SupportedDomains from '../../../../src/components/SupportedDomains'; 
+import EnvironmentComponent from '../../../../src/components/Environment';
+import RoutesByDomain from '../../../../src/components/Routes';
+import SupportedDomains from '../../../../src/components/SupportedDomains';
 import { Environment } from '@buildwithsygma/sygma-sdk-core';
 
 :::tip Status
@@ -44,8 +46,19 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 ## Supported Networks
 
-<SupportedDomains environment={Environment.TESTNET} />
 
+
+export default function DocPage() {
+  return (
+    <EnvironmentComponent environment={"testnet"}>
+      <div>
+        <h1>Testnet</h1>
+        <SupportedDomains />
+        <RoutesByDomain />
+      </div>
+    </EnvironmentComponent>
+  );
+}
 
 ## EVM Contract Addresses
 
