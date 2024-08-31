@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useConfig } from './ConfigContext';
-import { Resource, ResourceType } from '@buildwithsygma/sygma-sdk-core';
+import { Resource } from '@buildwithsygma/core';
 import {capLongName} from "@site/src/utils";
 
 type Route = {
@@ -24,6 +24,7 @@ type DomainMetadata = {
 const RoutesByDomain: React.FC = () => {
     const { config, loading: configLoading } = useConfig();
     const [selectedDomain, setSelectedDomain] = useState<string>('');
+    const [selectedDomainID, setSelectedDomainID] = useState(Number);
     const [routes, setRoutes] = useState<Route[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [metadata, setMetadata] = useState<DomainMetadata>({});
@@ -86,7 +87,7 @@ const RoutesByDomain: React.FC = () => {
         return <div>Loading domains...</div>;
     }
 
-    const domains: Domain[] = config.environment.domains.map((domain) => ({
+    const domains: Domain[] = config.getDomains().map((domain) => ({
         id: domain.id.toString(),
         name: domain.name,
     } as Domain));
@@ -111,13 +112,19 @@ const RoutesByDomain: React.FC = () => {
 
     }
 
+    const onSelectedDomain = (target: any) => {
+        setSelectedDomain(target.value)
+        const dom = config.findDomainConfig(target.value)
+        console.log(dom)
+    }
+
     return (
         <div>
             <label htmlFor="domain-select">Select Domain:</label>
             <select
                 id="domain-select"
                 value={selectedDomain}
-                onChange={(e) => setSelectedDomain(e.target.value)}
+                onChange={(e) => onSelectedDomain(e.target)}
             >
                 <option value="">--Select a domain--</option>
                 {domains.map((domain) => (
@@ -127,7 +134,7 @@ const RoutesByDomain: React.FC = () => {
                 ))}
             </select>
             {selectedDomain!="" ?
-            <img src={metadata[config.chainId]?.url} alt={`${selectedDomain} icon`}
+            <img src={metadata[selectedDomain]?.url} alt={`${selectedDomain} icon`}
                  width="20" height="20"/> : <span></span>}
     {
         loading ? (

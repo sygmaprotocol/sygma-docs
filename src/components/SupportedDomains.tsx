@@ -5,7 +5,7 @@ import { capName } from '../utils';
 const SupportedDomains: React.FC = () => {
   const { config, loading } = useConfig();
 
-  if (loading || !config || !config.environment) {
+  if (loading || !config) {
     return <div>Loading domains...</div>;
   }
 
@@ -20,7 +20,7 @@ const SupportedDomains: React.FC = () => {
         </tr>
         </thead>
         <tbody>
-        {config.environment.domains.map((domain, index) => (
+        {config.getDomains().map((domain, index) => (
             <tr key={index}>
               <td>{capName(domain.name)}</td>
               <td>{domain.type.toUpperCase()}</td>
