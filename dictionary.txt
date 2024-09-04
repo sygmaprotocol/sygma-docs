@@ -490,3 +490,5 @@ sygma-docs
 sygma-shared-configuration
 IPFS
 Paseo
+DefaultMessageReceiver
+SprinterNameService
