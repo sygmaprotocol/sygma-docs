@@ -4,7 +4,7 @@ id: testnet-index
 description: The following details a list of resources that support the Testnet environment.
 ---
 
-import SupportedDomains from '../../../../src/components/SupportedDomains'; 
+import SupportedDomains from '../../../../src/components/SupportedDomains';
 import { Environment } from '@buildwithsygma/sygma-sdk-core';
 
 :::tip Status
@@ -63,7 +63,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-721 Handler                                | [0x669F52487ffA6f9aBf722082f735537A98Ec0E4b](https://sepolia.etherscan.io/address/0x669F52487ffA6f9aBf722082f735537A98Ec0E4b)      |                                                                                                                               |
 | ERC-1155 Handler                               | [0x65903772866e538e6ffc001dd0c7665e356eb6d8](https://sepolia.etherscan.io/address/0x65903772866e538e6ffc001dd0c7665e356eb6d8)      |                                                                                                                               |
 | Permissionless Generic Handler                 | [0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479](https://sepolia.etherscan.io/address/0x7dCBdb9cBA0Bb1871EECafAB290E5a2e45077479)      | [0x57d66F8A5A57942b25368C837005141e8A586155](https://sepolia.etherscan.io/address/0x57d66F8A5A57942b25368C837005141e8A586155) |
-| Storage (GMP testing contract)                 | [0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd](https://sepolia.etherscan.io/address/0x0e963aEe445EDC19034e9938570E5E7BE4Ee19Cd)      |                                                                                                                               |
+| Storage (GMP testing contract)                 | [0x10791B617D2Dad4978Cc18E3A88e422310428430](https://sepolia.etherscan.io/address/0x10791b617d2dad4978cc18e3a88e422310428430)      |                                                                                                                               |
 | Router                                         |                                                                                                                                    | [0x57a3aC22bb0779A91B334027982cbC58a71aaD32](https://sepolia.etherscan.io/address/0x57a3aC22bb0779A91B334027982cbC58a71aaD32) |
 | Executor                                       |                                                                                                                                    | [0x108E42c97a57A7FFC3fbB80A8A14129a94cD29C7](https://sepolia.etherscan.io/address/0x108E42c97a57A7FFC3fbB80A8A14129a94cD29C7) |
 | Control Segregator                             |                                                                                                                                    | [0x2Bdfa87E8caaaB11b8b510C83899Cb18F1D2d4Fd](https://sepolia.etherscan.io/address/0x2Bdfa87E8caaaB11b8b510C83899Cb18F1D2d4Fd) |
@@ -86,7 +86,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-721 Handler                | [0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a](https://explorer.cronos.org/testnet/address/0x52757D9c1a8f8b496cf1e688bbB8055f9F3DfC8a) |
 | ERC-1155 Handler               | [0x2d92a0aa3ea19da735514ea542438345ef09cb60](https://explorer.cronos.org/testnet/address/0x2d92a0aa3ea19da735514ea542438345ef09cb60) |
 | Permissionless Generic Handler | [0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48](https://explorer.cronos.org/testnet/address/0x3CBbC542d10CD037cafb1632B29B5B0F59B08A48) |
-| Storage (GMP testing contract) | [0xcb9eb2b2abbd51945a82f77e789c26720b3835bf](https://explorer.cronos.org/testnet/address/0xcb9eb2b2abbd51945a82f77e789c26720b3835bf) |
+| Storage (GMP testing contract) | [0x4b17531F07e002Ee2A0714F79d84d9bEcF6b243D](https://explorer.cronos.org/testnet/address/0x4b17531F07e002Ee2A0714F79d84d9bEcF6b243D) |
 
 #### Holesky
 
@@ -99,7 +99,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-20 Handler                 | [0xEeFBd08769Ab1e369a04a17180E91E4549938d4c](https://holesky.etherscan.io/address/0xEeFBd08769Ab1e369a04a17180E91E4549938d4c) | [0x96e0cBCb653448a6AE76C2f4041eC6D73127585a](https://holesky.etherscan.io/address/0x96e0cBCb653448a6AE76C2f4041eC6D73127585a) |
 | ERC-721 Handler                |                                                                                                                               |                                                                                                                               |
 | Permissionless Generic Handler | [0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8](https://holesky.etherscan.io/address/0xc1154781Fa12a845aCaf276Bf2030040Ba9DAec8) | [0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45](https://holesky.etherscan.io/address/0x347BfeA6B3E929d91caE8e0AfB5DE97d3574AB45) |
-| Storage (GMP testing contract) | [0x58476c75b48c86c05ccad9ae82ac76145bc9119d](https://holesky.etherscan.io/address/0x58476c75b48c86c05ccad9ae82ac76145bc9119d) |                                                                                                                               |
+| Storage (GMP testing contract) | [0x5984CA38b38b43d0A9c94BA5a6D6969E92124a15](https://holesky.etherscan.io/address/0x5984CA38b38b43d0A9c94BA5a6D6969E92124a15) |                                                                                                                               |
 | Router                         |                                                                                                                               | [0x6Bac21Aa7627009C79cd4784D94e9c280E36ED79](https://holesky.etherscan.io/address/0x6Bac21Aa7627009C79cd4784D94e9c280E36ED79) |
 | Executor                       |                                                                                                                               | [0x8Fa58B46F887aB519bB4d7967E718eCe7a92716d](https://holesky.etherscan.io/address/0x8Fa58B46F887aB519bB4d7967E718eCe7a92716d) |
 | Control Segregator             |                                                                                                                               | [0xEE6dCE1979a80b6955FBf939403e956CE649a7b5](https://holesky.etherscan.io/address/0xEE6dCE1979a80b6955FBf939403e956CE649a7b5) |
@@ -117,7 +117,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-20 Handler                 | [0x5AF405550De00b38cAC1ED7276d0A09114831bCB](https://sepolia.arbiscan.io/address/0x5AF405550De00b38cAC1ED7276d0A09114831bCB) |
 | ERC-721 Handler                |                                                                                                                              |
 | Permissionless Generic Handler | [0x5ffB6Dc54221371CcBDb9850A283488e12aDf97D](https://sepolia.arbiscan.io/address/0x5ffB6Dc54221371CcBDb9850A283488e12aDf97D) |
-| Storage (GMP testing contract) | [0xd2973aca263e088bb3c9c0daf80ae2afebec1386](https://sepolia.arbiscan.io/address/0xd2973aca263e088bb3c9c0daf80ae2afebec1386) |
+| Storage (GMP testing contract) | [0xD7d5E7d7eaD31E783Df01760FbFad249704Aab14](https://sepolia.arbiscan.io/address/0xD7d5E7d7eaD31E783Df01760FbFad249704Aab14) |
 
 #### Gnosis Chiado
 
@@ -129,7 +129,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Percentage Fee Handler         | [0x14d1cA88277E13B5615C2C727415a1B94E90264F](https://gnosis-chiado.blockscout.com/address/0x14d1cA88277E13B5615C2C727415a1B94E90264F) |
 | ERC-20 Handler                 | [0xb947F89269F0cF54CC721BcDE298a46930f3418b](https://gnosis-chiado.blockscout.com/address/0xb947F89269F0cF54CC721BcDE298a46930f3418b) |
 | Permissionless Generic Handler | [0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE](https://gnosis-chiado.blockscout.com/address/0xe4B86b1B07bBdB0C47940b9B3bD4954A0deAdaBE) |
-| Storage (GMP testing contract) | [0x38ee9a4590035fc9506600f4d5c3f75fc8d15406](https://gnosis-chiado.blockscout.com/address/0x38ee9a4590035fc9506600f4d5c3f75fc8d15406) |
+| Storage (GMP testing contract) | [0x40e273C40349dCA9062F9a3B80BAdFF000512c1F](https://gnosis-chiado.blockscout.com/address/0x40e273C40349dCA9062F9a3B80BAdFF000512c1F) |
 
 #### Base Sepolia
 
@@ -142,7 +142,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-20 Handler                                 | [0x72a588B76025d552B239532C31fB7D5Cc80A3e41](https://sepolia.basescan.org/address/0x72a588B76025d552B239532C31fB7D5Cc80A3e41)      |
 | Permissionless Generic Handler                 | [0x7f4e1E62A0Abd4A381254335CeF5770F74b3E22E](https://sepolia.basescan.org/address/0x7f4e1E62A0Abd4A381254335CeF5770F74b3E22E)      |
 | Permissionless Generic Handler                 | [0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376](https://sepolia.basescan.org/address/0xfd69bbfcCbfc832C56Ca1490df48B4baF3DfD376)      |
-| Storage (GMP testing contract)                 | [0x669f52487ffa6f9abf722082f735537a98ec0e4b](https://sepolia.basescan.org/address/0x669f52487ffa6f9abf722082f735537a98ec0e4b)      |
+| Storage (GMP testing contract)                 | [0xF1bFBbE4174E2E6595E095BDF3ac8b97aF7796aA](https://sepolia.basescan.org/address/0xF1bFBbE4174E2E6595E095BDF3ac8b97aF7796aA)      |
 | ERC-20* Handler (with contract call)           | [0x3b0f996C474c91de56617da13a52B22BB659D18E](https://sepolia.basescan.org/address/0x3b0f996C474c91de56617da13a52B22BB659D18E#code) |                                                                                                                               |
 | Dynamic ERC-20* Native Fee Handler             | [0x4cd7786e926b1f3d5c8ecb338c6ad2abafc44948](https://sepolia.basescan.org/address/0x4cd7786e926b1f3d5c8ecb338c6ad2abafc44948#code) |                                                                                                                               |
 | DefaultMessageReceiver                         | [0x0a55ad2e95BFfd8216774c1489aeDef2F92Ae43a](https://sepolia.basescan.org/address/0x0a55ad2e95BFfd8216774c1489aeDef2F92Ae43a)      |                                                                                                                               |
@@ -159,7 +159,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | ERC-20 Handler                 | [0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af](https://www.oklink.com/amoy/address/0x7E462Fc0E0b6f5EC18C8935f2676E7E40e06a7af/contract) |
 | Permissionless Generic Handler | [0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7](https://www.oklink.com/amoy/address/0x3080Ecd6dEc3fe8a3A07d40e656f7D5fc6b3c3A7/contract) |
 | Permissionless Generic Handler | [0x1F932B2582c52f939DCfb367A3A42f8A95f66782](https://www.oklink.com/amoy/address/0x1F932B2582c52f939DCfb367A3A42f8A95f66782/contract) |
-| Storage (GMP testing contract) | [0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb](https://www.oklink.com/amoy/address/0x76b6fa3a0165f79aab9918e6193acb9e3bde5cdb/contract) |
+| Storage (GMP testing contract) | [0x2d5395aa622DBC7688B2eEeD3E2dC089aE0fd356](https://www.oklink.com/amoy/address/0x2d5395aa622DBC7688B2eEeD3E2dC089aE0fd356/contract) |
 
 #### B3 Sepolia
 | Contract                                       | Address                                                                                                                                       |
@@ -170,7 +170,7 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 | Percentage Fee Handler                         | [0xA6Cd2A4c41946fAADACf88a87A50997B04abE557](https://sepolia.explorer.b3.fun/address/0xA6Cd2A4c41946fAADACf88a87A50997B04abE557)              |
 | ERC-20 Handler                                 | [0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E](https://sepolia.explorer.b3.fun/address/0x36930B9117713EF92E2f5Ca4FCa047DAdb92C48E)              |
 | Permissionless Generic Handler                 | [0x41F7869E4E0dd06c0c02804e4afcFA76BEE92CC7](https://sepolia.explorer.b3.fun/address/0x41F7869E4E0dd06c0c02804e4afcFA76BEE92CC7)              |
-| Storage (GMP testing contract)                 |                                                                                                                                               |
+| Storage (GMP testing contract)                 | [0xF5Ac994A5C402F4f426c2D7319C27912d5DBD7a8](https://sepolia.explorer.b3.fun/address/0xF5Ac994A5C402F4f426c2D7319C27912d5DBD7a8)              |
 | ERC-20* Handler (with contract call)           | [0x46b535f52237a9621dce4d506744056b10d2AD7D](https://sepolia.explorer.b3.fun/address/0x46b535f52237a9621dce4d506744056b10d2AD7D?tab=contract) |                                                                                                                               |
 | Dynamic ERC-20* Native Fee Handler             | [0xfA520bE56053AFAbd82cE48BeCc5fa277DBda982](https://sepolia.explorer.b3.fun/address/0xfA520bE56053AFAbd82cE48BeCc5fa277DBda982?tab=contract) |                                                                                                                               |
 | DefaultMessageReceiver                         | [0x28a033aB855dc4A8459515706fD511689Aa40ce2](https://sepolia.explorer.b3.fun/address/0x28a033aB855dc4A8459515706fD511689Aa40ce2?tab=contract) |                                                                                                                               |
@@ -285,4 +285,4 @@ The [faucet UI](./01-obtain-testnet-tokens.md "mention") provides users with a v
 
 ## Sygma Explorer
 
-The [explorer UI](https://scan.test.buildwithsygma.com/) provides users with a cross-chain block explorer that scans for testnet transactions through the Sygma protocol. 
+The [explorer UI](https://scan.test.buildwithsygma.com/) provides users with a cross-chain block explorer that scans for testnet transactions through the Sygma protocol.
