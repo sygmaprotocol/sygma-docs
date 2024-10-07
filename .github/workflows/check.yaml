@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 18
       - run: corepack enable
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn typecheck
       - run: yarn spellcheck
       - name: Check for uppercase section links
