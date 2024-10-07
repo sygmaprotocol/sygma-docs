@@ -22,8 +22,8 @@ https://github.com/sygmaprotocol/sygma-sdk/tree/main/examples/evm-to-substrate-f
 
 Before running the script, ensure that you have the following:
 
-- Node.js v18
-- Yarn (version 3.4.1 or higher)
+- Node.js installed on your machine (v18.20.4)
+- Yarn (version 4 or higher)
 - The [exported private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) of your development wallet
 - A Substrate wallet to receive tokens into (the example presets an existing wallet address already)
 - [Sepolia ETH](https://sepoliafaucet.com/) for gas 
@@ -63,7 +63,7 @@ yarn install
 Build the SDK by running the following command:
 
 ```bash
-yarn sdk:build
+yarn build
 ```
 
 4. Usage

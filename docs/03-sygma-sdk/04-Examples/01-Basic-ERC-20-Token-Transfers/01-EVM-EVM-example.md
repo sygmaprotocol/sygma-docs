@@ -58,7 +58,7 @@ yarn install
 Build the SDK by running the following command:
 
 ```bash
-yarn sdk:build
+yarn build
 ```
 
 4. Usage
@@ -87,29 +87,35 @@ yarn run transfer
 
 The example will use `ethers` in conjunction with the sygma-sdk to create a transfer from Cronos to Sepolia with the `ERC20LRTST` token. It will be received on Sepolia as the `ERC20LRTST` token.
 
-### Script functionality
+## Script functionality
 
-This example script performs the following steps:
+This example script performs a cross-chain ERC-20 token transfer using the Sygma SDK. The transfer starts on one EVM chain (e.g., Cronos or Sepolia) and is received on another EVM chain (e.g., Sepolia or BASE). Here’s how the script works:
 
-- Initializes the SDK by importing the required packages and defining the constants for the script.
-
+### 1.	Imports the Required Packages:
+The script first imports all the necessary modules, including those from the Sygma SDK (for asset transfer) and ethers.js (for interacting with Ethereum wallets and providers).
 ```ts
-import { EVMAssetTransfer, Environment, getTransferStatusData, TransferStatusResponse } from "@buildwithsygma/sygma-sdk-core";
+import { getSygmaScanLink, type Eip1193Provider } from "@buildwithsygma/core";
+import {
+  createFungibleAssetTransfer,
+  FungibleTransferParams,
+} from "@buildwithsygma/evm";
+import dotenv from "dotenv";
 import { Wallet, providers } from "ethers";
-
+import Web3HttpProvider from "web3-providers-http";
+```
+Constants like SEPOLIA_CHAIN_ID, RESOURCE_ID, and CRONOS_RPC_URL are defined based on the specific environment you are working in.
+```ts
 const SEPOLIA_CHAIN_ID = 11155111;
+const BASE_SEPOLIA_CHAIN_ID = 84532;
 const RESOURCE_ID =
-  "0x0000000000000000000000000000000000000000000000000000000000000300"; // This is the resource ID for the ERC20LRTEST token according to Sygma's testnet environment 
-const CRONOS_RPC_URL = process.env.CRONOS_RPC_URL || "https://evm-t3.cronos.org" // use your own provider in case this RPC URL does not work
-const getStatus = async (
-  txHash: string
-): Promise<TransferStatusResponse[]> => {
-    const data = await getTransferStatusData(Environment.TESTNET, txHash);
-    return data as TransferStatusResponse[];
-};
+  "0x0000000000000000000000000000000000000000000000000000000000001200";
+const SEPOLIA_RPC_URL =
+  process.env.SEPOLIA_RPC_URL ||
+  "https://eth-sepolia.g.alchemy.com/v2/MeCKDrpxLkGOn4LMlBa3cKy1EzzOzwzG";
 ```
 
-- Configures the dotenv module and sets the `privateKey` as a value to be pulled from the `.env` file.
+### 2. Configures dotenv Module:
+The script loads environment variables using the dotenv module. This includes sensitive information like your private key, which should be stored in a .env file for security purposes.
 
 ```ts
 import dotenv from "dotenv";
@@ -123,23 +129,32 @@ if (!privateKey) {
 }
 ```
 
-- Defines the ERC-20 transfer function.
+The PRIVATE_KEY environment variable is critical for signing transactions with your Ethereum wallet.
 
+### 3.	Defines the Transfer Function:
+The erc20Transfer function is the main function that handles the token transfer. It initializes the provider and wallet, sets up the asset transfer, and constructs the transfer object.
 ```ts
-export async function erc20Transfer(): Promise<void> {
+export async function erc20Transfer(): Promise<void> {}
 ```
 
-- Set up the provider, wallet, and asset transfer objects using the TESTNET environment.
+### 4. Sets Up the Provider and Wallet:
+
+The script sets up a Web3 provider and creates a wallet using the provided private key. In this case, the script is interacting with the Sepolia network.
 
 ```ts
- const provider = new providers.JsonRpcProvider(CRONOS_RPC_URL); 
- const wallet = new Wallet(privateKey ?? "", provider);
-  const assetTransfer = new EVMAssetTransfer();
-  await assetTransfer.init(provider, Environment.TESTNET);
+const provider = new providers.JsonRpcProvider(CRONOS_RPC_URL);
+const wallet = new Wallet(privateKey ?? "", provider);
 ```
 
-- Constructs a `transfer` object that defines the details of the ERC-20 token transfer using the previously declared constants, as well as the amount to be transferred. As we specify the `getAddress` method from the ethers.js `wallet` module for our recipient, the recipient will be the same address but on a different test network.
-  
+### 5. Initializes the Asset Transfer Object:
+The Sygma SDK’s EVMAssetTransfer object is initialized using the TESTNET environment. This object is used to build and manage the cross-chain ERC-20 transfer.
+```ts
+const assetTransfer = new EVMAssetTransfer();
+await assetTransfer.init(provider, Environment.TESTNET);
+```
+### 6.	Constructs the Transfer Object:
+The script constructs a transfer object using the sender’s address, recipient’s address (same in this case but on a different chain), and the amount to be transferred (5 tokens, represented with 18 decimal places).
+
 ```ts
   const transfer = assetTransfer.createFungibleTransfer(
     await wallet.getAddress(),
@@ -150,17 +165,18 @@ export async function erc20Transfer(): Promise<void> {
   );
 ```
 
-- Retrieves the fee required to complete the transfer from the SDK.
-- Builds the necessary approval transactions for the transfer and sends them using the Ethereum wallet. The approval transactions are required to authorize the transfer of ERC-20 tokens.
-
+### 7.	Builds and Sends Approval Transactions:
+Before the actual transfer, approval transactions must be sent to authorize the transfer of ERC-20 tokens. The script iterates over the approval transactions, sends them, and logs their transaction hashes.
 ```ts
-const fee = await assetTransfer.getFee(transfer);
-  const approvals = await assetTransfer.buildApprovals(transfer, fee);
-  for (const approval of approvals) {
-    const response = await wallet.sendTransaction(
-      approval as providers.TransactionRequest
+const approvals = await transfer.getApprovalTransactions();
+console.log(`Approving Tokens (${approvals.length})...`);
+for (const approval of approvals) {
+    const response = await wallet.sendTransaction(approval);
+    await response.wait();
+    console.log(
+        `Approved, transaction: ${getTxExplorerUrl({txHash: response.hash, chainId: SEPOLIA_CHAIN_ID})}`
     );
-    console.log("Sent approval with hash: ", response.hash);
+}
 ```
 
 - Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.

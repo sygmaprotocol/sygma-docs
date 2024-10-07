@@ -52,7 +52,7 @@ yarn install
 Build the SDK by running the following command:
 
 ```bash
-yarn sdk:build
+yarn build
 ```
 
 4. Usage
