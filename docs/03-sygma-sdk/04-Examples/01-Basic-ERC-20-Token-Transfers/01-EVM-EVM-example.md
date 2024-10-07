@@ -179,39 +179,20 @@ for (const approval of approvals) {
 }
 ```
 
-- Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.
 
+### 8. Builds and Sends the Final Transfer Transaction:
+After approval, the script builds the transfer transaction and sends it to the Ethereum network. Once the transaction is sent, it logs the transaction hash.
 ```ts
-const id = setInterval(() => {
-    getStatus(response.hash)
-      .then((data) => {
-        if (data[0]) {
-          console.log("Status of the transfer", data[0].status);
-          if(data[0].status == "executed") {
-            clearInterval(id);
-            process.exit(0);
-          }
-        } else {
-          console.log("Waiting for the TX to be indexed");
-        }
-      })
-      .catch((e) => {
-        console.log("error:", e);
-      });
-  }, 5000);
-}
+  const transferTx = await transfer.getTransferTransaction();
+  const response = await wallet.sendTransaction(transferTx);
+  await response.wait();
+console.log(
+    `Depositted, transaction:  ${getSygmaScanLink(response.hash, process.env.SYGMA_ENV)}`
+);
 ```
 
-- Builds the final `transfer` transaction and sends it using the Ethereum wallet.
-  
+### 9. Call the method
+Call the described method above
 ```ts
-  const transferTx = await assetTransfer.buildTransferTransaction(
-    transfer,
-    fee
-  );
-  const response = await wallet.sendTransaction(
-    transferTx as providers.TransactionRequest
-  );
-  console.log("Sent transfer with hash: ", response.hash);
-}
+erc20Transfer().finally(() => {});
 ```
