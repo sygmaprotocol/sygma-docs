@@ -492,3 +492,11 @@ IPFS
 Paseo
 DefaultMessageReceiver
 SprinterNameService
+EVMAssetTransfer
+SEPOLIA_CHAIN_ID
+CRONOS_RPC_URL
+erc20Transfer
+EVMAssetTransfer
+broadcasted
+SDK's
+evm-to-substrate-fungible-transfer

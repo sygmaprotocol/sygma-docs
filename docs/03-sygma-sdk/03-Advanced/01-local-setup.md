@@ -74,7 +74,7 @@ yarn install
 And build the SDK by running:
 
 ```
-yarn sdk:build
+yarn build
 ```
 
 #### 4) Run the EVM-to-Substrate token transfer example
