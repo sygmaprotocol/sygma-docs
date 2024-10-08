@@ -1,13 +1,13 @@
 ---
 slug: /sdk/examples/erc20/evm-example
 id:  examples-erc20-evm-example
-title: EVM To EVM Token Transfer
+title: EVM-to-EVM (Sepolia to Base Sepolia) token transfer example
 description: Section that describes how to perform an EVM to EVM token transfer.
 sidebar_position: 1
 draft: false
 ---
 
-### EVM-to-EVM token transfer example
+### EVM-to-EVM (Sepolia to Base Sepolia) token transfer example
 
 In the following example, we will use the `TESTNET` environment to perform a cross-chain ERC-20 transfer with 5 `ERC20LRTST` tokens. The transfer will be initiated on the EVM-side via the Cronos testnet and received on the EVM-side via the Sepolia Ethereum testnet.
 
@@ -41,7 +41,7 @@ We make use of the dotenv module to manage exported private keys with environmen
 Clone the sygma-sdk repository into a directory of your choice, and then `cd` into the folder:
 
 ```bash
-git clone git@github.com:sygmaprotocol/sygma-sdk.git
+git clone https://github.com/sygmaprotocol/sygma-sdk.git
 cd sygma-sdk/
 ```
 
@@ -76,7 +76,9 @@ touch .env
 
 Replace between the quotation marks your exported private key:
 
-`PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"`
+```dotenv
+PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
+```
    
 To send an ERC-20 example transfer from EVM to EVM, run:
 

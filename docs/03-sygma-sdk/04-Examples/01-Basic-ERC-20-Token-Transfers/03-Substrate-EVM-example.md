@@ -8,7 +8,7 @@ draft: false
 ---
 
 
-## Sygma SDK Substrate to EVM (Tangle to Sepolia) Asset Transfer Example
+### Sygma SDK Substrate to EVM (Tangle to Sepolia) Asset Transfer Example
 This is an example script that demonstrates the functionality of the SDK using the Sygma ecosystem. The script showcases a Substrate Asset transfer between a Substrate network and an EVM network using the Sygma SDK.
 
 ## Prerequisites
@@ -29,7 +29,7 @@ Before running the script, ensure that you have the following:
 To get started, clone this repository to your local machine with:
 
 ```bash
-git clone git@github.com:sygmaprotocol/sygma-sdk.git
+git clone https://github.com/sygmaprotocol/sygma-sdk.git
 cd sygma-sdk/
 ```
 
@@ -74,7 +74,7 @@ The file should contain the following environment variables:
 - SYGMA_ENV: The Sygma environment you’re using, e.g., testnet.
 
 Here’s an example of the .env file:
-```bash
+```dotenv
 PRIVATE_MNEMONIC="YOUR TWELVE WORD MNEMONIC HERE"
 SOURCE_SUBSTRATE_RPC_URL="wss://rpc.tangle.tools"
 RECIPIENT_ADDRESS="YOUR EVM ADDRESS"

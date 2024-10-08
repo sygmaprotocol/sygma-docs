@@ -1,17 +1,15 @@
 ---
 slug: /sdk/examples/erc20/evm-substrate-example
 id:  examples-erc20-evm-substrate-example
-title: EVM To Substrate Token Transfer
+title: EVM To Substrate (Sepolia to Tangle) Token Transfer
 description: Section that describes how to perform an EVM to Substrate token transfer.
 sidebar_position: 2
 draft: false
 ---
 
-:::warning
-Please be aware that the Rococo-Phala testnet is currently down due to ongoing maintenance by the Phala team as they migrate their testnet to Paseo. Stay tuned for further updates.
-:::
+### EVM to Substrate (Sepolia to Tangle) Token Transfer Example
 
-### EVM-to-Substrate token transfer example
+The following example demonstrates how to use the Sygma SDK to transfer ERC-20 tokens from an EVM chain (in this case, Sepolia) to a Substrate chain (Tangle) using the SDK’s functionalities and Ethereum’s ethers.js library.
 
 In the following example, we will use the `TESTNET` environment to perform a cross-chain ERC-20 transfer with 0.5 Sepolia sygUSD `sygUSD` tokens. The transfer will be initiated on the EVM-side via the Sepolia Ethereum testnet and received on the Substrate-side via the Rococo-Phala testnet.
 
@@ -35,10 +33,6 @@ import App from '../../../../src/Faucet/App';
 <App />
 <br/>
 
-:::danger
-We make use of the dotenv module to manage exported private keys with environment variables. Please note that accidentally committing a .env file containing private keys to a wallet with real funds, onto GitHub, could result in the complete loss of your funds. **Never expose your private keys.**
-:::
-
 ### Getting started
 
 1. Clone the repository 
@@ -46,7 +40,7 @@ We make use of the dotenv module to manage exported private keys with environmen
 Clone the sygma-sdk repository into a directory of your choice, and then `cd` into the folder:
 
 ```bash
-git clone git@github.com:sygmaprotocol/sygma-sdk.git
+git clone https://github.com/sygmaprotocol/sygma-sdk.git
 cd sygma-sdk/
 ```
 
@@ -68,142 +62,147 @@ yarn build
 
 4. Usage
 
-This example uses the `dotenv` module to manage private keys. To run the example, you will need to configure your environment variable to include your test development account's [exported private key](https://support.metamask.io/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key). A `.env.sample` is provided as a template.
+:::danger Important Security Notice
+This example uses the dotenv module to manage sensitive information like private keys. Never expose your private keys or commit them to public repositories. Doing so could lead to the loss of all your funds. Make sure you handle private keys with care and follow best practices for security.
+:::
 
-**DO NOT COMMIT PRIVATE KEYS WITH REAL FUNDS TO GITHUB. DOING SO COULD RESULT IN COMPLETE LOSS OF YOUR FUNDS.**
+This script relies on the dotenv module to securely manage your private keys via environment variables. To run the example, you need to configure the environment variables for your test development account’s exported private key. A .env.sample file is provided as a template for you to create and manage these variables.
 
-Create a `.env` file in the evm-to-substrate example folder:
+### Steps to Set Up Environment Variables
+
+1.	Create a .env file in the evm-to-substrate-fungible-transfer example folder:
 
 ```bash
 cd examples/evm-to-substrate-fungible-transfer
 touch .env
 ```
+2. Add your exported private key to the .env file. Replace the placeholder text with your actual private key:
+```dotenv
+PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"
+```
 
-Replace between the quotation marks your exported private key:
-
-`PRIVATE_KEY="YOUR_PRIVATE_KEY_HERE"`
-
-Replace the placeholder value in the script for `DESTINATION_ADDRESS` with your preferred destination Substrate address.
-   
-To send an ERC-20 example transfer from EVM to Substrate, run:
+### Running the Example
+To send an ERC-20 token transfer from an EVM chain (Sepolia) to a Substrate chain (Tangle), use the following command:
 
 ```bash
 cd examples/evm-to-substrate-fungible-transfer
 yarn run transfer
 ```
 
-The example will use `ethers` in conjunction with the sygma-sdk to create a transfer from Sepolia to Rococo-Phala with a `sygUSD` token. It will be received on Rococo-Phala as the `sygUSD` token.
+This script uses **ethers.js** in conjunction with the sygma-sdk to handle the cross-chain transfer. The example demonstrates how to transfer sygUSD tokens from the Sepolia Ethereum testnet to the Tangle Substrate testnet, where it will be received as the same token (sygUSD).
+
 
 ### Script functionality
+The script performs the following steps:
 
-This example script performs the following steps:
+1. Importing Required Packages
 
-- Initializes the SDK by importing the required packages and defining the constants for the script.
-
+The first step is to import all necessary libraries, including the Sygma SDK, dotenv for managing environment variables, and ethers.js for interacting with the Ethereum blockchain.
 ```ts
-import { EVMAssetTransfer, Environment, getTransferStatusData, TransferStatusResponse } from "@buildwithsygma/sygma-sdk-core";
-import { Wallet, providers } from "ethers";
-
-const ROCOCO_PHALA_CHAIN_ID = 5231;
-const DESTINATION_ADDRESS = "5CDQJk6kxvBcjauhrogUc9B8vhbdXhRscp1tGEUmniryF1Vt";
-const RESOURCE_ID =
-  "0x0000000000000000000000000000000000000000000000000000000000001100";
-const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "https://gateway.tenderly.co/public/sepolia" // use your another RPC URL in case this does not work 
-const getStatus = async (
-  txHash: string
-): Promise<TransferStatusResponse[]> => {
-    const data = await getTransferStatusData(Environment.TESTNET, txHash);
-    return data as TransferStatusResponse[];
-};
-```
-
-- Configures the dotenv module and sets the `privateKey` as a value to be pulled from the `.env` file.
-
-```ts
+import type { Eip1193Provider } from "@buildwithsygma/core";
+import { createFungibleAssetTransfer } from "@buildwithsygma/evm";
 import dotenv from "dotenv";
+import { Wallet, providers } from "ethers";
+import Web3HttpProvider from "web3-providers-http";
 
-dotenv.config()
+dotenv.config();
+```
+Here, dotenv.config() loads environment variables (such as private keys) from a .env file into process.env.
 
+2. Loading and Validating the Private Key
+   
+The script fetches the **PRIVATE_KEY** from the .env file. If the private key is not found, an error is thrown to prevent the script from running without the necessary credentials.
+```ts
 const privateKey = process.env.PRIVATE_KEY;
 
 if (!privateKey) {
-  throw new Error("Missing environment variable: PRIVATE_KEY");
+    throw new Error("Missing environment variable: PRIVATE_KEY");
 }
 ```
 
-- Defines the ERC-20 transfer function.
+3. Setting up Constants
+   Key constants are defined for the Sepolia and Tangle chain IDs, the sygUSD token’s Resource ID, and the Sepolia RPC URL. The script also sets up a function to generate the transaction URL for Etherscan, enabling easy tracking of the transaction.
+```ts
+const SEPOLIA_CHAIN_ID = 11155111;
+const TANGLE_CHAIN_ID = 3799;
+const RESOURCE_ID = "0x0000000000000000000000000000000000000000000000000000000000002000";
+const SEPOLIA_RPC_URL = process.env.SOURCE_EVM_RPC_URL ?? "https://eth-sepolia.g.alchemy.com/v2/MeCKDrpxLkGOn4LMlBa3cKy1EzzOzwzG";
+
+const explorerUrls: Record<number, string> = {
+    [SEPOLIA_CHAIN_ID]: "https://sepolia.etherscan.io",
+};
+
+const getTxExplorerUrl = (params: { txHash: string; chainId: number }): string =>
+    `${explorerUrls[params.chainId]}/tx/${params.txHash}`;
+```
+4. Defining the ERC-20 Transfer Function
+   
+The core logic for the token transfer is encapsulated in the erc20Transfer function. This function sets up the provider and wallet using ethers.js, connects to the Sepolia network, and prepares for the cross-chain transfer.
+Set up the provider, wallet, and asset transfer objects using the TESTNET environment.
 
 ```ts
 export async function erc20Transfer(): Promise<void> {
-```
-- Set up the provider, wallet, and asset transfer objects using the TESTNET environment.
-
-```ts
-export async function erc20Transfer(): Promise<void> {
-  const provider = new providers.JsonRpcProvider(SEPOLIA_RPC_URL);
-  const wallet = new Wallet(privateKey ?? "", provider);
-  const assetTransfer = new EVMAssetTransfer();
-  await assetTransfer.init(provider, Environment.TESTNET);
+  const web3Provider = new Web3HttpProvider(SEPOLIA_RPC_URL);
+  const ethersWeb3Provider = new providers.Web3Provider(web3Provider);
+  const wallet = new Wallet(privateKey ?? "", ethersWeb3Provider);
+  const sourceAddress = await wallet.getAddress();
+  const destinationAddress = "5GjowPEaFNnwbrmpPuDmBVdF2e7n3cHwk2LnUwHXsaW5KtEL"; // Substrate address
 ```
 
-- Constructs a `transfer` object that defines the details of the ERC-20 token transfer using the previously declared constants, as well as the amount to be transferred. 
-  
+5. Constructing the Transfer Object
+   
+The transfer object is created by specifying the source and destination chain IDs, the source and destination addresses, the amount to transfer (1 sygUSD token), and the token’s Resource ID.
 ```ts
-  const transfer = assetTransfer.createFungibleTransfer(
-    await wallet.getAddress(),
-    ROCOCO_PHALA_CHAIN_ID,
-    DESTINATION_ADDRESS,
-    RESOURCE_ID,
-    "500000" // 6 decimal places, so in this case, 0.5 sygUSD tokens
-  );
+  const params = {
+    source: SEPOLIA_CHAIN_ID,
+    destination: TANGLE_CHAIN_ID,
+    sourceNetworkProvider: web3Provider as unknown as Eip1193Provider,
+    resource: RESOURCE_ID,
+    amount: BigInt(1) * BigInt(1e18), // 1 sygUSD token (18 decimals)
+    recipientAddress: destinationAddress,
+    sourceAddress: sourceAddress,
+  };
 ```
 
-- Retrieves the fee required to complete the transfer from the SDK.
-- Builds the necessary approval transactions for the transfer and sends them using the Ethereum wallet. The approval transactions are required to authorize the transfer of ERC-20 tokens.
+Here, the transfer object specifies the details of the cross-chain transfer, including the network provider and the token amount.
+
+6. Getting and Sending Approval Transactions
+   
+Before sending the transfer, the script needs to obtain and send approval transactions to allow the smart contract to move the user’s tokens. This step ensures that the tokens are authorized for transfer.
 
 ```ts
-  const fee = await assetTransfer.getFee(transfer);
-  const approvals = await assetTransfer.buildApprovals(transfer, fee);
+  const transfer = await createFungibleAssetTransfer(params);
+  const approvals = await transfer.getApprovalTransactions();
+  console.log(`Approving Tokens (${approvals.length})...`);
+
   for (const approval of approvals) {
-    const response = await wallet.sendTransaction(
-      approval as providers.TransactionRequest
+    const response = await wallet.sendTransaction(approval);
+    await response.wait();
+    console.log(
+      `Approved, transaction: ${getTxExplorerUrl({ txHash: response.hash, chainId: SEPOLIA_CHAIN_ID })}`
     );
-    console.log("Sent approval with hash: ", response.hash);
   }
 ```
-- Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.
 
+This loop iterates through each approval transaction, sending them through the Ethereum network and logging the transaction hash for tracking purposes.
+
+7.  Sending the Transfer Transaction
+    
+After the approvals are complete, the script constructs and sends the actual cross-chain transfer transaction. The transfer is confirmed once the transaction is finalized on the Ethereum side.
 ```ts
-  const id = setInterval(() => {
-    getStatus(response.hash)
-      .then((data) => {
-        if (data[0]) {
-          console.log("Status of the transfer", data[0].status);
-          if(data[0].status == "executed") {
-            clearInterval(id);
-            process.exit(0);
-          }
-        } else {
-          console.log("Waiting for the TX to be indexed");
-        }
-      })
-      .catch((e) => {
-        console.log("error:", e);
-      });
-  }, 5000);
-}
+  const transferTx = await transfer.getTransferTransaction();
+  const response = await wallet.sendTransaction(transferTx);
+  await response.wait();
+  console.log(
+    `Deposited, transaction: ${getTxExplorerUrl({ txHash: response.hash, chainId: SEPOLIA_CHAIN_ID })}`
+  );
 ```
 
-- Builds the final `transfer` transaction and sends it using the Ethereum wallet.
-  
+Once the transaction is confirmed, the console logs the deposit confirmation and provides the Etherscan link to track the transaction.
+
+8. Executing the Transfer Function
+
+Finally, the erc20Transfer function is executed. The .finally() method ensures that any necessary cleanup is performed once the function has completed.
 ```ts
- const transferTx = await assetTransfer.buildTransferTransaction(
-    transfer,
-    fee
-  );
-  const response = await wallet.sendTransaction(
-    transferTx as providers.TransactionRequest
-  );
-  console.log("Sent transfer with hash: ", response.hash);
-}
+erc20Transfer().finally(() => {});
 ```
