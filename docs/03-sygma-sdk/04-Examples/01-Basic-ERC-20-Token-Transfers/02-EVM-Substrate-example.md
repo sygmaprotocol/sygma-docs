@@ -11,7 +11,7 @@ draft: false
 
 The following example demonstrates how to use the Sygma SDK to transfer ERC-20 tokens from an EVM chain (in this case, Sepolia) to a Substrate chain (Tangle) using the SDK’s functionalities and Ethereum’s ethers.js library.
 
-In the following example, we will use the `TESTNET` environment to perform a cross-chain ERC-20 transfer with 0.5 Sepolia sygUSD `sygUSD` tokens. The transfer will be initiated on the EVM-side via the Sepolia Ethereum testnet and received on the Substrate-side via the Rococo-Phala testnet.
+In the following example, we will use the `TESTNET` environment to perform a cross-chain ERC-20 transfer with 0.5 Sepolia sygUSD `sygUSD` tokens. The transfer will be initiated on the EVM-side via the Sepolia Ethereum testnet and received on the Substrate-side via the Tangle testnet.
 
 This is an example script that demonstrates the functionality of the Sygma SDK and the wider Sygma ecosystem of relayers and bridge and handler contracts/pallets. The complete example can be found in this [repo](
 https://github.com/sygmaprotocol/sygma-sdk/tree/main/examples/evm-to-substrate-fungible-transfer#sygma-sdk-erc20-example).
