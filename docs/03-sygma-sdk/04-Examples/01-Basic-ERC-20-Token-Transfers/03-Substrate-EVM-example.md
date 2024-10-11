@@ -1,6 +1,6 @@
 ---
 slug: /sdk/examples/erc20/substrate-evm-example
-id:  examples-erc20-substrate-evm-example
+id: examples-erc20-substrate-evm-example
 title: Substrate To EVM Token Transfer
 description: Section that describes how to perform a Substrate to EVM token transfer.
 sidebar_position: 3
@@ -10,7 +10,6 @@ draft: false
 :::warning
 Please be aware that the Rococo-Phala testnet is currently down due to ongoing maintenance by the Phala team as they migrate their testnet to Paseo. Stay tuned for further updates.
 :::
-
 
 ### EVM-to-Substrate token transfer example
 
@@ -29,7 +28,7 @@ Before running the script, ensure that you have the following:
 - A Substrate provider (in case the hardcoded WSS within the script does not work)
 - A Substrate development wallet funded with `sygUSD` tokens
 
-import App from '../../../../src/Faucet/App'; 
+import App from '../../../../src/Faucet/App';
 
 <App />
 <br/>
@@ -40,7 +39,7 @@ We make use of the dotenv module to manage Substrate's private mnemonics with en
 
 ### Getting started
 
-1. Clone the repository 
+1. Clone the repository
 
 Clone the sygma-sdk repository into a directory of your choice, and then `cd` into the folder:
 
@@ -50,7 +49,7 @@ cd sygma-sdk/
 ```
 
 2. Install dependencies
-   
+
 Install the project dependencies by running:
 
 ```bash
@@ -62,7 +61,7 @@ yarn install
 Build the SDK by running the following command:
 
 ```bash
-yarn sdk:build
+yarn build
 ```
 
 4. Usage
@@ -83,7 +82,7 @@ Replace between the quotation marks your 12-word mnemonic:
 `PRIVATE_MNEMONIC="YOUR TWELVE WORD MNEMONIC HERE WITH SPACES"`
 
 Replace the placeholder value in the script for `recipient` with your preferred destination EVM address.
-   
+
 To send a Substrate token transfer from Substrate to EVM, run:
 
 ```bash
@@ -100,118 +99,87 @@ This example script performs the following steps:
 - Initializes the SDK by importing the required packages and defining the constants for the script.
 
 ```ts
-import { Keyring } from "@polkadot/keyring";
+import type { SubstrateAssetTransferRequest } from "@buildwithsygma/substrate";
+import { createSubstrateFungibleAssetTransfer } from "@buildwithsygma/substrate";
 import { ApiPromise, WsProvider } from "@polkadot/api";
+import { Keyring } from "@polkadot/keyring";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
 import dotenv from "dotenv";
-import {
-  Environment,
-  Substrate,
-  getTransferStatusData,
-  TransferStatusResponse
-} from "@buildwithsygma/sygma-sdk-core";
 
-const { SubstrateAssetTransfer } = Substrate;
+const MNEMONIC = process.env.PRIVATE_MNEMONIC;
+if (!MNEMONIC) {
+  throw new Error("Missing environment variable: PRIVATE_MNEMONIC");
+}
 
 const SEPOLIA_CHAIN_ID = 11155111;
-const RESOURCE_ID =
-  "0x0000000000000000000000000000000000000000000000000000000000001100"; // this is the resourceID for sygUSD 
-const MNEMONIC = process.env.PRIVATE_MNEMONIC;
-const recipient = "0xD31E89feccCf6f2DE10EaC92ADffF48D802b695C"; // replace this value for your preferred EVM recipient address 
-const RHALA_RPC_URL = process.env.RHALA_RPC_URL || "wss://rhala-node.phala.network/ws"
-if (!MNEMONIC) {
-  throw new Error("Missing environment variable: PRIVATE_MNEMONIC");
-}
+const TANGLE_CHAIN_ID = 3799;
+
+const RESOURCE_ID_SYGMA_USD =
+  "0x0000000000000000000000000000000000000000000000000000000000002000";
+const recipient = "<evm_recipient_address>";
+const TANGLE_RPC_URL =
+  process.env.SOURCE_SUBSTRATE_RPC_URL ?? "wss://rpc.tangle.tools";
 ```
 
-- Configures the dotenv module and sets the `MNEMONIC` as a value to be pulled from the `.env` file.
+Note: In the case of a substrate transfer, mnmeonic is required.
+
+- Constant and function to retrieve Sygma scanner URL (Optional)
 
 ```ts
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const MNEMONIC = process.env.PRIVATE_MNEMONIC;
-
-if (!MNEMONIC) {
-  throw new Error("Missing environment variable: PRIVATE_MNEMONIC");
-}
+const SYGMA_EXPLORER_URL = "https://scan.test.buildwithsygma.com";
+const getSygmaExplorerTransferUrl = (params: {
+  blockNumber: number;
+  extrinsicIndex: number;
+}): string =>
+  `${SYGMA_EXPLORER_URL}/transfer/${params.blockNumber}-${params.extrinsicIndex}`;
 ```
 
-- Defines the main Substrate transfer function, including the connection to the blockchain using a WebSocket provider, initializing the asset transfer instance, and setting up the keyring and account from the mnemonic phrase.
+- Create substrate provider and wallet to be able to send transactions and query data
 
 ```ts
-const substrateTransfer = async (): Promise<void> => {
-  const keyring = new Keyring({ type: "sr25519" });
-  // Make sure to fund this account with native tokens
-  // Account address: 5FNHV5TZAQ1AofSPbP7agn5UesXSYDX9JycUSCJpNuwgoYTS
-
-  await cryptoWaitReady();
-
-  const account = keyring.addFromUri(MNEMONIC);
-
-  const wsProvider = new WsProvider(RHALA_RPC_URL);
-  const api = await ApiPromise.create({ provider: wsProvider });
-
-  const assetTransfer = new SubstrateAssetTransfer();
-
-  await assetTransfer.init(api, Environment.TESTNET);
+const keyring = new Keyring({ type: "sr25519" });
+await cryptoWaitReady();
+const account = keyring.addFromUri(MNEMONIC);
+const wsProvider = new WsProvider(TANGLE_RPC_URL);
+const api = await ApiPromise.create({ provider: wsProvider });
 ```
 
-- Invokes the `getTransferStatusData` and `getStatus` functions by taking the transaction hash as an input to periodically check the status of the cross-chain transaction.
+- Prepare fungible token transfer parameters and create a transfer object
 
 ```ts
-const id = setInterval(() => {
-      getStatus(status.asInBlock.toString())
-        .then((data) => {
-          if (data[0]) {
-            console.log("Status of the transfer", data[0].status);
-            if(data[0].status == "executed") {
-              clearInterval(id);
-              process.exit(0);
-            }
-          } else {
-            console.log("Waiting for the TX to be indexed");
-          }
-        })
-        .catch((e) => {
-          console.log("error:", e);
-        });
-    }, 5000);
-  });
+const transferParams: SubstrateAssetTransferRequest = {
+  source: TANGLE_CHAIN_ID,
+  destination: SEPOLIA_CHAIN_ID,
+  sourceNetworkProvider: api,
+  sourceAddress: account.address,
+  resource: RESOURCE_ID_SYGMA_USD,
+  amount: BigInt(1) * BigInt(1e18),
+  destinationAddress: recipient,
+  environment: process.env.SYGMA_ENV,
 };
 ```
 
-- Constructs a transfer object that calculates the fee, then builds, signs, and sends the transaction.
+- Send the transaction and wait for confirmation
 
 ```ts
-const transferTx = assetTransfer.buildTransferTransaction(transfer, fee);
+const transfer = await createSubstrateFungibleAssetTransfer(transferParams);
+const transferTx = await transfer.getTransferTransaction();
 
-  const unsub = await transferTx.signAndSend(account, ({ status }) => {
-    console.log(`Current status is ${status.toString()}`);
+const unsub = await transferTx.signAndSend(account, (results) => {
+  const { status } = results;
 
-    if (status.isInBlock) {
+  if (status.isFinalized) {
+    const blockNumber = results.blockNumber?.toNumber();
+    const extrinsicIndex = results.txIndex;
+
+    if (blockNumber && extrinsicIndex) {
       console.log(
-        `Transaction included at blockHash ${status.asInBlock.toString()}`
+        `Explorer URL: ${getSygmaExplorerTransferUrl({
+          blockNumber,
+          extrinsicIndex,
+        })}`
       );
-    } else if (status.isFinalized) {
-      console.log(
-        `Transaction finalized at blockHash ${status.asFinalized.toString()}`
-      );
-      unsub();
     }
-```
-
-- Logs the current status of the transaction, and if it's included in a block or finalized, outputs the respective block hash.
-
-```ts
-const unsub = await transferTx.signAndSend(account, ({ status }) => {
-  console.log(`Current status is ${status.toString()}`);
-  if (status.isInBlock) {
-    console.log(`Transaction included at blockHash ${status.asInBlock.toString()}`);
-  } else if (status.isFinalized) {
-    console.log(`Transaction finalized at blockHash ${status.asFinalized.toString()}`);
-    unsub();
   }
 });
 ```

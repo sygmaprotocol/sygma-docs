@@ -14,25 +14,25 @@ You will need to have Docker and Docker Compose installed and running on your ma
 ### Local Sygma Setup
 
 The local setup contains preconfigured resources including:
+
 - two EVM networks running on Ganache with Sygma contracts already deployed
   - The networks are named `EVM1` and `EVM2` respectively
 - one Substrate network with Sygma pallets already implemented
   - The network is named `Substrate`
-- three relayer instances listening for, voting, and executing on events 
-- a fee oracle 
+- three relayer instances listening for, voting, and executing on events
+- a fee oracle
 
-More details can be found in the local configuration. 
+More details can be found in the local configuration.
 
-To interact with the local setup using the Sygma SDK, select `LOCAL` environment on initialization of the `assetTransfer` object.
+To interact with the local setup using the Sygma SDK, set `SYGMA_ENV` environment variable as `local`.
 
-```ts
-const assetTransfer = new EVMAssetTransfer();
-await assetTransfer.init(provider, Environment.LOCAL);
+```sh
+export SYGMA_ENV="local"
 ```
 
 ### Running the local setup example
 
-We will be running the local setup example provided inside the [Sygma SDK repository](https://github.com/sygmaprotocol/sygma-sdk/tree/main/examples/local-fungible-transfer).
+We will be running the example provided inside the [Sygma SDK repository](https://github.com/sygmaprotocol/sygma-sdk/tree/main/examples/evm-to-evm-fungible-transfer).
 
 #### 1) Clone the Sygma Relayer repository
 
@@ -44,7 +44,7 @@ git clone https://github.com/sygmaprotocol/sygma-relayer.git
 
 #### 2) Start local setup
 
-`cd` into the cloned sygma-relayer folder, and then run the following command, which will start the dockerized setup: 
+`cd` into the cloned sygma-relayer folder, and then run the following command, which will start the dockerized setup:
 
 ```
 make example
@@ -74,26 +74,25 @@ yarn install
 And build the SDK by running:
 
 ```
-yarn sdk:build
+yarn build
 ```
 
 #### 4) Run the EVM-to-Substrate token transfer example
 
-`cd` into the `local-fungible-transfer` example inside the `/sygma-sdk/examples` folder, and run:
+1. `cd` into the `evm-to-substrate-fungible-transfer` example inside the `/sygma-sdk/examples` folder
+2. Update RPC Urls and transfer parameters in the example with local configuration
+
+3. run:
 
 ```bash
-yarn run transfer:evm-substrate
+yarn run transfer
 ```
 
 This will start a local ERC-20 transfer of the `ERC20LRTest` token using the local Sygma setup. It will use `ethers` together with the sygma-sdk to create a transfer from the `EVM1` network to the `Substrate` network.
 
 #### 5) Run the Substrate-to-EVM token transfer example
 
-To demonstrate the exact same transfer in the other direction, you can also run:
-
-```bash
-yarn run transfer:substrate-evm
-```
+To demonstrate the exact same transfer in the other direction, you can use the example `substrate-to-evm-fungible-transfer` and follow similar steps of the previous example.
 
 Similarly, this will use `@polkadot/api` together with the sygma-sdk to create an `ERC20LRTest` transfer from the `Substrate` network to the `EVM1` network.
 
@@ -105,11 +104,11 @@ To easily verify the bridging transactions, we have added console logs that will
 TODO - add information on all registered resources on local setup -->
 
 ### Make changes to onchain Sygma setup
+
 Once you start the local setup, it is possible to configure the Sygma EVM contracts or Sygma Substrate pallets, since all node RPC endpoints are exposed and you can interact with them as with any regular node.
 
-| Network   | RPC endpoint               |
-| --------- | ---------------------------|
-| EVM1      | http://127.0.0.1:8545      |
-| EVM2      | http://127.0.0.1:8547      |
-| Substrate | ws://127.0.0.1:9944        |
-
+| Network   | RPC endpoint          |
+| --------- | --------------------- |
+| EVM1      | http://127.0.0.1:8545 |
+| EVM2      | http://127.0.0.1:8547 |
+| Substrate | ws://127.0.0.1:9944   |

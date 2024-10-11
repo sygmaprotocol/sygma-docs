@@ -7,84 +7,40 @@ sidebar_position: 3
 draft: false
 ---
 
-### Transferring a fungible asset from Substrate to EVM
+# Substrate to EVM Fungible token transfer
 
-Transferring assets from Substrate-based chains to EVM-based chains can be achieved using the Sygma SDK.
+Transferring assets from Substrate-based chains to EVM-based chains can be achieved using the Sygma SDK. To facilitate the transfer, the following steps are required:
 
-To facilitate the transfer, the following steps are required:
+1. Specify transfer parameters such as amount, recipient address, token, destination chain and use the method `createSubstrateFungibleAssetTransfer` from `@buildwithsygma/substrate` to create an instance of `SubstrateFungibleAssetTransfer`
+2. Sign and send the transfer transaction using `polkadot.js`
 
-1. Create an instance of the `SubstrateAssetTransfer` object and initialize it
-2. Determine the fee for the transfer, using the SubstrateAssetTransfer `getFee()` method
-3. Prepare, sign, and send the `Transfer` transaction to the Substrate node
-
-#### 1. Initialize the SubstrateAssetTransfer object
+## 1. Create and initialize the transfer object
 
 To initialize the asset transfer object, the following parameters need to be supplied:
 
-- An instance of the PolkadotJS ApiPromise object
-- The environment in which the bridge should function
+- An instance of the PolkadotJS `ApiPromise` object
+- Environment variable `SYGMA_ENV` needs to be set as `mainnet` or `testnet`
 
-```ts
-const assetTransfer = new SubstrateAssetTransfer();
-
-const wsProvider = new WsProvider("wss://URL-TO-YOUR-SUBSTRATE-INSTANCE");
-
-// Create an instance of the PolkadotJS ApiPromise
-const api = await ApiPromise.create({ provider: wsProvider });
-
-await assetTransfer.init(
-  api,
-  Environment.TESTNET  // (i.e. DEVNET, TESTNET, MAINNET)
-);
+```typescript
+const fungibleTokenTransfer = await createSubstrateFungibleAssetTransfer({
+  source: 5232, // Phala
+  destination: 1, // Ethereum Mainnet
+  sourceNetworkProvider: apiPromise,
+  sourceAddress: "<substrate_address>",
+  resource:
+    "0x0000000000000000000000000000000000000000000000000000000000000001", // PHA resource ID more resources can be found here: https://github.com/sygmaprotocol/sygma-shared-configuration/blob/main/mainnet/shared-config-mainnet.json
+  amount: BigInt(1) * BigInt(1e12),
+  destinationAddress: "<evm_recipient_address>",
+});
 ```
 
-#### 2. Get fee
+## 2. Sign and send transfer transaction
 
-To facilitate the transfer of tokens, a fee must be attached. This fee can be determined by utilizing the asset transfer `GetFee(transfer)` method. You will need to know the destination ChainID as well as the ResourceID that has been configured on the bridge. These details can be determined by inspecting the configurations of the bridge (see [here](https://docs.buildwithsygma.com/environments))
-
-
-```ts
-
-const keyring = new Keyring({ type: "sr25519" });
-await cryptoWaitReady();
-const account = keyring.addFromUri(MNEMONIC); // use the dotenv module to pull in a mnemonic from a .env file
-const transfer = await assetTransfer.createFungibleTransfer(
-  account.address,
-  DESTINATION_CHAINID,
-  DESTINATION_ADDRESS,
-  RESOURCE_ID,
-  "AMOUNT" // use appropriate decimal places based on the token and/or ecosystem you are operating in
-)
-
-const fee = await assetTransfer.getFee(transfer);
-
-```
-
-#### Prepare the transfer transaction
-
-Now that the fee has been determined, the transaction to deposit assets into the bridge should be generated, signed, and broadcast to the network.
-
-```ts
-// Build the transfer transaction
- const transferTx = assetTransfer.buildTransferTransaction(
-  transfer, 
-  fee
-  );
-
-// Sign and broadcast the transfer transaction
-const unsub = await transferTx.signAndSend(account, ({ status }) => {
-    console.log(`Current status is ${status.toString()}`);
-    
-  if (status.isInBlock) {
-    console.log(
-      `Transaction included at blockHash ${status.asInBlock.toString()}`
-    );
-  } else if (status.isFinalized) {
-    console.log(
-      `Transaction finalized at blockHash ${status.asFinalized.toString()}`
-    );
-    unsub();
-  }
+```typescript
+const tx = await fungibleTokenTransfer.getTransferTransaction();
+await transferTx.signAndSend(account, (results) => {
+  const { status } = results;
+  console.log(`Current status is ${status.toString()}`);
 });
 ```
 
