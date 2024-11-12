@@ -80,7 +80,7 @@ yarn build
 #### 4) Run the EVM-to-Substrate token transfer example
 
 1. `cd` into the `evm-to-substrate-fungible-transfer` example inside the `/sygma-sdk/examples` folder
-2. Update RPC Urls and transfer parameters in the example with local configuration
+2. Update RPC URLs and transfer parameters in the example with local configuration
 
 3. run:
 

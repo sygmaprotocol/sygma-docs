@@ -111,7 +111,7 @@ const privateKey = process.env.PRIVATE_KEY;
 if (!privateKey) throw new Error("Missing environment variable: PRIVATE_KEY");
 ```
 
-- Define transfer contants like destination chain ID, source chain ID, recipient address, resource ID and RPC Urls
+- Define transfer constants like destination chain ID, source chain ID, recipient address, resource ID and RPC URLs
 
 ```ts
 const SEPOLIA_CHAIN_ID = 11155111;

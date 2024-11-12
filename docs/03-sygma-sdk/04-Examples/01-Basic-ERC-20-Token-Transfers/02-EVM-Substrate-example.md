@@ -91,7 +91,7 @@ cd examples/evm-to-substrate-fungible-transfer
 yarn run transfer
 ```
 
-The example will use `ethers` in conjunction with the Sygma SKD to create a transfer from Sepolia to Rococo-Phala with a `sygUSD` token. It will be received on Rococo-Phala as the `sygUSD` token.
+The example will use `ethers` in conjunction with the Sygma SDK to create a transfer from Sepolia to Rococo-Phala with a `sygUSD` token. It will be received on Rococo-Phala as the `sygUSD` token.
 
 ### Script functionality
 
@@ -118,7 +118,7 @@ const privateKey = process.env.PRIVATE_KEY;
 if (!privateKey) throw new Error("Missing environment variable: PRIVATE_KEY");
 ```
 
-- Define transfer contants like destination chain ID, source chain ID, recipient address, resource ID and RPC Urls
+- Define transfer constants like destination chain ID, source chain ID, recipient address, resource ID and RPC URLs
 
 ```ts
 const SEPOLIA_CHAIN_ID = 11155111;

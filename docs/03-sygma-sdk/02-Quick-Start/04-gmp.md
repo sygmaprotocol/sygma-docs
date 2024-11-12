@@ -24,9 +24,9 @@ There are a few requirements for the Destination chain contract function that ge
 
 To initialize the generic message transfer object, the following parameters need to be supplied:
 
-- An EIP1193 compatible EVM provider
+- An `EIP-1193` compatible EVM provider
 - Environment variable `SYGMA_ENV` needs to be set as `mainnet` or `testnet`
-- Address, ABI of the contract and the function that will be invoked on the destination chain.
+- Address, `ABI` of the contract and the function that will be invoked on the destination chain.
 
 ```typescript
 const gmpTransfer = await createCrossChainContractCall<

@@ -121,7 +121,7 @@ const TANGLE_RPC_URL =
   process.env.SOURCE_SUBSTRATE_RPC_URL ?? "wss://rpc.tangle.tools";
 ```
 
-Note: In the case of a substrate transfer, mnmeonic is required.
+Note: In the case of a substrate transfer, mnemonic is required.
 
 - Constant and function to retrieve Sygma scanner URL (Optional)
 

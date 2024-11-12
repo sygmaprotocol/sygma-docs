@@ -60,7 +60,7 @@ This example uses the `dotenv` module to manage private keys. To run the example
 
 **DO NOT COMMIT PRIVATE KEYS WITH REAL FUNDS TO GITHUB. DOING SO COULD RESULT IN COMPLETE LOSS OF YOUR FUNDS.**
 
-Create a `.env` file in the `evm-to-evm-generic-message-transfer` folder withiin examples:
+Create a `.env` file in the `evm-to-evm-generic-message-transfer` folder within examples:
 
 ```bash
 cd examples/evm-to-evm-generic-message-transfer
