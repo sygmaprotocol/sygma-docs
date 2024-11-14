@@ -63,7 +63,7 @@ await tx.wait();
 
 ### Checking transaction hash
 
-The response object returned by the sendTransaction method contains a hash property. This transaction hash is logged to the console, and it can be used to look up the transaction on a block explorer.
+The response object returned by the `sendTransaction` method contains a hash property. This transaction hash is logged to the console, and it can be used to look up the transaction on a block explorer.
 
 ```typescript
 console.log("Sent transfer with hash: ", tx.hash);
