@@ -23,7 +23,7 @@ Transferring assets between EVM-based chains can be achieved using the Sygma SDK
 
 To initialize the asset transfer object, the following parameters are required:
 
-- An EIP1193 compatible EVM provider
+- An `EIP-1193` compatible EVM provider
 - Environment variable `SYGMA_ENV` needs to be set as `mainnet` or `testnet`
 
 ```typescript
